@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Numbers and Math in Python</title>
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<link xmlns:xlink="http://www.w3.org/1999/xlink" href="_static/pretext/css/ol-markers.css" rel="stylesheet" type="text/css">
+<script>
+var runestoneMathReady = new Promise((resolve) => window.rsMathReady = resolve);
+window.MathJax = {
+  "tex": {
+    "inlineMath": [
+      [
+        "\\(",
+        "\\)"
+      ]
+    ],
+    "tags": "none",
+    "tagSide": "right",
+    "tagIndent": ".8em",
+    "packages": {
+      "[+]": [
+        "base",
+        "extpfeil",
+        "ams",
+        "amscd",
+        "color",
+        "newcommand",
+        "knowl"
+      ]
+    }
+  },
+  "options": {
+    "ignoreHtmlClass": "tex2jax_ignore|ignore-math",
+    "processHtmlClass": "process-math",
+    "renderActions": {
+      "findScript": [
+        10,
+        function (doc) {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(function(node) {
+                var display = !!node.type.match(/; *mode=display/);
+                var math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+                var text = document.createTextNode('');
+                node.parentNode.replaceChild(text, node);
+                math.start = {node: text, delim: '', n: 0};
+                math.end = {node: text, delim: '', n: 0};
+                doc.math.push(math);
+            });
+        },
+        ""
+      ]
+    }
+  },
+  "chtml": {
+    "scale": 0.98,
+    "mtextInheritFont": true
+  },
+  "loader": {
+    "load": [
+      "input/asciimath",
+      "[tex]/extpfeil",
+      "[tex]/amscd",
+      "[tex]/color",
+      "[tex]/newcommand",
+      "[pretext]/mathjaxknowl3.js"
+    ],
+    "paths": {
+      "pretext": "_static/pretext/js/lib"
+    }
+  },
+  "startup": {
+    pageReady() {
+      return MathJax.startup.defaultPageReady().then(function () {
+      console.log("in ready function");
+      rsMathReady();
+      }
+    )}
+  }
+};
+</script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script><meta xmlns:xlink="http://www.w3.org/1999/xlink" name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="og:type" content="book">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:title" content="CodeWave">
+<meta xmlns:xlink="http://www.w3.org/1999/xlink" property="book:author" content="John Estes">
+<script src="_static/pretext/js/lib/jquery.min.js"></script><script src="_static/pretext/js/lib/jquery.sticky.js"></script><script src="_static/pretext/js/lib/jquery.espy.min.js"></script><script src="_static/pretext/js/pretext.js"></script><script src="_static/pretext/js/pretext_add_on.js?x=1"></script><script src="_static/pretext/js/user_preferences.js"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '7.5.16';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.a0c870bab402ccbf.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f6bda0c0ccce4835.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.97de40e034b535c5.css">
+<script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script xmlns:xlink="http://www.w3.org/1999/xlink" src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script><script>// Make *any* div with class 'sagecell-python' an executable Sage cell
+// Their results will be linked, only within language type
+sagecell.makeSagecell({
+  "inputLocation": "div.sagecell-python",
+  "linked": true,
+  "linkKey": "linked-python",
+  "autoeval": false,
+  "languages": [
+    "python"
+  ],
+  "evalButtonText": "Evaluate (Python)"
+});
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead"><div class="ptx-banner"><div class="title-container">
+<h1 class="heading"><a href="my-great-book.html"><span class="title">CodeWave:</span> <span class="subtitle">An open introduction to Python</span></a></h1>
+<p class="byline">John Estes</p>
+</div></div></header><nav xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="searchbox">
+<div class="searchwidget"><button id="searchbutton" class="searchbutton button" type="button" title="Search book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<div id="searchresultsplaceholder" class="searchresultsplaceholder" style="display: none">
+<div class="search-results-controls">
+<input aria-label="Search term" id="ptxsearch" class="ptxsearch" type="text" name="terms" placeholder="Search term"><button title="Close search" id="closesearchresults" class="closesearchresults"><span class="material-symbols-outlined">close</span></button>
+</div>
+<h2 class="search-results-heading">Search Results: </h2>
+<div id="searchempty" class="searchempty"><span>No results.</span></div>
+<ol id="searchresults" class="searchresults"></ol>
+</div>
+</div>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-strings.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-intro.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-strings.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div xmlns:xlink="http://www.w3.org/1999/xlink" id="ptx-sidebar" class="ptx-sidebar"><nav id="ptx-toc" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch-intro.html" class="internal"><span class="codenumber">1</span> <span class="title">Python Basics</span></a></div>
+<ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-pythonbasics.html" class="internal"><span class="codenumber">1.1</span> <span class="title">Python Basics: Variables and Printing</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pythonbasics.html#subsec-first-program" class="internal"><span class="codenumber">1.1.1</span> <span class="title">Your First Python Program</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pythonbasics.html#subsec-variables" class="internal"><span class="codenumber">1.1.2</span> <span class="title">Variables and Printing</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pythonbasics.html#subsec-print-function" class="internal"><span class="codenumber">1.1.3</span> <span class="title">Using the <code class="code-inline tex2jax_ignore">print()</code> function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-pythonbasics.html#subsec-tiy-print" class="internal"><span class="codenumber">1.1.4</span> <span class="title">Try It Yourself: Printing</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-strings.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Strings Intro</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-strings.html#subsec-string-intro" class="internal"><span class="codenumber">1.2.1</span> <span class="title">What is a String?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-strings.html#subsec-concatenation" class="internal"><span class="codenumber">1.2.2</span> <span class="title">Concatenation</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-strings.html#subsec-string-and-numbs" class="internal"><span class="codenumber">1.2.3</span> <span class="title">Strings and Numbers</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-strings.html#subsec-string-length" class="internal"><span class="codenumber">1.2.4</span> <span class="title">String Length</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-strings.html#subsec-characters" class="internal"><span class="codenumber">1.2.5</span> <span class="title">Accessing Characters</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-strings.html#subsec-string-methods" class="internal"><span class="codenumber">1.2.6</span> <span class="title">String Methods</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-strings.html#subsec-tiy-stringbasics" class="internal"><span class="codenumber">1.2.7</span> <span class="title">Try It Yourself: String Basics</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="sec-basics-numbers.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Numbers and Math in Python</span></a></div>
+<ul class="structural toc-item-list active">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basics-numbers.html#subsec-num-types" class="internal"><span class="codenumber">1.3.1</span> <span class="title">Types of Numbers in Python</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basics-numbers.html#subsec-math-ops" class="internal"><span class="codenumber">1.3.2</span> <span class="title">Math Operators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basics-numbers.html#subsec-tiy-numops" class="internal"><span class="codenumber">1.3.3</span> <span class="title">Try It Yourself: Math Operators</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basics-numbers.html#subsec-vars-math" class="internal"><span class="codenumber">1.3.4</span> <span class="title">Variables and Math</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-basics-numbers.html#sec-basics-numbers-7" class="internal"><span class="codenumber">1.3.5</span> <span class="title">Try It Yourself: Math and Variables</span></a></div></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-strings.html" class="internal"><span class="codenumber">2</span> <span class="title">Working with Strings</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-basics-projects.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Mini Project: Mad-libs</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-basics-numbers"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">1.3</span><span class="space"> </span><span class="title">Numbers and Math in Python</span>
+</h2>
+<div class="para logical" id="sec-basics-numbers-2">
+<div class="para">By the end of this lesson, you’ll be able to:</div>
+<ul class="disc" id="sec-basics-numbers-2-1">
+<li id="sec-basics-numbers-2-1-1"><div class="para" id="sec-basics-numbers-2-1-1-1">Work with numbers in Python (integers and decimals).</div></li>
+<li id="sec-basics-numbers-2-1-2"><div class="para" id="sec-basics-numbers-2-1-2-1">Use basic math operators to do calculations.</div></li>
+<li id="sec-basics-numbers-2-1-3"><div class="para" id="sec-basics-numbers-2-1-3-1">Write expressions using variables and numbers.</div></li>
+</ul>
+</div>
+<section class="subsection" id="subsec-num-types"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="space"> </span><span class="title">Types of Numbers in Python</span>
+</h3>
+<div class="para logical" id="subsec-num-types-2">
+<div class="para">Python has two different number structures: integers and floats.</div>
+<ul class="disc" id="subsec-num-types-2-1">
+<li id="subsec-num-types-2-1-1"><div class="para" id="subsec-num-types-2-1-1-1">Integers – whole numbers like <code class="code-inline tex2jax_ignore">5</code>, <code class="code-inline tex2jax_ignore">-12</code>, or <code class="code-inline tex2jax_ignore">0</code>
+</div></li>
+<li id="subsec-num-types-2-1-2"><div class="para" id="subsec-num-types-2-1-2-1">Floats – decimal numbers like <code class="code-inline tex2jax_ignore">3.14</code> or <code class="code-inline tex2jax_ignore">2.0</code>
+</div></li>
+</ul>
+</div>
+<div class="para" id="subsec-num-types-3"><div id="subsec-num-types-3-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">                    apples = 4          # Integer
+price = 1.99        # Float
+</script></div></div>
+<div class="para" id="subsec-num-types-4">It is important to remember if your application needs an integer or a float. Python does not think of 4 and 4.0 as the same thing!</div></section><section class="subsection" id="subsec-math-ops"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="space"> </span><span class="title">Math Operators</span>
+</h3>
+<div class="para" id="subsec-math-ops-2">Like a calculator, Python uses common symbols to do math:</div>
+<figure class="table table-like" id="subsec-math-ops-3"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.1<span class="period">.</span></span><span class="space"> </span>Common Arithmetic Operators</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Operator</td>
+<td class="l m b0 r0 l0 t0 lines">Symbol</td>
+<td class="l m b0 r0 l0 t0 lines">Example</td>
+<td class="l m b0 r0 l0 t0 lines">Result</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Addition</td>
+<td class="l m b0 r0 l0 t0 lines">+</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3 + 5\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Subtraction</td>
+<td class="l m b0 r0 l0 t0 lines">-</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10 - 4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(6\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Multiplication</td>
+<td class="l m b0 r0 l0 t0 lines">\(\times\) or \(\cdot\) or <code class="code-inline tex2jax_ignore">*</code>
+</td>
+<td class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(2 \times 6\)</span> or <span class="process-math">\(2 \cdot 6\)</span> or <code class="code-inline tex2jax_ignore">2 * 6</code>
+</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(12\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Division</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">/</code></td>
+<td class="l m b0 r0 l0 t0 lines">
+<span class="process-math">\(15 /slash 3\)</span> or <code class="code-inline tex2jax_ignore">15 / 3</code>
+</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(5\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Exponentiation</td>
+<td class="l m b0 r0 l0 t0 lines">**</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">2 ** 3</code></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(8\)</span></td>
+</tr>
+</table></div></figure><div class="para" id="subsec-math-ops-4"><div id="subsec-math-ops-4-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">print(5 + 3)
+print(10 / 4)
+print(2 ** 5)
+</script></div></div>
+<div class="para" id="subsec-math-ops-5">In addition to these common operators, Python has a couple of additional not-so-common-yet-common operators called Modulus and Floor Division.</div>
+<figure class="table table-like" id="subsec-math-ops-6"><figcaption><span class="type">Table</span><span class="space"> </span><span class="codenumber">1.3.2<span class="period">.</span></span><span class="space"> </span>Common Arithmetic Operators</figcaption><div class="tabular-box natural-width"><table class="tabular">
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Operator</td>
+<td class="l m b0 r0 l0 t0 lines">Symbol</td>
+<td class="l m b0 r0 l0 t0 lines">Example</td>
+<td class="l m b0 r0 l0 t0 lines">Result</td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Modulus</td>
+<td class="l m b0 r0 l0 t0 lines">%</td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10 % 3\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(1\)</span></td>
+</tr>
+<tr>
+<td class="l m b0 r0 l0 t0 lines">Floor Division</td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">/ / </code></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10 /slash /slash 4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
+</tr>
+</table></div></figure><div class="para" id="subsec-math-ops-7">The Modulus operator gives you the remainder after division. For example, <code class="code-inline tex2jax_ignore">13% 3</code> is <code class="code-inline tex2jax_ignore">1</code>. Floor Division give you the quotient, or in other words floor division rounds down to the nearest integer after dividing. For example, <code class="code-inline tex2jax_ignore">13 // 3</code> is <code class="code-inline tex2jax_ignore">4</code>.</div></section><section class="subsection" id="subsec-tiy-numops"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="space"> </span><span class="title">Try It Yourself: Math Operators</span>
+</h3>
+<details id="subsec-tiy-numops-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.3</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="subsec-tiy-numops-2-1">
+<div class="para">Write code that calculates and prints:</div>
+<ol class="decimal" id="subsec-tiy-numops-2-1-1">
+<li id="subsec-tiy-numops-2-1-1-1"><div class="para" id="subsec-tiy-numops-2-1-1-1-1">the sum of 12 and 8</div></li>
+<li id="subsec-tiy-numops-2-1-1-2"><div class="para" id="subsec-tiy-numops-2-1-1-2-1">the product of 7 and 5</div></li>
+<li id="subsec-tiy-numops-2-1-1-3"><div class="para" id="subsec-tiy-numops-2-1-1-3-1">the result of 15 divided by 4</div></li>
+</ol>
+<div class="para">Also print what type (integer or float) of each of the results.</div>
+</div>
+<div class="para" id="subsec-tiy-numops-2-2"><div id="subsec-tiy-numops-2-2-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">print("The number", 34 - 21, " is an integer.") # printing 34-21   
+ # The sum of 12 and 8. What type of number results?
+ # The product of 7 and 5. What type of number results?
+ #	The result of 15 divided by 4. What type of number results?
+</script></div></div></article></details><details id="subsec-tiy-numops-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para logical" id="subsec-tiy-numops-3-1">
+<div class="para">Write code that calculates and prints:</div>
+<ol class="decimal" id="subsec-tiy-numops-3-1-1">
+<li id="subsec-tiy-numops-3-1-1-1"><div class="para" id="subsec-tiy-numops-3-1-1-1-1">the remainder when 82 is divided by 7.</div></li>
+<li id="subsec-tiy-numops-3-1-1-2"><div class="para" id="subsec-tiy-numops-3-1-1-2-1">the quotient when 1036 is divded by 9.</div></li>
+</ol>
+</div>
+<div class="para" id="subsec-tiy-numops-3-2"><div id="subsec-tiy-numops-3-2-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage"># The remainder when 82 is divided by 7
+# The quotient when 1036 is divided by 9
+</script></div></div></article></details></section><section class="subsection" id="subsec-vars-math"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.4</span><span class="space"> </span><span class="title">Variables and Math</span>
+</h3>
+<div class="para" id="subsec-vars-math-2">You can combine variables and numbers:</div>
+<div id="subsec-vars-math-3" class="ptx-sagecell sagecell-python"><script type="text/x-sage">a = 10
+b = 3
+
+sum = a + b
+difference = a - b
+
+print("Sum:", sum)
+print("Difference:", difference)
+</script></div>
+<div class="para" id="subsec-vars-math-4">You can even update variables: <div id="subsec-vars-math-4-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">count = 5
+count = count + 1  
+print(count)       # Outputs: 6
+</script></div>
+</div>
+<div class="para" id="subsec-vars-math-5">We can even short-cut the previous example with count += 1. <div id="subsec-vars-math-5-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">                    count = 5
+count += 1  
+print(count)       # Outputs: 6
+</script></div>
+</div></section><section class="subsection" id="sec-basics-numbers-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="space"> </span><span class="title">Try It Yourself: Math and Variables</span>
+</h3>
+<details id="sec-basics-numbers-7-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.5</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec-basics-numbers-7-2-1-1">Create a simple shopping calculation. <div id="sec-basics-numbers-7-2-1-1-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">price = 2.50
+quantity = 4
+total = price * quantity
+
+print("Total cost:", total)
+</script></div>
+</div> <div class="para" id="sec-basics-numbers-7-2-1-2">Try making your own example with different numbers!</div></article></details><details id="sec-basics-numbers-7-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
+<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec-basics-numbers-7-3-1">Write a small “math quiz” program. This example includes a few things we have not yet seen that we will cover in more detail later. <div id="sec-basics-numbers-7-3-1-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">                    # Math Quiz!
+num1 = 10
+num2 = 3
+
+print("What is", num1, "+", num2, "?")
+answer = int(input("Your answer: "))
+
+if answer == num1 + num2:
+    print("Correct!")
+else:
+    print("Oops! The right answer is", num1 + num2)
+</script></div>
+</div>
+<div class="para" id="sec-basics-numbers-7-3-2">Can you adjust the code to make your own quiz using subtraction, multiplication, or division?</div></article></details><article class="remark remark-like" id="sec-basics-numbers-7-4"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span>
+</h4>
+<ol class="decimal" id="sec-basics-numbers-7-4-1">
+<li id="sec-basics-numbers-7-4-1-1"><div class="para" id="sec-basics-numbers-7-4-1-1-1">The <code class="code-inline tex2jax_ignore">input()</code> function, which we will cover in more detail later. However, <code class="code-inline tex2jax_ignore">input()</code> allows a user to interact with a program. In this case, the user types in a number.</div></li>
+<li id="sec-basics-numbers-7-4-1-2"><div class="para" id="sec-basics-numbers-7-4-1-2-1">Question: Why do we use <code class="code-inline tex2jax_ignore">int( )</code> around the <code class="code-inline tex2jax_ignore">input()</code> function? Answer: Whatever the user types is considered a string. The <code class="code-inline tex2jax_ignore">int()</code> function converts the string to an integer.</div></li>
+<li id="sec-basics-numbers-7-4-1-3"><div class="para" id="sec-basics-numbers-7-4-1-3-1">What is the if and else stuff? <code class="code-inline tex2jax_ignore">If-else</code> structures are a way we can introduce decision making into a program. In this case, if the user gives the correct answer, we congratulate them. If they give us the wrong answer (else), we correct them</div></li>
+<li id="sec-basics-numbers-7-4-1-4"><div class="para" id="sec-basics-numbers-7-4-1-4-1">Notice how we tell if someone gave use the correct answer <code class="code-inline tex2jax_ignore">answer == num1 + num2</code>. The double equals, <code class="code-inline tex2jax_ignore">==</code>, compares answer to <code class="code-inline tex2jax_ignore">num1 + num2</code>. Python decides if this is true or false, and makes a decision based upon that truth status. We call these true-false decision Booleans, and we will discuss them in detail later.</div></li>
+</ol></article><article class="activity project-like" id="sec-basics-numbers-7-5"><h4 class="heading">
+<span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">AI Connections.</span>
+</h4>
+<div class="para" id="sec-basics-numbers-7-5-2">We just saw some code that had elements we have not talked about yet. Some of it may have been confusing. A great use of AI is getting help understanding how the code works.</div>
+<div class="para" id="sec-basics-numbers-7-5-3">As an example, visit <a class="external" href="https://www.chatgpt.com" target="_blank">ChatGPT</a><details class="ptx-footnote" aria-live="polite" id="sec-basics-numbers-7-5-3-2"><summary class="ptx-footnote__number" title="Footnote 1.3.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-basics-numbers-7-5-3-2"><code class="code-inline tex2jax_ignore">chatgpt.com</code></div></details>, the popular AI tool provided by OpenAI. Once there, ask ChatGPT to explain the following code line by line.</div>
+<div class="para" id="sec-basics-numbers-7-5-4"><code class="code-inline tex2jax_ignore"># Get three integers from the user
+            start = int(input("Enter the first integer (start of range): "))
+            end = int(input("Enter the second integer (end of range): "))
+            adder = int(input("Enter the third integer (number to add): "))
+            
+            # For loop that goes from start to end (inclusive)
+            for i in range(start, end + 1):
+                result = i + adder
+                print(f"{i} + {adder} = {result}")
+            </code></div></article></section></section></div>
+<div class="ptx-content-footer">
+<a class="previous-button button" href="sec-strings.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-strings.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a xmlns:xlink="http://www.w3.org/1999/xlink" class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a xmlns:xlink="http://www.w3.org/1999/xlink" class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
