@@ -1,0 +1,48 @@
+<section xml:id="sec-basics-projects">
+    <title>Mini Project: Mad-libs</title>
+    
+    <p>
+    In this project, we will try to combine some of the things we have learned in this chapter. It's okay to make mistakes. Break some eggs!
+    This is how we learn.
+    </p>
+    <p>
+    Mad-libs has been a popular word game for decades! In this game, people select words to fill in a story. Usually, the words are out of 
+    context, and the stories are funny. For example: </p>
+
+    <p>
+    “One day, a [adjective] [noun] decided to [verb] through the neighborhood.
+Everyone stopped and stared, but no one could believe their eyes.
+It was the start of something truly unforgettable.”
+    </p>
+
+    <p>
+    Make your own mad-libs story with at least seven blanks (adjectives, nouns, verbs, adverbs, expressions, proper names, etc.). 
+    Ask a user to input the different blanks (stored as variables), and then print the story with the user’s selected words.
+    </p>
+
+    <p>
+        We recommend 
+        <ol>
+            <li>
+                <p>
+                    declaring your variables as inputs. For example <c>adjective1 = input("Give me an adjective: ")</c>,
+                </p>
+            </li>
+            <li>
+                <p>
+                  write your story with an f-string. For example, <c>my_story = f'''This is an {adjective1} story.'''</c>,  
+                </p>
+            </li>
+            <li>
+                <p>
+                    print your story with <c>print(my_story)</c>.
+                </p>
+            </li>
+        </ol>
+    </p>
+
+    <p>
+        To complete this project, vist <url href="https://www.online-python.com/" visual="online-python.com">Online-Python</url>. Once complete,
+        save the file and share with your instructor.
+    </p>
+</section>

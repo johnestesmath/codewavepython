@@ -1,0 +1,191 @@
+<section xml:id="sec-pythonbasics">
+    <title>Python Basics: Variables and Printing</title>
+ 
+  <subsection xml:id="subsec-first-program">
+    <title>Your First Python Program</title>
+
+    <p>
+      Before you can turn the world upside down with coding, you have to start somewhere. We will start where most programmers start... 
+      simply saying "hi" to the world.
+    </p>
+
+    <sage language="python">
+      <input>
+      print("hello world!")
+      </input>
+      </sage>
+
+  <p>Excellent! Good job. We'll explain how this works </p>
+  </subsection>
+
+  <subsection xml:id="subsec-variables">
+    <title>Variables and Printing</title>
+
+    <p>
+      A variable is like a container that stores information. You can think of it like a labeled box that holds a value.
+
+For example:
+    </p>
+
+    <sage language="python">
+      <input>
+      name = "Tonya"
+      age = 14
+      print(name)
+      print(age)
+      </input>
+      </sage>
+
+    <p>
+      
+    </p>
+    <p>
+      In this example:
+      <ol>
+        <li>
+          <p>
+            <c>name</c> is a variable that stores a string: <c>Tonya</c>
+          </p>
+        </li>
+        <li>
+          <p>
+            <c>age</c> is a variable that stores a number: <c>15</c>
+          </p>
+        </li>
+      </ol>
+    
+    </p>
+
+
+    <activity xml:id="act-print-variables">
+  <title>About Me</title>
+  <statement>
+    <p>
+      Write a short "About Me" using variables and <c>print()</c>.
+    </p>
+
+    <p>
+      <sage langue="python">
+        <input>
+          name = # What's your name?
+          hobby = # What's your hobby?
+          pet = # What's your pet name?
+            
+          print("My name is", name + ".")
+          print("I love", hobby + ".")
+          print("I have a pet", pet + ".")
+        </input>      
+    
+    </sage>
+  </p>
+  </statement>  
+
+ 
+
+</activity>
+
+<remark xmlid:="remakr-variablenames">
+  <title>A Few Tips on Variable Naming</title>
+There are a few rules when naming variables, and ignoring them can either cause code errors or make you code difficult to read. Here are a few guidelines:
+
+<ol>
+  <li>
+    <p>
+      Variable names can only contain letters, numbers, and underscores. However, variables CANNOT begin with a number.
+      Valid: <c>_dog12</c>, <c>monkeyAndHisBanana</c>, <c>ti56_xd_5 </c>	Invalid: <c>48pythonRocker</c>       
+    </p>
+  </li>
+  <li>
+    <p>
+      Variable names CANNOT include spaces. Valid: <c>orange_Cat</c>	Invalid: <c>orange Cat</c>
+    </p>
+  </li>
+  <li>
+    <p>
+      Variable names should be short, but be sure to give a good descriptive name.
+  For example, <c>pet_name</c> is better than <c>p_n</c> or <c>the_name_of_my_pet</c>. 
+    </p>
+  </li>
+  <li>
+    <p>
+      Variables are case sensitive: <c>red_rover</c>, <c>Red_Rover</c>, and <c>RED_rOvEr</c> are all different variable names.
+    </p>
+  </li>
+</ol>
+
+</remark>
+
+  </subsection>
+
+  <subsection xml:id="subsec-print-function">
+    <title>Using the <c>print()</c> function </title>
+
+    <p>
+      We have already used the <c>print()</c> function, but what is it? Python’s <c>print()</c> function shows information on the screen. Revelutionary! </p>
+
+      <p>With the <c>print()</c> function, we can display a message (called a string, which we will get to soon), a variable, mathematical calculations (soon!), and a combination of such things. </p>
+    
+      <p>
+        <sage language="python">
+          <input>
+            print("Hello!")
+          </input>
+        </sage>
+      </p>
+
+      <p>
+        You can also print variables with text.
+      </p>
+
+      <p>
+        <sage language="python">
+          <input>
+            name = "Michael"
+            age = 23
+            
+            print("My name is", name)
+            print("I am", age, "years old")
+                        
+          </input>
+        </sage>
+      </p>
+
+      <p>
+        Notice how a string like “My name is” and the variable interact within a print statement. Recall that the variable name is a label for something else, and Python recognizes that within the <c>print()</c> function.
+      </p>
+  </subsection>
+
+  <subsection xml:id="subsec-tiy-print">
+    <title>Try It Yourself: Printing</title>
+    
+    <exercise>
+      <p> Create a variable called <c>favorite_color</c> and set it to your favorite color. Then print it. </p>
+    
+      <p>
+        <sage language="python">
+          <input>
+            # set a variable as favorite_color and print it
+                        
+          </input>
+        </sage>
+      </p>    
+    </exercise>
+
+    <exercise>
+
+     <p>Create three variables: name, grade, and school. Assign values to them, then use <c>print()</c> to write a short introduction about yourself.</p>
+      
+     <p> Example output: <c>Hi, my name is Sam. I'm in 10th grade at Lincoln High School</c>. </p>
+
+     <p>
+      <sage language="python">
+        <input>
+          # set three variables, name, grade, and school, and print a short introduction about yourself.                      
+        </input>
+      </sage>
+    </p> 
+      
+    </exercise>
+    
+  </subsection>
+</section>

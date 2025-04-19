@@ -5,14 +5,25 @@
   <xi:include href="./docinfo.ptx" />
 
   <book xml:id="my-great-book">
-    <title>My Great Book</title>
-    <subtitle>An example to get you started</subtitle>
+    <title>CodeWave</title>
+    <subtitle>An open introduction to Python</subtitle>
+
+    
+    <figure>
+      <image xml:id="fig-codewave" source="codewave.jpg" width="80%" />
+    </figure>
 
     <!-- Include frontmatter -->
     <xi:include href="./frontmatter.ptx" />
 
     <!-- Include chapters -->
-    <xi:include href="./ch-chapter-title.ptx" />
+    <xi:include href="./ch-intro.ptx" />
+
+    <xi:include href="./ch-strings.ptx" />
+
+
+
+
 
 
     <!-- Include backmatter -->

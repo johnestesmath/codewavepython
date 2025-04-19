@@ -5,11 +5,12 @@
 
 <frontmatter xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="frontmatter">
   <bibinfo>
-  
+
+     
     <author>
-      <personname>You</personname>
-      <department>Your department</department>
-      <institution>Your institution</institution>
+      <personname>John Estes</personname>
+      <department>Student of the OMSCS Program</department>
+      <institution>Georgia Institue of Technology</institution>
     </author>
     <date>
       <today />
@@ -28,9 +29,15 @@
   
   </bibinfo>
 
+  
+
   <titlepage>
     <titlepage-items/>
+
+    
   </titlepage>
+
+  
 
   <colophon xml:id="front-colophon">
     <colophon-items/>

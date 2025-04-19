@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Python Basics</title>
+
+   <introduction>
+      
+    
+
+    <p>
+      Python is a powerful and beginner-friendly programming language used by companies like Google, NASA, and Netflix. It's known for its easy-to-read syntax and versatility. Whether you're interested in building websites, analyzing data, or creating games, Python is a great language to start with!
+    </p>
+
+    <ol>
+      <li>
+        <p>
+          Easy to read and write
+        </p>
+      </li>
+      <li>
+        <p>
+          Widely used in real-world applications
+        </p>
+      </li>
+      <li>
+        <p>
+          Perfect for beginners
+        </p>
+      </li>
+    </ol>
+
+    
+    <p>
+      By the end of this lesson, you will be able to:
+        <ul>
+          <li>
+            <p>
+              Understand what a variable is
+            </p>
+          </li>
+          <li>
+            <p>
+              Create variables to store different types of data
+            </p>
+          </li>
+          <li>
+            <p>
+              Use the <c>print()</c> function to display values and messages.
+            </p>
+          </li>
+        </ul>
+    </p>
+
+  </introduction>
+
+  <xi:include href="./ch-intro-secs/sec-basics.ptx" />
+
+<xi:include href="./ch-intro-secs/sec-strings.ptx" />
+
+<xi:include href="./ch-intro-secs/sec-numbers.ptx" />
+
+
+</chapter>

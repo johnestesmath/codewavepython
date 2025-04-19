@@ -1,0 +1,398 @@
+<section xml:id="sec-basics-numbers">
+    <title>Numbers and Math in Python</title>
+    
+    <p>
+        By the end of this lesson, you’ll be able to:
+        <ul>
+            <li>
+                <p>
+                    Work with numbers in Python (integers and decimals). 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Use basic math operators to do calculations. 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Write expressions using variables and numbers.  
+                </p>
+            </li>
+        </ul>
+    </p>
+
+    <subsection xml:id="subsec-num-types">
+        <title>Types of Numbers in Python</title>
+
+        <p>
+            Python has two different number structures: integers and floats. 
+        
+            <ul>
+                <li>
+                    <p>
+                        Integers – whole numbers like <c>5</c>, <c>-12</c>, or <c>0</c>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Floats – decimal numbers like <c>3.14</c> or <c>2.0</c>
+                    </p>
+                </li>
+            </ul>
+        </p>
+
+        <p>
+            <sage language="python">
+                <input>
+                    apples = 4          # Integer
+price = 1.99        # Float
+
+
+
+                </input>
+            </sage>
+        </p>
+
+        <p>
+            It is important to remember if your application needs an integer or a float.
+             Python does not think of 4 and 4.0 as the same thing!
+        </p>
+        
+    </subsection>
+
+    <subsection xml:id="subsec-math-ops">
+        <title>Math Operators</title>
+        
+        <p>
+            Like a calculator, Python uses common symbols to do math:
+        </p>
+
+        <table>
+            <title>Common Arithmetic Operators</title>
+            <tabular>
+                <row>
+                    <cell>Operator</cell>
+                    <cell>Symbol</cell>
+                    <cell>Example</cell>
+                    <cell>Result</cell>
+                </row>
+                <row>
+                    <cell>Addition</cell>
+                    <cell>+</cell>
+                    <cell><m>3 + 5</m></cell>
+                    <cell><m>8</m></cell>
+                </row>
+                <row>
+                    <cell>Subtraction</cell>
+                    <cell>-</cell>
+                    <cell><m>10 - 4</m></cell>
+                    <cell><m>6</m></cell>
+                </row>
+                <row>
+                    <cell>Multiplication</cell>
+                    <cell>\(\times\) or \(\cdot\) or <c>*</c></cell>
+                    <cell><m>2 \times 6</m> or <m>2 \cdot 6</m> or <c>2 * 6</c></cell>
+                    <cell><m>12</m></cell>
+                </row>
+                <row>
+                    <cell>Division</cell>
+                    <cell> <c>/</c></cell>
+                    <cell><m>15 /slash 3</m> or <c>15 / 3</c></cell>
+                    <cell><m>5</m></cell>
+                </row>
+                <row>
+                    <cell>Exponentiation</cell>
+                    <cell> **</cell>
+                    <cell> <c>2 ** 3</c></cell>
+                    <cell><m>8</m></cell>
+                </row>
+            </tabular>
+        </table>
+
+        <p>
+            <sage language="python">
+                <input>
+                    print(5 + 3)
+                    print(10 / 4)
+                    print(2 ** 5)
+
+                    
+                </input>
+            
+            </sage>
+        </p>
+
+        <p>
+            In addition to these common operators, Python has a couple of additional not-so-common-yet-common operators called Modulus and Floor Division.
+        </p>
+
+        <table>
+            <title>Common Arithmetic Operators</title>
+            <tabular>
+                <row>
+                    <cell>Operator</cell>
+                    <cell>Symbol</cell>
+                    <cell>Example</cell>
+                    <cell>Result</cell>
+                </row>
+                <row>
+                    <cell>Modulus</cell>
+                    <cell>%</cell>
+                    <cell><m>10 % 3</m></cell>
+                    <cell><m>1</m></cell>
+                </row>
+                <row>
+                    <cell>Floor Division</cell>
+                    <cell> <c>/ / </c></cell>
+                    <cell><m>10 /slash /slash 4</m></cell>
+                    <cell><m>3</m></cell>
+                </row>
+                
+            </tabular>
+        </table>
+
+        <p>
+            The Modulus operator gives you the remainder after division. 
+            For example, <c>13% 3</c> is <c>1</c>. Floor Division give you the quotient, or in other words floor division rounds down to 
+            the nearest integer after dividing. For example, <c>13 // 3</c> is <c>4</c>. 
+        </p>
+    </subsection>
+
+    <subsection xml:id="subsec-tiy-numops">
+        <title>Try It Yourself: Math Operators</title>
+        
+        <exercise>
+            <p>
+                Write code that calculates and prints:
+                <ol>
+                    <li>
+                        <p>
+                            the sum of 12 and 8
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            the product of 7 and 5
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            the result of 15 divided by 4
+                        </p>
+                    </li>
+                </ol>
+                Also print what type (integer or float) of each of the results.
+            </p>
+
+            <p>
+                <sage language="python">
+                    <input>
+                     print("The number", 34 - 21, " is an integer.") # printing 34-21   
+                      # The sum of 12 and 8. What type of number results?
+                      # The product of 7 and 5. What type of number results?
+                      #	The result of 15 divided by 4. What type of number results?  
+                    </input>
+                </sage>
+            </p>
+        </exercise>
+
+        <exercise>
+            <p>
+                Write code that calculates and prints:
+                <ol>
+                    <li>
+                        <p>
+                            the remainder when 82 is divided by 7.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            the quotient when 1036 is divded by 9.
+                        </p>
+                    </li>
+                </ol>
+            </p>
+
+            <p>
+                <sage language="python">
+                    <input>
+                      # The remainder when 82 is divided by 7
+                      # The quotient when 1036 is divided by 9
+                    </input>
+                </sage>
+            </p>
+            
+        </exercise>
+    </subsection>
+
+    <subsection xml:id="subsec-vars-math">
+        <title>Variables and Math</title>
+        
+        <p>
+            You can combine variables and numbers:
+        </p>
+
+        <sage language="python">
+            <input>
+                a = 10
+                b = 3
+                
+                sum = a + b
+                difference = a - b
+                
+                print("Sum:", sum)
+                print("Difference:", difference)               
+                
+            </input>
+        </sage>
+
+        <p>
+            You can even update variables:
+
+            <sage language="python">
+                <input>
+                    count = 5
+                    count = count + 1  
+                    print(count)       # Outputs: 6                    
+                </input>
+            </sage>
+        </p>
+
+        <p>
+            We can even short-cut the previous example with count += 1.
+
+            <sage language="python">
+                <input>
+                    count = 5
+count += 1  
+print(count)       # Outputs: 6
+
+                </input>
+            </sage>
+        </p>
+    </subsection>
+
+    <subsection xmlid="subs-tyi-calc">
+        <title>Try It Yourself: Math and Variables</title>
+    
+        <exercise>
+            <statement>
+                <p>
+                    Create a simple shopping calculation.
+                
+                    <sage language="python">
+                        <input>
+                            price = 2.50
+                            quantity = 4
+                            total = price * quantity
+                            
+                            print("Total cost:", total)
+                              
+                        </input>
+                    </sage>
+                
+                </p>
+
+                <p>
+                    Try making your own example with different numbers!
+                </p>
+
+            </statement>
+        </exercise>
+
+        <exercise>
+            <p>
+                Write a small “math quiz” program. 
+                This example includes a few things we have not yet seen that we will cover in more detail later.
+            
+            <sage language="python">
+                <input>
+                    # Math Quiz!
+num1 = 10
+num2 = 3
+
+print("What is", num1, "+", num2, "?")
+answer = int(input("Your answer: "))
+
+if answer == num1 + num2:
+    print("Correct!")
+else:
+    print("Oops! The right answer is", num1 + num2)
+
+                </input>
+            </sage>
+           
+            </p>
+
+            <p>
+                Can you adjust the code to make your own quiz using subtraction, multiplication, or division?
+            </p>
+
+
+
+        </exercise>
+
+        <remark>
+            We will cover these concepts in more detail later, but let’s point out what we haven’t seen before.
+
+            <ol>
+                <li>
+                    <p>
+                    The <c>input()</c> function, which we will cover in more detail later. However, <c>input()</c> allows a user to interact with a program. 
+                    In this case, the user types in a number. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                    Question: Why do we use <c>int( )</c> around the <c>input()</c> function? 
+                    Answer: Whatever the user types is considered a string. The <c>int()</c> function converts the string to an integer. 
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        What is the if and else stuff? <c>If-else</c> structures are a way we can introduce decision making into a program. In this case, 
+                        if the user gives the correct answer, we congratulate them. If they give us the wrong answer (else), we correct them
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Notice how we tell if someone gave use the correct answer <c>answer == num1 + num2</c>.  
+                        The double equals, <c>==</c>, compares answer to <c>num1 + num2</c>. Python decides if this is true or false, 
+                        and makes a decision based upon that truth status. We call these true-false decision Booleans, and we will discuss them in detail later. 
+                    </p>
+                </li>
+            </ol>
+        </remark>
+
+        <activity>
+        <title>AI Connections</title>
+        <p>
+           We just saw some code that had elements we have not talked about yet. Some of it may have been confusing. A great use of AI
+           is getting help understanding how the code works. 
+        </p>
+
+        <p>
+        As an example, visit <url href="https://www.chatgpt.com" visual="chatgpt.com">ChatGPT</url>, the popular AI tool provided by 
+        OpenAI. Once there, ask ChatGPT to explain the following code line by line. 
+        </p>
+
+        <p>
+        <c># Get three integers from the user
+            start = int(input("Enter the first integer (start of range): "))
+            end = int(input("Enter the second integer (end of range): "))
+            adder = int(input("Enter the third integer (number to add): "))
+            
+            # For loop that goes from start to end (inclusive)
+            for i in range(start, end + 1):
+                result = i + adder
+                print(f"{i} + {adder} = {result}")
+            </c>
+        </p>
+        
+            
+    </activity>
+    </subsection>
+
+
+</section>

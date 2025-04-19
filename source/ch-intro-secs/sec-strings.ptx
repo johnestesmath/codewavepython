@@ -1,0 +1,223 @@
+<section xml:id="sec-strings">
+    <title>Strings Intro</title>
+  
+    <subsection xml:id="subsec-string-intro">
+      <title>What is a String?</title>
+  
+      <p>
+        We have already given examples of strings, like “My name is” and “Hello World”, 
+        but what is a string exactly? Simply stated, a string is a sequence of characters, 
+        and you can create a string by putting text inside quotes — either single (') or double (").
+      </p>
+  
+      <p>
+        As we saw earlier, you can assign a string to a variable and use it later. For example
+  
+        <sage language="python">
+          <input>
+            greeting = "Hi there!"
+  print(greeting)
+          </input>
+        </sage>
+      </p>
+  
+      <p>
+        Python has a lot of built-in tools to handle strings. 
+        We can build new strings from existing strings, decide how long a string is, and all other sorts of things.
+      </p>
+      
+    </subsection>
+    
+    <subsection xml:id="subsec-concatenation">
+      <title>Concatenation</title>
+  
+      <p>
+        You can add or join strings together (called concatenation) using the <c>+</c> operator. For example:
+  
+        <sage language="python">
+          <input>
+            first_name = "Ada"
+  last_name = "Lovelace"
+  full_name = first_name + " " + last_name
+  print(full_name)
+  
+  print("1" + "1 = " + "1 + 1")
+          </input>
+        </sage>
+      </p>
+  
+      <p>
+        Note that we had to include an empty space after <c>first_name</c>. Try removing the empty space and see what happens.
+      </p>
+  
+      <exercise>
+        <p>
+          Print a list of groceries by setting six different variables to food items and concatenating your items into a list. 
+        </p>
+  
+        <sage language="python">
+          <input>
+           # set six food items to variable and print them in a list 
+          </input>
+        </sage>
+      </exercise>
+      
+    </subsection>
+  
+    <subsection xml:id="subsec-string-and-numbs">
+      <title>Strings and Numbers</title>
+  
+      <p>
+        Numbers play a big role in coding, and we will spend more time on numbers shortly. 
+        In the meantime, we will just look at how numbers and strings interact.
+  
+        <sage language="python">
+          <input>
+            #Try this:
+  age = 30
+  print("I am " + age + "years old.")
+  
+          </input>
+          
+        </sage>
+      </p>
+  
+      <p>
+        You should receive an error! Why? Because we are trying to concatenate two different objects: one string and one number. 
+        Python does not know how to do that! However, we can convert the number to a string using <c>str()</c>:
+      
+        <sage language="python">
+          <input>
+            age = 30
+            print("I am " + str(age) + "years old.")
+  
+          </input>
+          
+        </sage>
+      </p>
+  
+      <remark>
+        <p>
+          In Python’s mind, 30 and ‘30’ are two different things. Understanding the difference is very important to an aspiring programmer.
+        </p>
+      </remark>
+      
+    </subsection>
+  
+    <subsection xml:id="subsec-string-length">
+      <title>String Length</title>
+  
+      <p>
+        Sometimes we may need to know how long a string is. How many characters are in the sentence “How many characters are in this sentence?” 
+        Use the <c>len()</c> function to find out how many characters are in a string.
+  
+        <sage>
+          <input>
+            sentence = "How many characters are in this sentence?"
+            print(len(sentence))
+            
+          </input>
+        </sage>
+      </p>
+  
+      <p>
+        Note that we are also counting the blank spaces and punctuation marks in this sentence. If we wanted to know how many letters this sentence contained, 
+        then we would need a few more tools that we will learn later on.
+      </p>
+      
+    </subsection>
+  
+    <subsection xml:id="subsec-characters">
+      <title>Accessing Characters</title>
+      
+      <p>
+        What is the seventh character of the sentence “What is the seventh character of this sentence?” 
+        You can access individual characters in a string using indexing. A character’s index refers is the position 
+        number of that character in a string. 
+      </p>
+  
+      <p>
+        For example, for the string <c>text = "Hello"</c>, the character of index 1 is e. We start the count at 0.
+      <sage language="python">
+        <input>
+          text = "Hello"
+  print(text[0])  # H
+  print(text[1])  # e
+  print(text[4])  # o
+        </input>
+      </sage>
+      
+      </p>
+    </subsection>
+  
+    <subsection xml:id="subsec-string-methods">
+      <title>String Methods</title>
+      
+      <p>
+        Python is full of built-in functions we call methods. 
+        Several methods are specifically for strings and can be used with dot (.) notation:
+      
+        <sage language="python">
+          <input>
+            message = "hello world"
+  
+  print(message.upper())    # HELLO WORLD
+  print(message.capitalize())  # Hello world
+  print(message.replace("world", "Python"))  # hello Python
+  
+          </input>
+        </sage>
+      
+      </p>
+  
+      <p>
+        We will spend more time learning how to format strings in a future lesson.
+      </p>
+    </subsection>
+  
+  <subsection xml:id="subsec-tiy-stringbasics">
+    <title>Try It Yourself: String Basics</title>
+    
+    <p>
+      Try the following exercises. Don't be afraid of making errors. That's how we learn.
+    </p>
+  
+  <exercise>
+    <p>
+      Complete the following.
+      <ol>
+        <li>
+          <p>
+            Create a string variable that holds your favorite quote.
+          </p>
+        </li>
+        <li>
+          <p>
+            Print the length of the quote.
+          </p>
+        </li>
+        <li>
+          <p>
+            Replace one word in the quote using <c>.replace()</c>.
+          </p>
+        </li>
+        <li>
+          <p>
+            Print the quote in ALL CAPS.
+          </p>
+        </li>
+      </ol>
+    </p>
+    <sage>
+      <input>
+        # 1.	Create a string variable that holds your favorite quote.
+        # 2.	Print the length of the quote.
+        # 3.	Replace one word in the quote using .replace().
+        # 4.	Print the quote in ALL CAPS.
+      </input>
+    </sage>
+  </exercise>
+  
+  </subsection>
+  
+  </section>
