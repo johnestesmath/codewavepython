@@ -5,6 +5,7 @@
 
   <introduction>
     <p> In this lesson, you'll learn how to:
+
       •	Work with strings (text data) in Python
       •	Create multi-line strings
       •	Use f-strings and .format() to combine text and variables
