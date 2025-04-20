@@ -4,9 +4,16 @@
   <title>Working with Strings</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p> In this lesson, you'll learn how to:
+      •	Work with strings (text data) in Python
+      •	Create multi-line strings
+      •	Use f-strings and .format() to combine text and variables
+      •	Take input from a user using input()
+      •	String manipulation methods
+      . </p>
   </introduction>
 
+  <xi:include href="./ch-strings-secs/sec-whatisstring.ptx" />
   
   <xi:include href="./ch-strings-secs/sec-project.ptx" />
 
