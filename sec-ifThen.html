@@ -8,7 +8,7 @@
 <html lang="en-US" dir="ltr">
 <head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>If-Thens and Loops</title>
+<title>Conditional Statements</title>
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.googleapis.com">
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <link xmlns:xlink="http://www.w3.org/1999/xlink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
@@ -153,7 +153,7 @@ sagecell.makeSagecell({
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-strings-project2.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="my-great-book.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-booleans.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-booleans.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-loops.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -230,36 +230,39 @@ sagecell.makeSagecell({
 </li>
 <li class="toc-item toc-chapter contains-active">
 <div class="toc-title-box"><a href="ch-loops.html" class="internal"><span class="codenumber">3</span> <span class="title">If-Thens and Loops</span></a></div>
-<ul class="structural toc-item-list active">
+<ul class="structural toc-item-list contains-active">
 <li class="toc-item toc-section">
 <div class="toc-title-box"><a href="sec-booleans.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Booleans: True and False</span></a></div>
 <ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-booleans.html#subsec-boolean-logic" class="internal"><span class="codenumber">3.1.1</span> <span class="title">Boolean Logic</span></a></div></li></ul>
 </li>
-<li class="toc-item toc-section">
+<li class="toc-item toc-section contains-active">
 <div class="toc-title-box"><a href="sec-ifThen.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Conditional Statements</span></a></div>
-<ul class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ifThen.html#subsec-" class="internal"><span class="codenumber">3.2.1</span> <span class="title">If Statements</span></a></div></li></ul>
+<ul class="structural toc-item-list active"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-ifThen.html#subsec-" class="internal"><span class="codenumber">3.2.1</span> <span class="title">If Statements</span></a></div></li></ul>
 </li>
 </ul>
 </li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
-<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section class="chapter" id="ch-loops"><h2 class="heading">
-<span xmlns:xlink="http://www.w3.org/1999/xlink" class="type">Chapter</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="space"> </span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="codenumber">3</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="space"> </span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="title">If-Thens and Loops</span>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-ifThen"><h2 class="heading hide-type">
+<span class="type">Section</span><span class="space"> </span><span class="codenumber">3.2</span><span class="space"> </span><span class="title">Conditional Statements</span>
 </h2>
-<section xmlns:xlink="http://www.w3.org/1999/xlink" class="introduction" id="ch-loops-2"><div class="para logical" id="ch-loops-2-1">
-<div class="para">So far, you’ve learned how to work with variables, numbers, and strings. Now, we will learn how to code decision making. In this chapter, you’ll learn how to make your programs think—by evaluating conditions and choosing what to do next. This is where control flow comes in. Python provides several powerful tools for control flow:</div>
-<ol class="decimal" id="ch-loops-2-1-1">
-<li id="ch-loops-2-1-1-1"><div class="para" id="ch-loops-2-1-1-1-1">Booleans: The foundation of logic in programming</div></li>
-<li id="ch-loops-2-1-1-2"><div class="para" id="ch-loops-2-1-1-2-1">Conditional statements: if, if-else, and if-elif-else</div></li>
-<li id="ch-loops-2-1-1-3"><div class="para" id="ch-loops-2-1-1-3-1">Loops: for and while loops for repeating actions</div></li>
-</ol>
-<div class="para">Let’s break it all down.</div>
-</div></section><nav class="summary-links"><ul>
-<li xmlns:xlink="http://www.w3.org/1999/xlink"><a href="sec-booleans.html" class="internal"><span class="codenumber">3.1</span> <span class="title">Booleans: True and False</span></a></li>
-<li xmlns:xlink="http://www.w3.org/1999/xlink"><a href="sec-ifThen.html" class="internal"><span class="codenumber">3.2</span> <span class="title">Conditional Statements</span></a></li>
-</ul></nav></section></div>
+<div class="para" id="sec-ifThen-2">Conditional statements let you branch your code—only running certain blocks when specific conditions are met. We make these decisions through Boolean values. We’ll look at the most common conditional statements: <code class="code-inline tex2jax_ignore">if</code>, <code class="code-inline tex2jax_ignore">if-then</code>, and <code class="code-inline tex2jax_ignore">if-elif-else</code>
+</div>
+<section class="subsection" id="subsec-"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="space"> </span><span class="title">If Statements</span>
+</h3>
+<div class="para" id="subsec--2">Let’s look at an example. <div id="subsec--2-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">age = 18
+if age >= 18:
+    print("You can vote!")
+</script></div>
+</div>
+<div class="para" id="subsec--3">The code inside the <code class="code-inline tex2jax_ignore">if</code> block only runs if the condition is True. In this case, we print "You can vote!" if the age is at least 18.</div>
+<article class="remark remark-like" id="subsec--4"><h4 class="heading">
+<span class="type">Remark</span><span class="space"> </span><span class="codenumber">3.2.1</span><span class="period">.</span>
+</h4>
+<div class="para" id="subsec--4-1">Notice the indentation: Python uses indentation (typically 4 spaces) to define blocks of code. Generally speaking, (and you may have discovered this on your own already) Python is picky with indentation. Here, the indentation tells Python what all is considered to be in your <code class="code-inline tex2jax_ignore">if</code> block.</div></article></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-strings-project2.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-booleans.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-booleans.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="backmatter.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">

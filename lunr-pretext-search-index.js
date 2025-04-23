@@ -172,13 +172,157 @@ var ptx_lunr_docs = [
   "body": " AI Connections  We just saw some code that had elements we have not talked about yet. Some of it may have been confusing. A great use of AI is getting help understanding how the code works.  As an example, visit ChatGPT , the popular AI tool provided by OpenAI. Once there, ask ChatGPT to explain the following code line by line.   # Get three integers from the user start = int(input(\"Enter the first integer (start of range): \")) end = int(input(\"Enter the second integer (end of range): \")) adder = int(input(\"Enter the third integer (number to add): \")) # For loop that goes from start to end (inclusive) for i in range(start, end + 1): result = i + adder print(f\"{i} + {adder} = {result}\")   "
 },
 {
-  "id": "sec-basics-projects",
+  "id": "ch-strings-3",
   "level": "1",
-  "url": "sec-basics-projects.html",
+  "url": "ch-strings-3.html",
   "type": "Section",
   "number": "2.1",
+  "title": "What is a String?",
+  "body": " What is a String?  We already talked about strings. Remember that a string is a sequence of characters. You can think of a string as any text inside quotes. As long as a statement has quotes ' ' , double quotes \" \" , or even triple quotes ( ''' ''' or \"\"\" \"\"\" ), Python will recognize it as a string.    Reflection   How could we store \"I'm eating Bobby's pizza.\"?    We could store just as is written! message = \"I'm eating Bobby's pizza.\"      Multi-line Strings  Sometimes we wish to include a lot of text as one string instead of many smaller strings. You can write strings that span multiple lines using triple quotes ( ''' or \"\"\" ), and note we don’t have     F-strings  We've seen examples of how to include variables in the middle of a print statement. For example,   However, this technique is not always convenient. Instead, f-strings make it easier to include variables in your text. Just add an f before the string and put variables in {} .   You can even do math inside an f-string:     String Formatting  We can also use .format()    You can also number the placeholders:    "
+},
+{
+  "id": "ch-strings-3-3",
+  "level": "2",
+  "url": "ch-strings-3.html#ch-strings-3-3",
+  "type": "Checkpoint",
+  "number": "2.1.1",
+  "title": "Reflection.",
+  "body": " Reflection   How could we store \"I'm eating Bobby's pizza.\"?    We could store just as is written! message = \"I'm eating Bobby's pizza.\"    "
+},
+{
+  "id": "sec-string-manipulation",
+  "level": "1",
+  "url": "sec-string-manipulation.html",
+  "type": "Section",
+  "number": "2.2",
+  "title": "String Manipulation in Python",
+  "body": " String Manipulation in Python   We use strings in almost every Python application we dream up, and understanding how to work with strings is critically important. In particular, we need to know string manipulation. String manipulation means working with or changing strings to get the information or format you need.    String Concactenation  We saw how to concactenate strings in the last chapter. However, it's such an important topic that it's worth repeating! Don't forget: You can combine strings using the + operator.   You can also repeat strings using * :     String Methods  Just like concatenation, we saw some methods that Python has to manipulate strings. We now will present a more comprehensive (but not totally comprehensive!) list of string methods.     Method  Description  Example    .lower()  Converts to lowercase  \"HELLO\".lower() → \"hello\"    .upper()  Converts to uppercase  \"hello\".upper() → \"HELLO\"    .capitalize()  Capitalizes first letter  \"python\".capitalize() → \"Python\"    .title()  Capitalizes each word  \"hello world\".title() → \"Hello World\"    .strip()  Removes spaces from both ends  \" hello \".strip() → \"hello\"    .replace()  Replaces part of a string  \"cat\".replace(\"c\", \"b\") → \"bat\"    .find()  Finds the position of a substring  \"banana\".find(\"na\") → 2    .count()  Counts how many times a substring appears  \"banana\".count(\"a\") → 3       Try It Yourself: String Manipulation  Try the following exercises. Don’t be afraid of making errors. That’s how we learn.   Consider the following statement: \" If we TaKE the CHILDREN's tickets, tHEN THey won'T be able tO Go To ThE North pole. \" Clean up the statement so that the string starts with \"I\" and ends with \".\", the first letter is capitolized, and the other words are lower case. Try using the following:    .strip()      .lower()      .capitalize()         How many times does the letter e appear in the sentence: \"Elephants never forget to elevate their feet when at the equator.\"? (Including the capitol E!)     Replace the word \"boring\" with \"exciting\"... because that's the truth, right? \"This class is boring.\"     Find where in the sentence the word \"fox\" is located in the sentence \"The quick brown fox jumps over the lazy dog.\"      String Indexes  As we saw in the previous chapter, each character in a string has an associated number called its index. You can access individual characters in a string using indexing. Just don't forget that Python starts counting from 0.   You can also grab parts of strings using \"slicing\". This is also a very helpful technique.   We can even use negative indices! A negative index refers to counting backwards from the end.    "
+},
+{
+  "id": "subsec-stringmethods-3",
+  "level": "2",
+  "url": "sec-string-manipulation.html#subsec-stringmethods-3",
+  "type": "Table",
+  "number": "2.2.1",
+  "title": "",
+  "body": "   Method  Description  Example    .lower()  Converts to lowercase  \"HELLO\".lower() → \"hello\"    .upper()  Converts to uppercase  \"hello\".upper() → \"HELLO\"    .capitalize()  Capitalizes first letter  \"python\".capitalize() → \"Python\"    .title()  Capitalizes each word  \"hello world\".title() → \"Hello World\"    .strip()  Removes spaces from both ends  \" hello \".strip() → \"hello\"    .replace()  Replaces part of a string  \"cat\".replace(\"c\", \"b\") → \"bat\"    .find()  Finds the position of a substring  \"banana\".find(\"na\") → 2    .count()  Counts how many times a substring appears  \"banana\".count(\"a\") → 3    "
+},
+{
+  "id": "subsec-tiy-manipulate-3",
+  "level": "2",
+  "url": "sec-string-manipulation.html#subsec-tiy-manipulate-3",
+  "type": "Checkpoint",
+  "number": "2.2.2",
+  "title": "",
+  "body": " Consider the following statement: \" If we TaKE the CHILDREN's tickets, tHEN THey won'T be able tO Go To ThE North pole. \" Clean up the statement so that the string starts with \"I\" and ends with \".\", the first letter is capitolized, and the other words are lower case. Try using the following:    .strip()      .lower()      .capitalize()       "
+},
+{
+  "id": "subsec-tiy-manipulate-4",
+  "level": "2",
+  "url": "sec-string-manipulation.html#subsec-tiy-manipulate-4",
+  "type": "Checkpoint",
+  "number": "2.2.3",
+  "title": "",
+  "body": " How many times does the letter e appear in the sentence: \"Elephants never forget to elevate their feet when at the equator.\"? (Including the capitol E!)   "
+},
+{
+  "id": "subsec-tiy-manipulate-5",
+  "level": "2",
+  "url": "sec-string-manipulation.html#subsec-tiy-manipulate-5",
+  "type": "Checkpoint",
+  "number": "2.2.4",
+  "title": "",
+  "body": " Replace the word \"boring\" with \"exciting\"... because that's the truth, right? \"This class is boring.\"   "
+},
+{
+  "id": "subsec-tiy-manipulate-6",
+  "level": "2",
+  "url": "sec-string-manipulation.html#subsec-tiy-manipulate-6",
+  "type": "Checkpoint",
+  "number": "2.2.5",
+  "title": "",
+  "body": " Find where in the sentence the word \"fox\" is located in the sentence \"The quick brown fox jumps over the lazy dog.\"   "
+},
+{
+  "id": "sec-input",
+  "level": "1",
+  "url": "sec-input.html",
+  "type": "Section",
+  "number": "2.3",
+  "title": "User Input",
+  "body": " User Input  A big part of programming involves asking the program's user for some sort of input.   username and password    setting preferences    their favorite color     We can easily interact with a program user with input() . Use the input() function to ask the user a question and get their answer.    The input() function always gives us (or returns) a string. If you want a number, convert it using int() or float() .    Use input() is an exteremely valuable tool to add to your growing, programming toolkit!   Try It Yourself: Strings and Inputs  Try the following exercises. Don’t be afraid of making errors. That’s how we learn.   Making Introductions  Ask a user for (1) their name, (2) their favorite animal, and (3) a place they would like to visit. Then summarize their answers with a sentence.    Ask a user for a sentence. Then   convert the sentence to lowercase    count the number of times the letter 's' appears    replace all spaces with an underscore '_'    print the resulting sentence.      "
+},
+{
+  "id": "sec-input-4",
+  "level": "2",
+  "url": "sec-input.html#sec-input-4",
+  "type": "Remark",
+  "number": "2.3.1",
+  "title": "",
+  "body": " The input() function always gives us (or returns) a string. If you want a number, convert it using int() or float() .   "
+},
+{
+  "id": "subsec-tiy-input-3",
+  "level": "2",
+  "url": "sec-input.html#subsec-tiy-input-3",
+  "type": "Checkpoint",
+  "number": "2.3.2",
+  "title": "Making Introductions.",
+  "body": " Making Introductions  Ask a user for (1) their name, (2) their favorite animal, and (3) a place they would like to visit. Then summarize their answers with a sentence.   "
+},
+{
+  "id": "subsec-tiy-input-4",
+  "level": "2",
+  "url": "sec-input.html#subsec-tiy-input-4",
+  "type": "Checkpoint",
+  "number": "2.3.3",
+  "title": "",
+  "body": "Ask a user for a sentence. Then   convert the sentence to lowercase    count the number of times the letter 's' appears    replace all spaces with an underscore '_'    print the resulting sentence.    "
+},
+{
+  "id": "sec-strings-project1",
+  "level": "1",
+  "url": "sec-strings-project1.html",
+  "type": "Section",
+  "number": "2.4",
   "title": "Mini Project: Mad-libs",
   "body": " Mini Project: Mad-libs  In this project, we will try to combine some of the things we have learned in this chapter. It's okay to make mistakes. Break some eggs! This is how we learn.  Mad-libs has been a popular word game for decades! In this game, people select words to fill in a story. Usually, the words are out of context, and the stories are funny. For example:  “One day, a [adjective] [noun] decided to [verb] through the neighborhood. Everyone stopped and stared, but no one could believe their eyes. It was the start of something truly unforgettable.”  Make your own mad-libs story with at least seven blanks (adjectives, nouns, verbs, adverbs, expressions, proper names, etc.). Ask a user to input the different blanks (stored as variables), and then print the story with the user’s selected words.  We recommend   declaring your variables as inputs. For example adjective1 = input(\"Give me an adjective: \") ,    write your story with an f-string. For example, my_story = f'''This is an {adjective1} story.''' ,    print your story with print(my_story) .     To complete this project, vist Online-Python . Once complete, save the file and share with your instructor.  "
+},
+{
+  "id": "sec-strings-project2",
+  "level": "1",
+  "url": "sec-strings-project2.html",
+  "type": "Section",
+  "number": "2.5",
+  "title": "Mini Project: Calculator",
+  "body": " Mini Project: Calculator  In this project, we will try to combine some of the things we have learned in this chapter. It's okay to make mistakes. Break some eggs! This is how we learn.  Build a simple calculator for a user. In this project, ask the user for two numbers and an operation ( + , - , * , \/ , of ** ). Then print out a summary. For example: \"3 - 4 = -1\".  To complete this project, vist Online-Python . Once complete, save the file and share with your instructor.  "
+},
+{
+  "id": "sec-booleans",
+  "level": "1",
+  "url": "sec-booleans.html",
+  "type": "Section",
+  "number": "3.1",
+  "title": "Booleans: True and False",
+  "body": " Booleans: True and False  How can we ask a computer to make a decision? By answering a True\/False question. Let's do a quick simulation to highlight what that means.   You say, \"I have not brushed my teeth yet today.\"    Is this true? If it is, you decide to brush your teeth.    If it is false, you choose to brush your teeth later.   .  This is how computers make decisions as well. At the heart of every decision in a program is a Boolean value. A Boolean represents one of two states: True or False .     Boolean Logic     -->  Booleans are crucially important for computer decision making. Boolean values are the foundation of computer logic. --> "
+},
+{
+  "id": "sec-ifThen",
+  "level": "1",
+  "url": "sec-ifThen.html",
+  "type": "Section",
+  "number": "3.2",
+  "title": "Conditional Statements",
+  "body": " Conditional Statements  Conditional statements let you branch your code—only running certain blocks when specific conditions are met. We make these decisions through Boolean values. We'll look at the most common conditional statements: if , if-then , and if-elif-else    If Statements  Let's look at an example.   The code inside the if block only runs if the condition is True. In this case, we print \"You can vote!\" if the age is at least 18.   Notice the indentation: Python uses indentation (typically 4 spaces) to define blocks of code. Generally speaking, (and you may have discovered this on your own already) Python is picky with indentation. Here, the indentation tells Python what all is considered to be in your if block.    "
+},
+{
+  "id": "subsec--4",
+  "level": "2",
+  "url": "sec-ifThen.html#subsec--4",
+  "type": "Remark",
+  "number": "3.2.1",
+  "title": "",
+  "body": " Notice the indentation: Python uses indentation (typically 4 spaces) to define blocks of code. Generally speaking, (and you may have discovered this on your own already) Python is picky with indentation. Here, the indentation tells Python what all is considered to be in your if block.  "
 },
 {
   "id": "backmatter-2",
