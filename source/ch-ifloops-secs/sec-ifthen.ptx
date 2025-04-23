@@ -1,0 +1,43 @@
+<section xml:id="sec-ifThen">
+    <title>Conditional Statements</title>
+    
+    <p>
+        Conditional statements let you branch your code—only running certain blocks when specific conditions are met. We make
+        these decisions through Boolean values. We'll look at the most common conditional statements: <c>if</c>, <c>if-then</c>,
+        and <c>if-elif-else</c>
+    </p>
+
+    <subsection xml:id="subsec-">
+        <title>If Statements</title>
+        
+        <p>
+            Let's look at an example.
+
+            <sage language="python">
+                <input>
+                    age = 18
+                    if age >= 18:
+                        print("You can vote!")
+                            
+                </input>
+            </sage>
+            
+        </p>
+
+        <p>
+            The code inside the <c>if</c> block only runs if the condition is True. In this case, we print "You can vote!" if the age is
+            at least 18.
+        </p>
+
+        <remark>
+            <p>
+                Notice the indentation: Python uses indentation (typically 4 spaces) to define blocks of code. Generally speaking,
+                (and you may have discovered this on your own already) Python is picky with indentation. Here, the indentation tells Python
+                what all is considered to be in your <c>if</c> block.
+            </p>
+        </remark>
+    </subsection>
+
+    
+
+</section>

@@ -6,16 +6,41 @@
   <introduction>
     <p> In this lesson, you'll learn how to:
 
-      •	Work with strings (text data) in Python
-      •	Create multi-line strings
-      •	Use f-strings and .format() to combine text and variables
-      •	Take input from a user using input()
-      •	String manipulation methods
-      . </p>
+      <ol>
+        <li>
+          <p>
+            Work with strings (text data) in Python
+          </p>
+        </li>
+        <li>
+          <p>
+            Create multi-line strings
+          </p>
+        </li>
+        <li>
+          <p>
+            Use f-strings and <c>.format()</c> to combine text and variables
+          </p>
+        </li>
+        <li>
+          <p>
+            Take input from a user using <c>input()</c>
+          </p>
+        </li>
+        <li>
+          <p>
+            String manipulation methods
+          </p>
+        </li>
+      </ol>
+     </p>
   </introduction>
 
   <xi:include href="./ch-strings-secs/sec-whatisstring.ptx" />
+<xi:include href="./ch-strings-secs/sec-manipulate.ptx" />
+  <xi:include href="./ch-strings-secs/sec-input.ptx" />
   
   <xi:include href="./ch-strings-secs/sec-project.ptx" />
+  <xi:include href="./ch-strings-secs/sec-project2.ptx" />
 
 </chapter>

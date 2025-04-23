@@ -1,12 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <chapter xml:id="ch-loops" xmlns:xi="http://www.w3.org/2001/XInclude">
-  <title>Loops and Iterations</title>
+  <title>If-Thens and Loops</title>
 
   <introduction>
-    <p> Text before the first section. </p>
+    <p> So far, you’ve learned how to work with variables, numbers, and strings. Now, we will learn how to 
+      code decision making. In this chapter, you’ll learn how to make your programs think—by evaluating conditions and choosing what to do next. This is where control flow comes in.
+      Python provides several powerful tools for control flow:
+
+      <ol>
+        <li>
+          <p>
+            Booleans: The foundation of logic in programming
+          </p>
+        </li>
+        <li>
+          <p>
+            Conditional statements: if, if-else, and if-elif-else
+          </p>
+        </li>
+        <li>
+          <p>
+            Loops: for and while loops for repeating actions
+          </p>
+        </li>
+      </ol>
+     
+      Let’s break it all down.
+       </p>
+
+
   </introduction>
 
- 
+ <xi:include href="./ch-ifloops-secs/sec-booleans.ptx"/> 
+  <xi:include href="./ch-ifloops-secs/sec-ifthen.ptx" />
 
 </chapter>

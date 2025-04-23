@@ -1,0 +1,229 @@
+<section xml:id="sec-string-manipulation">
+    <title>String Manipulation in Python</title>
+    
+    <introduction>
+        <p>
+            We use strings in almost every Python application we dream up, and understanding how
+            to work with strings is critically important. In particular, we need to know string manipulation. String manipulation means working with or changing strings to get the information or format you need.
+         </p>
+   </introduction>
+ 
+
+    <subsection xml:id="subsec-string-concact">
+        <title>String Concactenation</title>
+        
+        <p>
+           We saw how to concactenate strings in the last chapter. However, it's such an important topic that it's worth repeating!
+           Don't forget: You can combine strings using the <c>+</c> operator.
+           
+           <sage language="python">
+            <input>
+              first = "he"
+              last = "llo World!"
+              
+              print(first + last)
+            </input>
+           </sage>
+        </p>
+
+        <p>
+            You can also repeat strings using <c>*</c>:
+
+            <sage language="python">
+                <input>
+                    print("Ha" * 3)  # Output: HaHaHa
+                </input>
+            </sage>
+        </p>
+    </subsection>
+
+    <subsection xml:id="subsec-stringmethods">
+        <title>String Methods</title>
+        
+        <p>
+            Just like concatenation, we saw some methods that Python has to manipulate strings. We now will present a more 
+            comprehensive (but not totally comprehensive!) list of string methods.
+        </p>
+            <table>
+                <tabular>
+                  <row>
+                    <th>Method</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                  </row>
+                  <row>
+                    <cell><code>.lower()</code></cell>
+                    <cell>Converts to lowercase</cell>
+                    <cell><code>"HELLO".lower()</code> → <code>"hello"</code></cell>
+                  </row>
+                  <row>
+                    <cell><code>.upper()</code></cell>
+                    <cell>Converts to uppercase</cell>
+                    <cell><code>"hello".upper()</code> → <code>"HELLO"</code></cell>
+                  </row>
+                  <row>
+                    <cell><code>.capitalize()</code></cell>
+                    <cell>Capitalizes first letter</cell>
+                    <cell><code>"python".capitalize()</code> → <code>"Python"</code></cell>
+                  </row>
+                  <row>
+                    <cell><code>.title()</code></cell>
+                    <cell>Capitalizes each word</cell>
+                    <cell><code>"hello world".title()</code> → <code>"Hello World"</code></cell>
+                  </row>
+                  <row>
+                    <cell><code>.strip()</code></cell>
+                    <cell>Removes spaces from both ends</cell>
+                    <cell><code>" hello ".strip()</code> → <code>"hello"</code></cell>
+                  </row>
+                  <row>
+                    <cell><code>.replace()</code></cell>
+                    <cell>Replaces part of a string</cell>
+                    <cell><code>"cat".replace("c", "b")</code> → <code>"bat"</code></cell>
+                  </row>
+                  <row>
+                    <cell><code>.find()</code></cell>
+                    <cell>Finds the position of a substring</cell>
+                    <cell><code>"banana".find("na")</code> → <code>2</code></cell>
+                  </row>
+                  <row>
+                    <cell><code>.count()</code></cell>
+                    <cell>Counts how many times a substring appears</cell>
+                    <cell><code>"banana".count("a")</code> → <code>3</code></cell>
+                  </row>
+                </tabular>
+              </table>
+
+    </subsection>
+
+    <subsection xml:id="subsec-tiy-manipulate">
+        <title>Try It Yourself: String Manipulation</title>
+
+        <p>
+            Try the following exercises. Don’t be afraid of making errors. That’s how we learn.
+        </p>
+
+        <exercise>
+            <p>
+                Consider the following statement: " If we TaKE the CHILDREN's tickets, tHEN THey won'T be able tO Go To ThE North pole. "
+                Clean up the statement so that the string starts with "I" and ends with ".", the first letter is capitolized, and the other
+                words are lower case. Try using the following:
+                <ol>
+                    <li>
+                        <p>
+                        <c>.strip()</c>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <c>.lower()</c>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <c>.capitalize()</c>
+                        </p>
+                    </li>
+                </ol>
+
+            <sage language="python">
+                <input>
+                  message = " If we TaKE the CHILDREN's tickets, tHEN THey won'T be able tO Go To ThE North pole. "  
+                </input>
+            </sage>
+            </p>
+        </exercise>
+
+        <exercise>
+            <p>
+                How many times does the letter e appear in the sentence: "Elephants never forget to elevate their feet when at the equator."? (Including the capitol E!)
+            
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+            
+            </p>
+        </exercise>
+
+        <exercise>
+            <p>
+                Replace the word "boring" with "exciting"... because that's the truth, right? "This class is boring."
+                
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+           
+            </p>
+        </exercise>
+
+        <exercise>
+            <p>
+                Find where in the sentence the word "fox" is located in the sentence "The quick brown fox jumps over the lazy dog."
+
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+            </p>
+        </exercise>
+        
+    </subsection>
+
+    <subsection xml:id="subsec-string-indexes">
+        <title>String Indexes</title>
+        
+        <p>
+            As we saw in the previous chapter, each character in a string has an associated number called its index. You can access individual characters in a string using indexing. 
+            Just don't forget that Python starts counting from 0.
+
+            <sage language="python">
+                <input>
+                    word = "Python"
+print(word[0])  # Output: P
+print(word[5])  # Output: n
+
+                </input>
+            </sage>
+        </p>
+
+        <p>
+            You can also grab parts of strings using "slicing". This is also a very helpful technique.
+
+            <sage language="python">
+                <input>
+
+                    word = "Python"
+
+                    print(word[0:3])  # Output: Pyt
+print(word[2:])   # Output: thon
+print(word[:4])   # Output: Pyth
+
+                </input>
+            </sage>
+        </p>
+
+        <p>
+            We can even use negative indices! A negative index refers to counting backwards from the end.
+
+            <sage language="python">
+                <input>
+
+                    word = "Python"
+                    
+                    print(word[-1])  # Output: n (last character)
+print(word[-2])  # Output: o (second-to-last)
+
+
+                </input>
+            </sage>
+
+            
+        </p>
+    </subsection>
+    
+</section>

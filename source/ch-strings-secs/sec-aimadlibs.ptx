@@ -1,0 +1,60 @@
+<section xml:id="sec-aimadlibs">
+    <title>AI Connecting: Mad-Libs</title>
+    
+    <p>
+        We just completed a project in which you wrote a Mad-Libs game. Hopefully, you wrote a story you
+        enjoyed and even played a game or two with a friend. 
+    </p>
+
+    <p>
+        Now we want to highlight how Large-Language Models (LLMs), an AI tool for language writing, can handle Python scripting.
+        Visit <url href="www.chatgpt.com" visual="www.chatgpt.com"/> ChatGPT </url> and ask ChatGPT "Write a Python script for a mad-libs game".
+        Compare ChatGPT's code with what you provided.
+    </p>
+
+    <p>
+        Ask yourself: 
+        <ol>
+            <li>
+                <p>
+                    How similar is the code I wrote versus ChatGPTs?
+                </p>
+            </li>
+            <li>
+                <p>
+                    Are there things ChatGPT did that are different? Do I understand what it wrote?
+                </p>
+            </li>
+            <li>
+                <p>
+                    Can (or should) I use ChatGPT to write code?
+                </p>
+            </li>
+        </ol>
+
+    </p>
+
+    <p>
+        For the last question, we recommend the following tip:
+        <ol>
+            <li>
+                <p>
+                    If you cannot write it yourself, do not ask ChatGPT (or any other AI) to do it.
+                </p>
+            </li>
+        </ol>
+    </p>
+
+    <p>
+
+    We recommend this strategy for several reason. Firstly, you cannot verify code that you cannot do yourself, and it is not
+        uncommon for LLMs to make coding errors. Secondly, you are trying to learn how to code, so how will you actually learn something
+        if you are outsourcing all of the work. Thirdly, just like exercising your body to become a better athlete, writing code (and making
+        mistakes) and putting in the "hard yards" is what will actually make you a better coder.
+    </p>
+
+    <p>
+        You do not want to rely on AI so much that it's the only tool you've got. That is a sad and dangerous place to find yourself as a 
+        budding coder. Nonetheless, LLMs like ChatGPT are becoming increasingly helpful in programming circles.
+    </p>
+</section>

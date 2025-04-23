@@ -2,7 +2,133 @@
     <title>What is a String?</title>   
 
 <p>We already talked about strings. Remember that a string is a sequence of characters. 
-    You can think of a string as any text inside quotes. Strings can be single or double quoted: </p>
+    You can think of a string as any text inside quotes. As long as a statement has quotes <c>' '</c>, double quotes <c>" "</c>, or
+    even triple quotes (<c>''' '''</c> or <c>""" """</c>), Python will recognize it as a string.
+    <sage language = "python">
+        <input>
+            location = 'Mississippi'
+            goodByeMessage = "Goodbye, my friend!"
+        </input>
+    </sage>
+
+</p>
+
+<exercise>
+    <title>Reflection</title>
+    
+    <statement>
+        <p>
+            How could we store "I'm eating Bobby's pizza."?
+        </p>
+    </statement>
+    <answer>
+        <p>
+            We could store just as is written! <c>message = "I'm eating Bobby's pizza."</c>
+        </p>
+    </answer>
+    
+</exercise>
+
+<subsection xml:id="subsec-multiline">
+    <title>Multi-line Strings</title>
+
+    <p>
+        Sometimes we wish to include a lot of text as one string instead of many smaller strings. You can write strings that span multiple lines using triple quotes (<c>'''</c> or <c>"""</c>), and note we don’t have   
+    
+    <sage language="python">
+        <input>
+            message = """Dear student,
+
+Welcome to Python programming!
+We hope you enjoy learning.
+
+- Your Instructor
+"""
+
+print(message)
+        </input>
+    </sage>
+
+    </p>
+    
+</subsection>
+
+<subsection xml:id="subsec-fstrings">
+    <title>F-strings</title>
+
+    <p>
+        We've seen examples of how to include variables in the middle of a print statement. For example,
+
+        <sage language="python">
+            <input>
+                favorite_fruit = "mango"
+                
+                print("My favorite fruit is " + favorite_fruit + " because" + favorite_fruit +"s are a good source of vitamins.")
+            </input>
+        </sage>
+
+    </p>
+
+    <p>
+        
+        However, this technique is not always convenient. Instead, f-strings make it easier to include variables in your text. Just add an <c>f</c> before the string 
+        and put variables in <c>{}</c>.
+
+        <sage language="python">
+            <input>
+                favorite_fruit = "mango"
+vitamin="B"
+
+print(f"My favorite fruit is {favorite_fruit}, because {favorite_fruit}s are a good source of vitamin {vitamin}.")
+
+            </input>
+        </sage>
+    </p>
+
+    <p>
+        You can even do math inside an f-string:
+
+        <sage language="python">
+            <input>
+            current_age = 18
+
+            print(f"Today, I am {current_age} years old. In two years, I will be {current_age + 2} years old.")
+            </input>
+        </sage>
+    </p>
+    
+</subsection>
+
+
+
+<subsection xml:id="subsec-stringformat">
+    <title>String Formatting</title>
+
+    <p>
+        We can also use <c>.format()</c>
+
+    <sage language="python">
+        <input>
+            city = "New York"
+weather = "sunny"
+
+print("The weather in {} is {} today.".format(city, weather))
+
+        </input>
+    </sage>
+    </p>
+
+    <p>
+        You can also number the placeholders:
+    
+        <sage language="python">
+            <input>
+                print("My name is {0} and I live in {1}.".format("Taylor", "Chicago"))
+            </input>
+        </sage>
+    </p>
+    
+</subsection>
 
 
 

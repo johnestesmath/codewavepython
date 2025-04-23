@@ -1,0 +1,18 @@
+<section xml:id="sec-strings-project2">
+    <title>Mini Project: Calculator</title>
+    
+    <p>
+    In this project, we will try to combine some of the things we have learned in this chapter. It's okay to make mistakes. Break some eggs!
+    This is how we learn.
+    </p>
+  
+    <p>
+    Build a simple calculator for a user. In this project, ask the user for two numbers and an operation (<c>+</c>,<c>-</c>,<c>*</c>, <c>/</c>, of <c>**</c>). 
+    Then print out a summary. For example: "3 - 4 = -1".
+    </p>
+
+    <p>
+        To complete this project, vist <url href="https://www.online-python.com/" visual="online-python.com">Online-Python</url>. Once complete,
+        save the file and share with your instructor.
+    </p>
+</section>

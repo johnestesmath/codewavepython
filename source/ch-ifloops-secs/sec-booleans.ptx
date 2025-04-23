@@ -1,0 +1,131 @@
+<section xml:id="sec-booleans">
+    <title>Booleans: True and False</title>
+
+  <p>
+        How can we ask a computer to make a decision? By answering a True/False question. 
+        Let's do a quick simulation to highlight what that means.
+        <ol>
+            <li>
+                <p>
+                You say, "I have not brushed my teeth yet today."
+                </p>
+            </li>
+            <li>
+                <p>
+                    Is this true? If it is, you decide to brush your teeth.
+                </p>
+            </li>
+            <li>
+                <p>
+                    If it is false, you choose to brush your teeth later.
+                </p>
+            </li>
+        </ol>. 
+    </p>
+    <p>
+       This is how computers make decisions as well. At the heart of every decision in a program is a Boolean value. A Boolean represents one of two states: <c>True</c> or <c>False</c>.
+    </p>
+
+ <!--  <p>
+        For example,
+
+        <sage language="python">
+            <input>
+                3 == 2 # Are 3 and 2 equal?
+                3 >= 2 # Is 3 greater than or equal to 2? 
+            </input>
+        </sage>
+    </p>--> 
+
+      <!--  <table>
+            <title>Comparison Operators</title>
+            <tabular>
+                <row>
+                    <cell>Expression</cell>
+                    <cell>Meaning</cell>
+                    <cell>Example</cell>
+                    <cell>Result</cell>
+                </row>
+                <row>
+                    <cell>==</cell>
+                    <cell>Equal To</cell>
+                    <cell>5 == 5</cell>
+                    <cell>True</cell>
+                </row>
+                <row>
+                    <cell>!=</cell>
+                    <cell>Not Equal </cell>
+                    <cell>5 != 3</cell>
+                    <cell>True</cell>
+                </row>
+                <row>
+                    <cell> < </cell>
+                    <cell>Less Than</cell>
+                    <cell>5 < 5</cell>
+                    <cell>False</cell>
+                </row>
+                <row>
+                    <cell> ></cell>
+                    <cell>Greater Than </cell>
+                    <cell> 4 > 6</cell>
+                    <cell>False</cell>
+                </row>
+                <row>
+                    <cell> <= </cell>
+                    <cell>Less Than or Equal To</cell>
+                    <cell>5 <= 5</cell>
+                    <cell>False</cell>
+                </row>
+                <row>
+                    <cell> >= </cell>
+                    <cell> Greater Than or Equal To</cell>
+                    <cell>5 >= 3</cell>
+                    <cell>True</cell>
+                </row>
+            </tabular>
+        </table> -->
+
+
+    <subsection xml:id="subsec-boolean-logic">
+        <title>Boolean Logic</title>
+        
+     <!--   <p>
+            We can combine logic statement as well. Python also includes logical operators to combine or modify Booleans:
+
+            <ol>
+                <li>
+                    <p>
+                        <c>and</c>: <c>True</c> if both conditions are true
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <c>or</c>: <c>True</c> if either condition is true (or both)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <c>not</not>: <c>True</c> if the condition is false
+                    </p>
+                </li>
+            </ol>
+        </p> -->
+
+        <p>
+            <sage language="python">
+                <input>
+                    (5 \\gt 3) and (2 \\lt 4)    # True
+(5 \\gt 3) or (2 \\lt 4)     # True
+not (5 \\gt 3)            # False
+
+                </input>
+            </sage>
+        </p> -->
+
+    </subsection>
+
+<p>
+    Booleans are crucially important for computer decision making. Boolean values are the foundation of computer logic.
+</p>-->
+    
+</section>
