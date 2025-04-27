@@ -10,8 +10,12 @@
         code in for yourself. Once complete, save the file and share with your instructor.
     </p>
 
-    <p>
-        <computation>import random
+
+
+            <program language="python" line-numbers="yes" highlight-lines="2,6-8">
+                <title>Rock, Paper, Scissors</title>
+                <code>
+import random
 
             throws=("rock","paper","scissors")
             
@@ -52,7 +56,8 @@
                 play_again = input("Do you want to play again? Y/N ")
                 if play_again.upper() == "N":
                     print("See you later!")
-                    game_on = False</computation>
-    </p>
+                    game_on = False
+                </code>
+                </program>
 
 </section>
