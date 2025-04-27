@@ -8,7 +8,238 @@
         
     </p>
 
+    <p>
+        We can think of a function as building a tool that we will use over and over again. Imagine functions like a machine: you put something in, and it gives something back. For example,
+        consider the following:
     
+        <sage language="python">
+            <input>
+                def largerthan(a,b):
+                    if a > b:
+                        print(f"{a} is larger than {b}")
+                    elif b > a:
+                        print(f"{b} is larger than {a}")
+                    else:
+                        print(f"{a} equals {b}")
+                
+                largerthan(3,5)
+                largerthan(14,0)
+                largerthan(6,6)
+            </input>
+        </sage>
+    
+    </p>
 
+    <p>
+        A good function saves a programmer a lot time!
+    </p>
+
+    <subsection xml:id="subsec-def-funcs">
+        <title>Defining a Function</title>
+        
+        <p>
+            We create a function using the <c>def</c> keyword. This defines the function. We use the function by "calling" it. 
+            <sage language="python">
+                <input>
+                    def say_hello(): # defining the function
+                    print("Hello, world!") # the contents of the function
+                  
+                    say_hell() # calling the function
+                </input>
+            </sage>
+        </p>
+
+        <remark>
+            <p>
+                When writing a program that requires you repeat a task repeatedly, defining a function that can
+                accomplish this task may be a good idea.
+            </p>
+        </remark>
+    </subsection>
+
+    <subsection xml:id="subsec-parameters">
+        <title>Parameters of a Function</title>
+
+        <p>
+            In mathematical functions like <m>f(x) = x^2</m> and <m>f(y,z) = y + z</m> have variable <m>x, y,</m> and <m>z</m>.
+            In programming, we call variables like these parameters.
+        </p>
+
+        <p>
+            In Python, functions can have
+            <ol>
+                <li>
+                    <p>
+                        1 parameter
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        many parameters
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        no parameters
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        parameters of different types (integers, floats, strings, lists, etc.)
+                    </p>
+                </li>
+            </ol>
+        </p>
+
+        <p>
+            For example,
+
+            <sage language="python">
+                <input>
+                    def greet1(name):
+                    print("Hello, " + name + "!")
+                
+                def greet0():
+                    print("Hello, friend.")
+                    
+                def greet2(name1, name2):
+                    print("Hello, " + name1 + " and " + name2 + "!")
+                
+                greet1("Alice")
+                greet1("Bob")
+                greet0()
+                greet2("Charlie", "Dorothy"
+
+                </input>
+            </sage>
+        </p>
+
+        <p>
+            In <c>greet1(name)</c>, <c>name</c> is the parameter. Notice that <c>greet0()</c> has no parameter! Yet, it 
+            still is effective. There are two parameters in <c>greet2(name1, name2)</c>. Is there a limit to how many parameters
+            a function can have? Not really.
+        </p>
+
+       <p>
+        Try to make some functions for yourself.</p>
+
+        <exercise>
+           <p> Write a function <c>say_goodbye()</c> that prints "Goodbye!".
+
+            <sage language="python">
+                <input>
+                    
+                </input>
+            </sage>
+
+        </p>
+        </exercise>
+
+        <exercise>
+            <p>
+                Write a function <c>favorite_movie(title)</c> that prints "My favorite movie is <c>title</c>."
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+           
+            </p>
+        </exercise>
+       
+        <exercise>
+            <p>
+                Write a function <c>star(n)</c> that prints out <m>n</m> copies of "*". For example,
+                <c>star(5)</c> prints out <c>*****</c>.
+
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+           
+            </p>
+        </exercise>
+    </subsection>
+
+    <subsection xml:id="subsec-return">
+        <title>Returning a Value</title>
+
+        <p>
+            All of our examples so far have printed some sort of statement. It's very common that instead of printing something
+            we will want to perform a calculation and use that result somewhere else. In this case, a function needs to give a value back using <c>return</c>.
+            
+            <sage language="python">
+                <input>
+                    def interval(a, b): # returns a list starting at a and ending at b
+                    list = []
+                    i = a
+                    while i &gt;= b:
+                        list.append(i)
+                        i += 1
+                    return list
+                
+                
+                result = interval(4,11)
+                print(result)    
+                </input>
+            </sage>
+        </p>
+
+        <p>
+            <remark>
+                Why, again, would we use a function?
+                <ol>
+                    <li>
+                        <p>
+                            Organization: Keeps your code neat and easy to read/
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                           Reuse: Write code once, use it many times.
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            Testing: You can test small pieces instead of the whole program.
+                        </p>
+                    </li>
+                </ol>
+            </remark>
+        </p>
+        
+    </subsection>
+
+    <subsection xml:id="subsec-tiy-funcs">
+        <title>Try It Yourself: Functions</title>
+        
+        <exercise>
+            <p>
+            Write a function <c>multiply(x, y)</c> that returns the result of <c>x</c> times <c>y</c>
+
+            <sage language="python">
+                <input>
+                    
+                </input>
+            </sage>
+            </p>
+        </exercise>
+
+        <exercise>
+            <p>
+                Write a function <c>added(n)</c> that prints the sum of 1 up to <c>n</c>. 
+                (Hint: In your function definition, start with <c>sum = 0</c>. Then with <c>for i in range(n)</c>,
+                <c>sum+= i</c>.)
+            
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+            </p>
+        </exercise>
+
+    </subsection>
     
 </section>

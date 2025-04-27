@@ -1,0 +1,126 @@
+<section xml:id="sec-randomness">
+    <title>Randomness</title>
+    
+    <subsection xml:id="subsec-whyrandomness">
+        <title>Why Use Randomness?</title>
+        
+        <p>
+            Randomness makes programs less predictable — perfect for games, simulations, and surprises. We make use of
+            randomness for dice rolls, coin flips, and many other applications. 
+        </p>
+
+        <p>
+            To implement randomness in Python, we must first import the <c>random</c> module.
+
+            <sage language="python">
+                <input>
+                   import random 
+                </input>
+            </sage>
+        </p>
+
+    </subsection>
+
+    <subsection xml:id="subsec-randint">
+        <title>Random Numbers</title>
+        
+        <p>
+            We can a generate random number between <c>n</c> and <c>m</c> with <c>random.randint(n,m)</c> to generate. Each time you run the program, you may get a different number.
+
+            <sage language="python">
+                <input>
+                   import random 
+
+                   print(random.randint(-4,4))
+                   print(random.randint(-4,4))
+                   print(random.randint(-4,4))
+                </input>
+            </sage>
+        </p>
+
+        <exercise>
+            <p>
+               Print 4 random integers between 50 and 100. 
+
+               <sage language="python">
+                <input>
+                   import random 
+
+                   
+                </input>
+            </sage>
+            </p>
+        </exercise>
+    </subsection>
+
+    <subsection xml:id="subsec-randomfloats">
+        <title>Random Floating-Point Numbers</title>
+
+        <p>
+            Probabilities are always between <m>0</m> and <m>1</m>, so <c>randint</c> is not always what we need. We can use
+            <c>random()</c> to generate a random float between <m>0</m> and <m>1</m>.
+
+            <sage language="python">
+                <input>
+                   import random 
+
+                   print(random.random())
+                </input>
+            </sage>
+        </p>
+        
+    </subsection>
+
+    <subsection xml:id="subsec-seeding">
+        <title>Seeding the Random Generator </title>
+
+        <p>
+            If you want repeatable randomness (for testing), you can seed the random number generator:
+
+            <sage language="python">
+                <input>
+                   import random 
+
+                   random.seed(5)
+print(random.randint(1, 100))
+print(random.randint(1, 100))
+                </input>
+            </sage>
+        </p>
+        
+    </subsection>
+
+    <subsection xml:id="subsec-tiy-random">
+        <title>Try It Yourself: Randomness</title>
+
+        <exercise>
+            <p>
+                Import <c>random</c> and print a random number between 1 and 50.
+
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+            </p>
+        </exercise>
+
+        <exercise>
+            <p>
+                Print a random decimal number between 0 and 5. (You can multiple <c>random()</c> by 5)
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+            </p>
+        </exercise>
+
+        <exercise>
+        <p>
+            Generate three random numbers between 1 and 20 and print their sum.
+        </p>
+        </exercise>
+        
+    </subsection>
+</section>
