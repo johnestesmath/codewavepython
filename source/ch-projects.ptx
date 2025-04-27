@@ -8,8 +8,11 @@
         <image xml:id="fig-codewavep" source="codewavep.jpg" width="80%" />
       </figure>
 
-    <p> Text before the first section. </p>
+    <p> Now that you have covered much of the basic of Python and built a good starting tool kit, it's time to start  
+      using these tools. Projects are for programmers as paintings are for artists. It's time to start breaking some eggs!
+    </p>
   </introduction>
 
+  <xi:include href="./ch-projects/sec-project1.ptx" />
 
 </chapter>

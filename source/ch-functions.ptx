@@ -28,6 +28,7 @@
 
   <xi:include href="./ch-functions/sec-functions.ptx" />
   <xi:include href="./ch-functions/sec-random.ptx" />
+  <xi:include href="./ch-functions/sec-functproject.ptx" />
  
 
 </chapter>
