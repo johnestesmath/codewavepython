@@ -583,7 +583,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Randomness",
-  "body": " Randomness   Why Use Randomness?  Randomness makes programs less predictable — perfect for games, simulations, and surprises. We make use of randomness for dice rolls, coin flips, and many other applications.  To implement randomness in Python, we must first import the random module.     Random Numbers  We can a generate random number between n and m with random.randint(n,m) to generate. Each time you run the program, you may get a different number.    Print 4 random integers between 50 and 100.      Random Floating-Point Numbers  Probabilities are always between and , so randint is not always what we need. We can use random() to generate a random float between and .     Seeding the Random Generator  If you want repeatable randomness (for testing), you can seed the random number generator:     Try It Yourself: Randomness   Import random and print a random number between 1 and 50.     Print a random decimal number between 0 and 5. (You can multiple random() by 5)     Generate three random numbers between 1 and 20 and print their sum.    "
+  "body": " Randomness   Why Use Randomness?  Randomness makes programs less predictable — perfect for games, simulations, and surprises. We make use of randomness for dice rolls, coin flips, and many other applications.  To implement randomness in Python, we must first import the random module.     Random Numbers  We can a generate random number between n and m with random.randint(n,m) to generate. Each time you run the program, you may get a different number.    Print 4 random integers between 50 and 100.      Random Floating-Point Numbers  Probabilities are always between and , so randint is not always what we need. We can use random() to generate a random float between and .     Seeding the Random Generator  If you want repeatable randomness (for testing), you can seed the random number generator:     Random Choice  We can randomly select from a list using random.choice() , a very useful application!     Try It Yourself: Randomness   Import random and print a random number between 1 and 50.     Print a random decimal number between 0 and 5. (You can multiple random() by 5)     Generate three random numbers between 1 and 20 and print their sum.    "
 },
 {
   "id": "subsec-randint-3",
@@ -622,22 +622,31 @@ var ptx_lunr_docs = [
   "body": " Generate three random numbers between 1 and 20 and print their sum.  "
 },
 {
-  "id": "ch-projects",
+  "id": "sec-function-project",
   "level": "1",
-  "url": "ch-projects.html",
-  "type": "Chapter",
-  "number": "6",
-  "title": "Projects",
-  "body": " Projects      Text before the first section.   "
+  "url": "sec-function-project.html",
+  "type": "Section",
+  "number": "5.3",
+  "title": "Mini Project: Magic 8-Ball",
+  "body": " Mini Project: Magic 8-Ball  You can combine functions and randomness to make really cool programs. We'll provide an example, and give you something to try.   Rolling a Die  Let's roll a die.     Magic 8-Ball  Build a Magic 8-Ball in Python that will give us very useful advice. We recommend   Defining a function magic_8()     Making a list of possible answers (in magic_8() ).    Return a randomly chosen answer from your list.    Prompt the user to ask a question (with input() .)    Print a magic_8() response.     To complete this project, vist Online-Python . Once complete, save the file and share with your instructor.   "
 },
 {
-  "id": "ch-projects-2-1",
+  "id": "sec-projectproejct1",
+  "level": "1",
+  "url": "sec-projectproejct1.html",
+  "type": "Section",
+  "number": "6.1",
+  "title": "Project 1: Rock, Paper, and Scissors",
+  "body": " Project 1: Rock, Paper, and Scissors  In this project, we will build a game of Rock, Paper, and Scissors against a Bot. Here's the code in full.  We will explain what is going on, but vist Online-Python and type the code in for yourself. Once complete, save the file and share with your instructor.   import random throws=(\"rock\",\"paper\",\"scissors\") game_on = True def rock_paper_scissors(a, b): if a == b: print(\"It's a tie!\") elif a%3 == b%3 + 1: print(\"You win!\") else: print(\"Bot wins!\") while game_on == True: choice = False while choice == False: player_choice = input(\"What do you throw? 1 rock, 2 paper, 3 scissors \") if player_choice not in (\"1\",\"2\",\"3\"): print(\"Sorry. Please pick 1, 2, 3.\") else: player_throw = int(player_choice) - 1 choice = True bot_throw = random.randint(0,2) # Bot picks 1, 2, 3 randomly input(\"Bot has decided. You ready? [Press Enter] \") print(\"1... \") print(\"2... \") print(\"3... Shoot!\") print(\"You throw \" + throws[player_throw]) print(\"Bot throws \" + throws[bot_throw]) rock_paper_scissors(player_throw, bot_throw) play_again = input(\"Do you want to play again? Y\/N \") if play_again.upper() == \"N\": print(\"See you later!\") game_on = False   "
+},
+{
+  "id": "sec-projectproejct1-4-1",
   "level": "2",
-  "url": "ch-projects.html#ch-projects-2-1",
-  "type": "Figure",
-  "number": "6.0.1",
+  "url": "sec-projectproejct1.html#sec-projectproejct1-4-1",
+  "type": "Computation",
+  "number": "6.1.1",
   "title": "",
-  "body": "  "
+  "body": "import random throws=(\"rock\",\"paper\",\"scissors\") game_on = True def rock_paper_scissors(a, b): if a == b: print(\"It's a tie!\") elif a%3 == b%3 + 1: print(\"You win!\") else: print(\"Bot wins!\") while game_on == True: choice = False while choice == False: player_choice = input(\"What do you throw? 1 rock, 2 paper, 3 scissors \") if player_choice not in (\"1\",\"2\",\"3\"): print(\"Sorry. Please pick 1, 2, 3.\") else: player_throw = int(player_choice) - 1 choice = True bot_throw = random.randint(0,2) # Bot picks 1, 2, 3 randomly input(\"Bot has decided. You ready? [Press Enter] \") print(\"1... \") print(\"2... \") print(\"3... Shoot!\") print(\"You throw \" + throws[player_throw]) print(\"Bot throws \" + throws[bot_throw]) rock_paper_scissors(player_throw, bot_throw) play_again = input(\"Do you want to play again? Y\/N \") if play_again.upper() == \"N\": print(\"See you later!\") game_on = False "
 },
 {
   "id": "backmatter-2",

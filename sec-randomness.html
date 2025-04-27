@@ -153,7 +153,7 @@ sagecell.makeSagecell({
 <ol id="searchresults" class="searchresults"></ol>
 </div>
 </div>
-<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-functions.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="ch-projects.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+<span class="nav-other-controls"><button id="light-dark-button" class="light-dark-button button" title="Dark Mode"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span class="name">Dark Mode</span></button></span><span class="treebuttons"><a class="previous-button button" href="sec-functions.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch-functions.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="sec-function-project.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
 </div></nav><div xmlns:xlink="http://www.w3.org/1999/xlink" id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N} \newcommand{\Z}{\mathbb Z} \newcommand{\Q}{\mathbb Q} \newcommand{\R}{\mathbb R}
 \newcommand{\lt}{&lt;}
 \newcommand{\gt}{&gt;}
@@ -308,12 +308,23 @@ sagecell.makeSagecell({
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-randomness.html#subsec-randint" class="internal"><span class="codenumber">5.2.2</span> <span class="title">Random Numbers</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-randomness.html#subsec-randomfloats" class="internal"><span class="codenumber">5.2.3</span> <span class="title">Random Floating-Point Numbers</span></a></div></li>
 <li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-randomness.html#subsec-seeding" class="internal"><span class="codenumber">5.2.4</span> <span class="title">Seeding the Random Generator</span></a></div></li>
-<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-randomness.html#subsec-tiy-random" class="internal"><span class="codenumber">5.2.5</span> <span class="title">Try It Yourself: Randomness</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-randomness.html#subsec-randomchoice" class="internal"><span class="codenumber">5.2.5</span> <span class="title">Random Choice</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-randomness.html#subsec-tiy-random" class="internal"><span class="codenumber">5.2.6</span> <span class="title">Try It Yourself: Randomness</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec-function-project.html" class="internal"><span class="codenumber">5.3</span> <span class="title">Mini Project: Magic 8-Ball</span></a></div>
+<ul class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-function-project.html#subsec-die" class="internal"><span class="codenumber">5.3.1</span> <span class="title">Rolling a Die</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec-function-project.html#subsec-magicball" class="internal"><span class="codenumber">5.3.2</span> <span class="title">Magic 8-Ball</span></a></div></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toc-item toc-chapter"><div class="toc-title-box"><a href="ch-projects.html" class="internal"><span class="codenumber">6</span> <span class="title">Projects</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch-projects.html" class="internal"><span class="codenumber">6</span> <span class="title">Projects</span></a></div>
+<ul class="structural toc-item-list"><li class="toc-item toc-section"><div class="toc-title-box"><a href="sec-projectproejct1.html" class="internal"><span class="codenumber">6.1</span> <span class="title">Project 1: Rock, Paper, and Scissors</span></a></div></li></ul>
+</li>
 <li class="toc-item toc-backmatter"><div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div></li>
 </ul></nav></div>
 <main class="ptx-main"><div id="ptx-content" class="ptx-content"><section xmlns:xlink="http://www.w3.org/1999/xlink" class="section" id="sec-randomness"><h2 class="heading hide-type">
@@ -355,8 +366,18 @@ print(random.random())
 print(random.randint(1, 100))
 print(random.randint(1, 100))
 </script></div>
+</div></section><section class="subsection" id="subsec-randomchoice"><h3 class="heading hide-type">
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="space"> </span><span class="title">Random Choice</span>
+</h3>
+<div class="para" id="subsec-randomchoice-2">We can randomly select from a list using <code class="code-inline tex2jax_ignore">random.choice()</code>, a very useful application! <div id="subsec-randomchoice-2-2" class="ptx-sagecell sagecell-python"><script type="text/x-sage">import random
+
+fruits = ["banana", "strawberry", "peach"]
+my_fruit = random.choice(fruits)
+
+print(f"You know... I could really go for a {my_fruit} right now.")
+</script></div>
 </div></section><section class="subsection" id="subsec-tiy-random"><h3 class="heading hide-type">
-<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.2.5</span><span class="space"> </span><span class="title">Try It Yourself: Randomness</span>
+<span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.2.6</span><span class="space"> </span><span class="title">Try It Yourself: Randomness</span>
 </h3>
 <details id="subsec-tiy-random-2" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.2</span><span class="period">.</span>
@@ -370,7 +391,7 @@ print(random.randint(1, 100))
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span>
 </h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-tiy-random-4-1">Generate three random numbers between 1 and 20 and print their sum.</div></article></details></section></section></div>
 <div class="ptx-content-footer">
-<a class="previous-button button" href="sec-functions.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-projects.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+<a class="previous-button button" href="sec-functions.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-function-project.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>
 </div>
 <div id="ptx-page-footer" class="ptx-page-footer">
