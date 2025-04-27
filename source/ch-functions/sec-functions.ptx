@@ -1,0 +1,14 @@
+<section xml:id="sec-functions">
+    <title>What is a Function? </title>
+
+    <p>
+        In mathematics, a function like <m>f(x) = x^2</m> is a way to assign output with a given input. For example,
+        <m>f(3) = 3^2  = 9</m>. Functions are very useful in algebra, calculus, and so on. In programming, a function is a block of code that performs a specific task.
+        Once you write a function, you can call it whenever you need it.
+        
+    </p>
+
+    
+
+    
+</section>

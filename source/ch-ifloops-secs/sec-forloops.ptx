@@ -1,0 +1,156 @@
+<section xml:id="sec-forloops">
+    <title>For Loops and While Loops</title>
+    
+    <subsection xml:id="subsec-forloops">
+        <title>For Loops</title>
+        
+        <p>
+            What if we want to print "Hello World" 10 times? We could manually type a really long string, but that's not very computer science-y.
+            What if we want to print "Hello World" 1000 times? We need some new tools. We need loops!
+        </p>
+        
+        <p>
+            We can use a <c>for</c> loop to repeat something a specific number of times. You’ll most often loop over a sequence of values, like numbers or characters in a string.
+        <sage language="python">
+            <input>
+                for i in range(5)
+    print(i," Hello World")
+
+            </input>
+        </sage>
+        
+        </p>
+
+        <p>
+            Let's go over this example in more detail. The line <c>for i in range(5)</c> initiates a loop that will run
+            5 times. The letter <c>i</c> is a loop variable (or counter), counting how many times we have gone through the loop, and <c>range(5)</c> 
+            dictates how many times the loop will run.
+        </p>
+
+        <p>
+            As you run the code, you can see that on the first run through the loop, <c>i</c> is 0, and we print <c>i</c> and the string
+            <c>"Hello World</c>. We keep doing this until we have a total of 5 iterations through our loop.
+        </p>
+
+        <remark>
+            Keep in mind that <c>range(n)</c> starts with 0.
+        </remark>
+
+        <p>Loops are a vital tool for programming. It may be a bit confusing at first, but <c>for</c> loops will be your best
+        friend by the end of things.</p>
+   
+   <subsubsection xml:id="subsubsec-looplists">
+    <title>Looping Over Lists</title>
+    <p>
+        We have not talked about lists in Python yet, but we should still mention that Python can also loop over a list. This means that
+        Python apply the code in your <c>for</c> loop once for each item in your list.
+
+        <sage language="python">
+            <input>
+                colors = ["red", "green", "blue"]
+                for color in colors:
+                    print(color)
+                 
+            </input>
+        </sage>
+    </p>
+
+    <p>
+        We can do the same thing over strings!
+
+        <sage language="python">
+            <input>
+                word = "Mississippi"
+                 
+                for letter in word:
+                    if letter == "s":
+                        print("crooked letter ")
+                    elif letter == "p":
+                        print("hump back ")
+                    else:
+                        print(letter)
+            </input>
+        </sage>
+    </p>
+   </subsubsection>
+   
+    </subsection>
+
+    <subsection xml:id="subsec-whileloops">
+        <title>While Loops</title>
+        
+        <p>
+            With a <c>for</c> loop, we tell Python how many times we want to go through our loop. Another powerful loop,
+            the <c>while</c> loop operate a little differently. A <c>while</c> loop repeats as long as a condition is true.
+
+            <sage>
+                <input language="python">
+                    count = 5
+                    while count > 0:
+                        print(count)
+                        count -= 1
+                     
+                </input>
+            </sage>
+        </p>
+
+        <p>
+            In this example, we set a <c>count</c> variable to 5, and as long as <c>count > 5</c> the loop will initiate. So how is it that 
+            the <c>while</c> will ever not initiate? In theory, a <c>while</c> loop can run forever (called an infinite loop... and you want
+            to avoid these). However, in the loop statement, we reduce the count by 1. So eventually the loop condition is false.
+        </p>
+    </subsection>
+
+   <subsection xml:id="subsec-breakloops">
+    <title>Break and Continue</title>
+    
+    <p>
+        We can exercise additional control over looping with using <c>break</c> and <c>continue</c>.
+
+        <sage language="python">
+            <input>
+                for i in range(10):
+                if i == 3:
+                    break
+                print(i)
+              
+            </input>
+        </sage>
+
+        <sage language="python">
+            <input>
+                for i in range(5):
+    if i == 2:
+        continue
+    print(i
+
+            </input>
+        </sage>
+    </p>
+   </subsection>
+
+   <subsection xml:id="subsec-tyi-more-loops">
+    <title>Try It Yourself: Loops</title>
+    
+    <exercise>
+        Write a program that asks a user for their age and prints whether they can drive, vote, or neither.
+    </exercise>
+
+    <exercise>
+        Write a loop that prints all the even numbers from 0 to 20. (Hint: Try using <c>%</c> to determine if a number is even or not.)
+    </exercise>
+
+    <exercise>
+        Modify the following loop to skip printing the number 5:
+
+<sage language="python">
+    <input>
+        for i in range(10):
+    print(i)
+    </input>
+
+</sage>
+
+    </exercise>
+   </subsection>
+</section>

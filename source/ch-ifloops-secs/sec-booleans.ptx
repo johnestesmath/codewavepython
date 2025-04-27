@@ -89,7 +89,7 @@
     <subsection xml:id="subsec-boolean-logic">
         <title>Boolean Logic</title>
         
-     <!--   <p>
+       <p>
             We can combine logic statement as well. Python also includes logical operators to combine or modify Booleans:
 
             <ol>
@@ -105,17 +105,17 @@
                 </li>
                 <li>
                     <p>
-                        <c>not</not>: <c>True</c> if the condition is false
+                        <c>not</c>: <c>True</c> if the condition is false
                     </p>
                 </li>
             </ol>
-        </p> -->
+        </p> 
 
         <p>
             <sage language="python">
                 <input>
-                    (5 \\gt 3) and (2 \\lt 4)    # True
-(5 \\gt 3) or (2 \\lt 4)     # True
+                    (5 > 3) and (2 \\lt 4)    # True
+(5 > 3) or (2 \\lt 4)     # True
 not (5 \\gt 3)            # False
 
                 </input>

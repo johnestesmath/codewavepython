@@ -4,6 +4,11 @@
   <title>Working with Strings</title>
 
   <introduction>
+
+    <figure>
+      <image xml:id="fig-codewave2" source="codewave2.jpg" width="80%" />
+    </figure>
+
     <p> In this lesson, you'll learn how to:
 
       <ol>

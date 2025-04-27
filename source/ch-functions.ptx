@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-functions" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Functions and Randomness</title>
+
+  <introduction>
+    <figure>
+        <image xml:id="fig-codewave5" source="codewave5.jpg" width="80%" />
+      </figure>
+
+    <p> So far, we have covered a lot of the basics of programming. In this chapter, you’ll learn two of the most important ideas in programming:
+        <ol>
+            <li>
+                <p>
+                    Functionns: ways to organize and reuse your code 
+                </p>
+            </li>
+            <li>
+                <p>
+                    Randomness: making programs unpredictable and exciting 
+                </p>
+            </li>
+        </ol>
+        	
+        With these tools, you’ll be able to write cleaner, smarter, and more interesting programs. Let's take a look.
+         </p>
+  </introduction>
+
+  <xi:include href="./ch-functions/sec-functions.ptx" />
+ 
+
+</chapter>

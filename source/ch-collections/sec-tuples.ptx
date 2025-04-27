@@ -1,0 +1,43 @@
+<section xml:id="sec-tuples">
+    <title>Tuples</title>
+    
+    <p>
+        Lists are ordered and mutable. Sets are unordered and mutable, but there may be times we need something unmutable. 
+        Tuples are ordered, immutable collections. Use them when you want to ensure data cannot be changed.
+    
+        <sage language="python">
+            <input>
+                coordinates = (10, 20)
+                single_element = ('hello',)  # Note the comma
+                
+                print(coordinates[0])
+            </input>
+        </sage>
+    </p>
+
+    <p>
+        If we try to modifying a tuple, we receive an error.
+
+        <sage language="python">
+            <input>
+                coordinates = (10, 20)
+                coordinate[0] = 15  # TypeError
+            </input>
+        </sage>
+    </p>
+
+<subsection xml:id="subsec-tiytuples">
+    <title>Try It Yourself: Tuples</title>
+    
+    <exercise>
+        Create a tuple representing your birth date (day, month, year). Print the month.
+
+        <sage language="python">
+            <input>
+                
+            </input>
+        </sage>
+
+    </exercise>
+</subsection>
+</section>

@@ -3,9 +3,12 @@
 <chapter xml:id="ch-intro" xmlns:xi="http://www.w3.org/2001/XInclude">
   <title>Python Basics</title>
 
+  
    <introduction>
       
-    
+    <figure>
+      <image xml:id="fig-codewave1" source="codewave1.jpg" width="80%" />
+    </figure>
 
     <p>
       Python is a powerful and beginner-friendly programming language used by companies like Google, NASA, and Netflix. It's known for its easy-to-read syntax and versatility. Whether you're interested in building websites, analyzing data, or creating games, Python is a great language to start with!

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<chapter xml:id="ch-projects" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Projects</title>
+
+  <introduction>
+    <figure>
+        <image xml:id="fig-codewavep" source="codewavep.jpg" width="80%" />
+      </figure>
+
+    <p> Text before the first section. </p>
+  </introduction>
+
+
+</chapter>

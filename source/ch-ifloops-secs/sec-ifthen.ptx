@@ -38,6 +38,77 @@
         </remark>
     </subsection>
 
+    <subsection xml:id="subsec-ifthen">
+        <title>If-Then Statements</title>
+        
+        <p>
+            When we initiate an <c>if</c> statement, we test some conditional statement. If it is True, then the code is run. What
+            if we want something to happen if the conditional statement if False? That's where we get the <c>if-then</c> block.
+            
+            <sage language="python">
+                <input>
+                    age = 16
+if age >= 18:
+    print("You can vote!")
+else:
+    print("You are too young to vote.")
+
+                </input>
+            </sage>
+        </p>
+
+        <p>
+            With <c>else</c>, we cover both possibilities: one block runs if the condition is true, the other if it’s false.
+        </p>
+    </subsection>
+
+    <subsection xml:id="subsec-ifelif">
+        <title>If-Elif-Else Statements</title>
+        
+        <p>
+            We can parse out more logical possibilities with <c>if-elif-else</c> chains. Try to guess the output of the following
+            code before running it.
+
+            <sage language="python">
+                <input>
+                    grade = 85
+
+if grade >= 90:
+    print("A")
+elif grade >= 80:
+    print("B")
+elif grade >= 70:
+    print("C")
+else:
+    print("F")
+
+                </input>
+            </sage>
+        </p>
+
+        <p>
+            With <c>if-elif-else</c> chains, we can insert as many conditional checks that we need.
+        </p>
+    </subsection>
+
+    <subsection xml:id="subsec-tyielif">
+        <title>Try It Yourself: If-Elif-Else</title>
+        <exercise>
+            <p>
+                Define the variable <c>day = "Sunday"</c>. Then use an <c>if-elif-else</c> chain that checks to see
+                what day of the week <c>day</c> is set to and prints a different greeting based upon the day. (Hint use
+                <c>day == "Monday"</c> to test if <c>day</c> is equal.)
+
+                Use several different days to check your logic works.
+
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+            </p>
+        </exercise>
+    </subsection>
     
 
 </section>

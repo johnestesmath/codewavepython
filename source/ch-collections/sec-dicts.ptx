@@ -1,0 +1,62 @@
+<section xml:id="subsec-dictionaries">
+    <title>Dictionaries</title>
+    
+    <p>
+        We can refer to an element in a list by its index. Sometimes, though, we might want to reference
+        things in a different way. A dictionary pairs a key with an element.
+    </p>
+
+    <p>
+        For example,
+
+        <sage language="python">
+            <input>
+               my_pet = {'name':'Max', 'species':'dog', 'personality':'needy'}
+               
+               print(my_pet['name'])
+               print(f"My pet {my_pet['species']} is named {my_pet['name']} and is very {my_pet['personality']}.")
+            </input>
+        </sage>
+    </p>
+
+    <p>
+        As another example,
+        <sage language="python">
+            <input>
+                person = {
+                    'name': 'Alice',
+                    'age': 30,
+                    'is_student': False
+                }
+
+                person['age'] = 31
+person['email'] = 'alice@example.com'
+
+print(person.keys())
+print(person.values())
+print(person.items())
+                
+            </input>
+        </sage>
+    </p>
+
+<subsection xml:id="subsec-tiydict">
+    <title>Try It Yourself: Dictionaries</title>
+
+    <exercise>
+        <p>
+            Create a dictionary representing a book (title, author, year). Add a new key genre. Update the year.
+
+
+            <sage language="python">
+                <input>
+                    
+                </input>
+            </sage>
+                
+        </p>
+    </exercise>
+    
+</subsection>
+
+</section>

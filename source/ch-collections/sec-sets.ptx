@@ -1,0 +1,64 @@
+<section xml:id="sec-sets">
+    <title>Sets</title>
+    
+    <p>
+        Where lists consist of elements in a given order, sometimes we may not care about the order of elements. 
+        Sets are unordered collections of unique elements. They are useful when you need to eliminate duplicates or perform set operations.
+        
+    </p>
+
+    <remark>
+        Sets in Python are just like sets you see in mathematics.
+    </remark>
+
+    <subsection xml:id="subsec-sets">
+        <title>Sets</title>
+        
+    <p>
+    Given sets <c>a</c> and <c>b</c>, we can form new sets. The set "a union b" combines elements of two lists into one (without duplicates), and
+    the set "a intersect b" is the list of elements that are in <c>a </c> and <c>b</c>.    
+    </p>
+
+    <p>
+        <sage language="python">
+            <input>
+                a = {1, 2, 3}
+b = {3, 4, 5}
+
+print(a.union(b))      # {1, 2, 3, 4, 5}
+print(a.intersection(b))  # {3}
+print(a.difference(b))    # {1, 2}
+
+            </input>
+        </sage>
+    </p>
+
+    <p>
+        We can also modify sets and their elements.
+        <sage language="python">
+            <input>
+                colors.add('yellow')
+                colors.remove('red')                     
+            </input>
+        </sage>
+    </p>
+</subsection>
+
+<subsection xml:id="subsec-tiysets">
+    <title>Try It Yourself: Sets</title>
+    
+    <exercise>
+        <p>
+            Create two sets of favorite foods for two people. Find the common and unique favorites.
+
+            <sage language="python">
+                <input>
+                    
+                </input>
+            </sage>
+
+        </p>
+    </exercise>
+</subsection>
+
+</section>

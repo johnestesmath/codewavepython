@@ -1,0 +1,13 @@
+<section xml:id="sec-ifsloopsproject1">
+    <title>Ifs and Loops Project 1</title>
+    
+    <p>
+        Ask the user to guess a secret number between 1 and 10. Give them up to 3 tries using a while loop.
+    </p>
+
+    <p>
+        To complete this project, vist <url href="https://www.online-python.com/" visual="online-python.com">Online-Python</url>. Once complete,
+        save the file and share with your instructor.
+    </p>
+</section>
+

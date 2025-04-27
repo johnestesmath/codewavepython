@@ -1,0 +1,55 @@
+
+<chapter xml:id="ch-collections" xmlns:xi="http://www.w3.org/2001/XInclude">
+  <title>Collections: Lists, Sets, and Dictionaries</title>
+
+  <introduction>
+
+    <figure>
+      <image xml:id="fig-codewave4" source="codewave4.jpg" width="80%" />
+    </figure>
+
+    <p>
+        At this point, you've got a good, growing toolset for coding. Understanding variables, math, strings, and loops will carry you far.
+        There is more though! Your next task is about some of Python's basic data structures. We can keep collections of objects in various ways.
+    </p>
+
+    <p>
+        In particular, we'll look at:
+      <ol>
+        <li>
+          <p>
+            lists
+          </p>
+        </li>
+        <li>
+          <p>
+           sets
+          </p>
+        </li>
+        <li>
+          <p>
+            tuples
+          </p>
+        </li>
+        <li>
+            <p>
+                dictionaries
+            </p>
+        </li>
+      </ol>
+     
+      Let’s break it all down.
+       </p>
+
+
+  </introduction>
+
+ <xi:include href="./ch-collections/sec-lists.ptx" /> 
+ <xi:include href="./ch-collections/sec-sets.ptx" />
+ <xi:include href="./ch-collections/sec-tuples.ptx" />
+ <xi:include href="./ch-collections/sec-dicts.ptx" />   
+ <xi:include href="./ch-collections/sec-listsproject.ptx" /> 
+
+
+
+</chapter>

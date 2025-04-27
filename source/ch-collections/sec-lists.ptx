@@ -1,0 +1,129 @@
+<section xml:id="sec-lists">
+    <title>Lists</title>
+    <p>
+        Lists are the simplest of the collections we're investigating. Lists are ordered, mutable (changeable) collections that can hold a variety of data types. We call
+        the entries of a list an element.
+    </p>
+
+    <p>
+        We can create a list with brackets, <c>[ ]</c>.
+
+        <sage language="python">
+            <input>
+                fruits = ['apple', 'banana', 'cherry']
+numbers = [1, 2, 3, 4, 5]
+mixed = ['hello', 10, 3.14, True]
+
+print(fruits)
+
+            </input>
+        </sage>
+    </p>
+
+    <subsection xml:id="subsec-indices">
+        <title>Indices</title>      
+
+    <p>
+        We can use indices to access an element from a list.
+
+        <sage language="python">
+            <input>
+                fruits = ['apple', 'banana', 'cherry']
+numbers = [1, 2, 3, 4, 5]
+mixed = ['hello', 10, 3.14, True]
+
+print(fruits[0])    # 'apple'
+print(fruits[-1])   # 'cherry'
+
+            </input>
+        </sage>
+    </p>
+
+    <remark>
+        Remember using indices to find a character in a string? Well, strings are also lists... lists of characters.
+    </remark>
+
+    <p>
+        We can pull out "sublists" from our lists with slicing. Slicing is an extremely useful tool when dealing with lists. One that you will
+        use often!
+
+        <sage language="python">
+            <input>
+                fruits = ['apple', 'banana', 'cherry', 'pineapple', 'pear', 'grape', 'mango']
+
+                print(fruits[4:7])
+                print(fruits[5:])
+                print(fruits[:6])
+                print(fruits[4:len(fruits)])
+
+            </input>
+        </sage>
+    </p>
+
+    </subsection>
+
+    <subsection xml:id="subsec-modifying">
+        <title>Modifying Lists</title>
+
+        <p>
+        Some structures in Python are immutable, meaning that the cannot be changed. Lists, however, are very mutable. There
+        are many convenient methods to modify lists.
+        </p>
+
+        <p>
+            For example,
+
+            <sage language="python">
+                <input>
+                    
+                fruits = ['apple', 'banana', 'cherry', 'pineapple', 'pear', 'grape', 'mango']
+fruits[1] = 'blueberry'         # Modify
+fruits.append('orange')         # Add to end
+fruits.insert(1, 'kiwi')        # Insert at index
+fruits.remove('apple')          # Remove by value
+removed_item = fruits.pop()     # Remove last
+
+                </input>
+            </sage>
+        </p>
+        
+    </subsection>
+
+    <subsection xml:id="subsec-ttyi-lists">
+        <title>Try It Yourself: Lists</title>
+        
+            <exercise>
+                <p>
+                Create a list of five animals. Replace the third one with another animal.
+
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+                </p>
+            </exercise>
+
+            <exercise>
+                <p>
+                Create a list of five animals. Add two more animals to the list. Then remove one (You can
+                do that using the <c>.pop()</c> method.).
+
+                <sage language="python">
+                    <input>
+                        
+                    </input>
+                </sage>
+                </p>
+            </exercise>
+        
+    </subsection>
+
+    
+
+    
+
+  
+
+    
+</section>
