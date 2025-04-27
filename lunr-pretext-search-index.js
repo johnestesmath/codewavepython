@@ -636,15 +636,114 @@ var ptx_lunr_docs = [
   "url": "sec-projectproejct1.html",
   "type": "Section",
   "number": "6.1",
-  "title": "Project 1: Rock, Paper, and Scissors",
-  "body": " Project 1: Rock, Paper, and Scissors  In this project, we will build a game of Rock, Paper, and Scissors against a Bot. Here's the code in full.  We will explain what is going on, but vist Online-Python and type the code in for yourself. Once complete, save the file and share with your instructor.   Rock, Paper, Scissors  import random throws=(\"rock\",\"paper\",\"scissors\") game_on = True def rock_paper_scissors(a, b): if a == b: print(\"It's a tie!\") elif a%3 == b%3 + 1: print(\"You win!\") else: print(\"Bot wins!\") while game_on == True: choice = False while choice == False: player_choice = input(\"What do you throw? 1 rock, 2 paper, 3 scissors \") if player_choice not in (\"1\",\"2\",\"3\"): print(\"Sorry. Please pick 1, 2, 3.\") else: player_throw = int(player_choice) - 1 choice = True bot_throw = random.randint(0,2) # Bot picks 1, 2, 3 randomly input(\"Bot has decided. You ready? [Press Enter] \") print(\"1... \") print(\"2... \") print(\"3... Shoot!\") print(\"You throw \" + throws[player_throw]) print(\"Bot throws \" + throws[bot_throw]) rock_paper_scissors(player_throw, bot_throw) play_again = input(\"Do you want to play again? Y\/N \") if play_again.upper() == \"N\": print(\"See you later!\") game_on = False   "
+  "title": "Project 1: Rock, Paper, Scissors",
+  "body": " Project 1: Rock, Paper, Scissors  In this project, we will build a game of Rock, Paper, and Scissors against a Bot. Here's the code in full.  We will explain what is going on, but vist Online-Python and type the code in for yourself. Once complete, save the file and share with your instructor.  Keep in mind that program is not linear. Much like writing a story, a poem, or a mathematical proof, we will not think of the parts one at a time. We'll try to describe our thought process in the script to share the strategy behind writing a program.   The bot we play against will make a random decision, so we definitely need to import random .    import random    We also need a way to declare a winner. There are a lot of ways we can do this, but a nice way is to \"mathematize\" the selection of \"rock\" , \"paper\" , and \"scissors\" . We can do this with a tuple.    throws=(\"rock\",\"paper\",\"scissors\")    If we plan to play a lot of rounds, we should also make a function that computes the winner. The tuple throws=(\"rock\",\"paper\",\"scissors\") implies that beats , beats , and beats . How can we decide a winner then? With circular inequalities like this, using can be very useful.    def rock_paper_scissors(a, b): if a == b: print(\"It's a tie!\") elif a%3 == b%3 + 1: # If you choose 1, and they choose 0, you win. print(\"You win!\") else: print(\"Bot wins!\")    We have a way to declare a winner, but now we need actually play the game. We also hope to play more than once.  We can do this by setting a Boolean (like game_on = True ) and a while loop (like while game_on == True: ). At some point, we need to be able to end the game, and we do that by setting game_on =False .    game_on = True while game_on == True: ''' Our game mechanic will go here. ''' play_again = input(\"Do you want to play again? Y\/N \") if play_again.upper() == \"N\": # If the user doesn't want to play again, we set the game_on Boolean to False print(\"See you later!\") game_on = False    Now for the game mechanic. How does the bot choose? randomly.    bot_throw = random.randint(0,2) # Bot picks 1, 2, 3 randomly    And the human? With an input() function and matching their selection with something from throws=(\"rock\",\"paper\",\"scissors\") . We can also set up a while loop to ensure that the user gives us a workable answer. This while trick is a common technique, and one you'll want to keep that in mind for sure!.    choice = False while choice == False: player_choice = input(\"What do you throw? 1 rock, 2 paper, 3 scissors \") if player_choice not in (\"1\",\"2\",\"3\"): print(\"Sorry. Please pick 1, 2, 3.\") else: player_throw = int(player_choice) - 1 choice = True    Lastly, we add some of the printing and declare a winner. We already have bot_throw and player_throw , so rock_paper_scissors(player_throw, bot_throw) will declare the winner.    input(\"Bot has decided. You ready? [Press Enter] \") print(\"1... \") print(\"2... \") print(\"3... Shoot!\") print(\"You throw \" + throws[player_throw]) print(\"Bot throws \" + throws[bot_throw]) rock_paper_scissors(player_throw, bot_throw)   Now, just debug for syntax issues, and good luck against the bot!  "
+},
+{
+  "id": "sec-projectproejct1-5",
+  "level": "2",
+  "url": "sec-projectproejct1.html#sec-projectproejct1-5",
+  "type": "Remark",
+  "number": "6.1.1",
+  "title": "",
+  "body": " The bot we play against will make a random decision, so we definitely need to import random .  "
+},
+{
+  "id": "sec-projectproejct1-7",
+  "level": "2",
+  "url": "sec-projectproejct1.html#sec-projectproejct1-7",
+  "type": "Remark",
+  "number": "6.1.2",
+  "title": "",
+  "body": " We also need a way to declare a winner. There are a lot of ways we can do this, but a nice way is to \"mathematize\" the selection of \"rock\" , \"paper\" , and \"scissors\" . We can do this with a tuple.  "
+},
+{
+  "id": "sec-projectproejct1-9",
+  "level": "2",
+  "url": "sec-projectproejct1.html#sec-projectproejct1-9",
+  "type": "Remark",
+  "number": "6.1.3",
+  "title": "",
+  "body": " If we plan to play a lot of rounds, we should also make a function that computes the winner. The tuple throws=(\"rock\",\"paper\",\"scissors\") implies that beats , beats , and beats . How can we decide a winner then? With circular inequalities like this, using can be very useful.  "
+},
+{
+  "id": "sec-projectproejct1-11",
+  "level": "2",
+  "url": "sec-projectproejct1.html#sec-projectproejct1-11",
+  "type": "Remark",
+  "number": "6.1.4",
+  "title": "",
+  "body": " We have a way to declare a winner, but now we need actually play the game. We also hope to play more than once.  We can do this by setting a Boolean (like game_on = True ) and a while loop (like while game_on == True: ). At some point, we need to be able to end the game, and we do that by setting game_on =False .  "
+},
+{
+  "id": "sec-projectproejct1-13",
+  "level": "2",
+  "url": "sec-projectproejct1.html#sec-projectproejct1-13",
+  "type": "Remark",
+  "number": "6.1.5",
+  "title": "",
+  "body": " Now for the game mechanic. How does the bot choose? randomly.  "
+},
+{
+  "id": "sec-projectproejct1-15",
+  "level": "2",
+  "url": "sec-projectproejct1.html#sec-projectproejct1-15",
+  "type": "Remark",
+  "number": "6.1.6",
+  "title": "",
+  "body": " And the human? With an input() function and matching their selection with something from throws=(\"rock\",\"paper\",\"scissors\") . We can also set up a while loop to ensure that the user gives us a workable answer. This while trick is a common technique, and one you'll want to keep that in mind for sure!.  "
+},
+{
+  "id": "sec-projectproejct1-17",
+  "level": "2",
+  "url": "sec-projectproejct1.html#sec-projectproejct1-17",
+  "type": "Remark",
+  "number": "6.1.7",
+  "title": "",
+  "body": " Lastly, we add some of the printing and declare a winner. We already have bot_throw and player_throw , so rock_paper_scissors(player_throw, bot_throw) will declare the winner.  "
+},
+{
+  "id": "sec-projectproejct2",
+  "level": "1",
+  "url": "sec-projectproejct2.html",
+  "type": "Section",
+  "number": "6.2",
+  "title": "Project 2: Hangman",
+  "body": " Project 2: Hangman  In this project, we will build a game of Hangman that two friends can. Here's the code in full.  We will explain what is going on, but vist Online-Python and type the code in for yourself. Once complete, save the file and share with your instructor.  Keep in mind that program is not linear. Much like writing a story, a poem, or a mathematical proof, we will not think of the parts one at a time. We'll try to describe our thought process in the script to share the strategy behind writing a program.   print(\"Let's play hangman! User 1 types a message, and user 2 has 5 attempts to figure it out by guessing letters.\") print(\"Letters only, please.\") user1 = input(\"Player 1: Give us your hangman message. \") print('\\n'*20 + 'Player 2, are you ready? ') message = user1.strip() message = message.lower() tries = 5 board = \"\" for i in message: if i == \" \": board += i else: board += \"_\" print(board) win = False used_letters = [] while tries > 0: guess = input(\"Player 2: Guess a letter \") if guess.lower() in used_letters: print(\"You already guessed that letter!\") elif guess.lower() in message: for i in range(len(message)): if guess.lower() == message[i]: board = board[:i] + guess.lower() + board[i+1:] if board == message: print(\"Great! You won!\") tries = 0 win = True used_letters.append(guess.lower()) else: tries -= 1 print(\"Tries left: \", tries) print(board) if win == True: print(\"Congrats! You won!\") else: print(\"Sorry... maybe better luck next time.\")   "
+},
+{
+  "id": "sec-projectproejct3",
+  "level": "1",
+  "url": "sec-projectproejct3.html",
+  "type": "Section",
+  "number": "6.3",
+  "title": "Project 3: Ceasar Cipher",
+  "body": " Project 3: Ceasar Cipher  In this project, we will learn to encrypt and decrypt secrete messages with a Ceasare Cipher. A Ceasar Cipher maps the letters of the alphabet to different letters. For example, take the message 'Hello World' and a cipher code of 3, we will move each letter down 3 letters in the alphabet.  So H -> K, E -> H, L -> 0, and so on. So 'Hello World' is encrypted as 'KHOOR ZRUOG'. If we know the cipher code, we can decrypt it back to 'HELLO WORLD'.  We will explain what is going on, but vist Online-Python and type the code in for yourself. Once complete, save the file and share with your instructor.  Keep in mind that program is not linear. Much like writing a story, a poem, or a mathematical proof, we will not think of the parts one at a time. We'll try to describe our thought process in the script to share the strategy behind writing a program.   letters = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\" open_message = \"\"\" We are going to use a Ceaser Cipher to encrypt or decrypt a secret message. A Ceasar Cipher maps the letters of the alphabet to different letters. For example, take the message 'Hello World' and a cipher code of 3, we will move each letter down 3 letters in the alphabet. So H -> K, E -> H, L -> 0, and so on. So 'Hello World' is encrypted as 'KHOOR ZRUOG'. If we know the cipher code, we can decrypt it back to 'HELLO WORLD'. \"\"\" print(open_message) encrypt_decrypt = input(\"Do you want to encrypt or decrypt a message? E or D \") if encrypt_decrypt.upper() == 'E': message = input(\"What is your secret message? \") code = input(\"Give a cipher code between 0 and 25. \") message = message.upper() encrypt_message = \"\" for i in range(len(message)): if message[i] == \" \": encrypt_message += \" \" else: letter_index = letters.index(message[i]) letter_index += int(code) encrypt_message += letters[letter_index%26] print(\"Your encrypted message: \") print(encrypt_message) else: message = input(\"What is your encrypted message? \") code = input(\"Give a cipher code between 0 and 25. \") decrypt_message = \"\" for i in range(len(message)): if message[i] == \" \": decrypt_message += \" \" else: letter_index = letters.index(message[i]) letter_index -= int(code) decrypt_message += letters[letter_index%26] print(\"Your encrypted message: \") print(decrypt_message)   "
+},
+{
+  "id": "sec-projectproejct4",
+  "level": "1",
+  "url": "sec-projectproejct4.html",
+  "type": "Section",
+  "number": "6.4",
+  "title": "Project 4: Upside Down Snow Storm",
+  "body": " Project 4: Upside Down Snow Storm  In this project, we will make a calm and relaxing visual of snowfall. The only catch is that the snowflakes will be falling up... so an upside down snow storm.  We will explain what is going on, but vist Online-Python and type the code in for yourself. Once complete, save the file and share with your instructor.  Keep in mind that program is not linear. Much like writing a story, a poem, or a mathematical proof, we will not think of the parts one at a time. We'll try to describe our thought process in the script to share the strategy behind writing a program.   import random, time open_message = \"\"\" We will build an upside-down snowfall... meaning the snow flakes will fall upward! \"\"\" print(open_message) intensity = input(\"How intense of a snowstorm do you want? 1-10 \") snow_count = int(intensity) while True: #Display our snow flakes row = \" \"*90 for i in range(snow_count): flake = random.randint(0,len(row)) row = row[:flake] + '*' + row[flake+1:] time.sleep(0.05) print(row)   Now, just debug for syntax issues, and good luck against the bot!  "
+},
+{
+  "id": "sec-projectproejct5",
+  "level": "1",
+  "url": "sec-projectproejct5.html",
+  "type": "Section",
+  "number": "6.5",
+  "title": "Project 5: The Sieve of Eratosthenes",
+  "body": " Project 5: The Sieve of Eratosthenes  In this project, we will build the famous Sieve of Eratosthenes ---- a way to check for primes. Philosopher and mathematician, Eratosthenes developed a way to find prime numbers less than a given integer. First, we arange the numbers in a grid. Secondly, we choose a number and eliminate all multiples of that number in our grid. After a while, we will eliminate all numbers that are not prime! And for integer , we only need to check the first integers.  We will explain what is going on, but vist Online-Python and type the code in for yourself. Once complete, save the file and share with your instructor.  Keep in mind that program is not linear. Much like writing a story, a poem, or a mathematical proof, we will not think of the parts one at a time. We'll try to describe our thought process in the script to share the strategy behind writing a program.   import math open_message = \"\"\" The Sieve of Eratosthenes ---- a way to check for primes. Philosopher and mathematician, Eratosthenes developed a way to find prime numbers less than a given integer. First, we arange the numbers in a grid. Secondly, we choose a number and eliminate all multiples of that number in our grid. After a while, we will eliminate all numbers that are not prime! And for integer n, we only need to check the first sqrt(n) integers. \"\"\" def num_list(n): row_count = n\/\/10 + 1 grid = [] for i in range(row_count): row = [] for j in range(10): if (i*10 + j >= n): row.append(i*10 + j) grid.append(row) return grid def num_grid(list): list for i in range(len(list)): print(list[i]) def multiples_in_row(p, list): for i in range(len(list)): if list[i]=='X': continue elif int(list[i])% p == 0 and int(list[i]) != p: list[i] = 'X' elif int(list[i]) == 1: list[i] = 'X' return list def multiples_in_sieve(p,list): if p == 1: print(\"Well, 1 is not prime. Try again. \") else: for j in range(len(list)): multiples_in_row(p, list[j]) return list iterate = True print(open_message) number_q = input(\"For what integer, do you want to apply the Sieve of Eratosthenes? (Like 100, for example.) \") number = int(number_q) sieve = num_list(number) num_grid(sieve) while iterate == True: multiples_to_check = input(\"What multiples should we eliminate? \") multiples_in_sieve(int(multiples_to_check),sieve) num_grid(sieve) terminate = input(\"Do you think you have all the primes? Y\/N \") if terminate.upper() == 'Y': iterate = False   Now, just debug for syntax issues, and good luck against the bot!  "
 },
 {
   "id": "sec-projectproejctprojects",
   "level": "1",
   "url": "sec-projectproejctprojects.html",
   "type": "Section",
-  "number": "6.2",
+  "number": "6.6",
   "title": "Project Solutions",
   "body": " Project Solutions  We are providing a solution to the projects from this chapter, just in case you get stuck. Note, though, that there's more than one way to write a program usually. Each person's program, just a like a painting or an English paper, will be somewhat unique.  Also, after these projects, be sure to challenge yourself in how you can make these projects better. Can you make a 5-way Rock, Paper, Scissors? Are there bugs in the code if someone does not respond to questions the way you intend? Can you include a score tracker in hangman?   Project 1: Rock, Paper, and Scissors   Rock, Paper, Scissors  import random throws=(\"rock\",\"paper\",\"scissors\") game_on = True #This Boolean keeps the game running def rock_paper_scissors(a, b): if a == b: print(\"It's a tie!\") elif a%3 == b%3 + 1: print(\"You win!\") else: print(\"Bot wins!\") while game_on == True: choice = False while choice == False: player_choice = input(\"What do you throw? 1 rock, 2 paper, 3 scissors \") if player_choice not in (\"1\",\"2\",\"3\"): print(\"Sorry. Please pick 1, 2, 3.\") else: player_throw = int(player_choice) - 1 choice = True bot_throw = random.randint(0,2) # Bot picks 1, 2, 3 randomly input(\"Bot has decided. You ready? [Press Enter] \") print(\"1... \") print(\"2... \") print(\"3... Shoot!\") print(\"You throw \" + throws[player_throw]) print(\"Bot throws \" + throws[bot_throw]) rock_paper_scissors(player_throw, bot_throw) play_again = input(\"Do you want to play again? Y\/N \") if play_again.upper() == \"N\": print(\"See you later!\") game_on = False     Project 2: Hangman   print(\"Let's play hangman! User 1 types a message, and user 2 has 5 attempts to figure it out by guessing letters.\") print(\"Letters only, please.\") user1 = input(\"Player 1: Give us your hangman message. \") print('\\n'*20 + 'Player 2, are you ready? ') message = user1.strip() message = message.lower() tries = 5 board = \"\" for i in message: if i == \" \": board += i else: board += \"_\" print(board) win = False used_letters = [] while tries > 0: guess = input(\"Player 2: Guess a letter \") if guess.lower() in used_letters: print(\"You already guessed that letter!\") elif guess.lower() in message: for i in range(len(message)): if guess.lower() == message[i]: board = board[:i] + guess.lower() + board[i+1:] if board == message: print(\"Great! You won!\") tries = 0 win = True used_letters.append(guess.lower()) else: tries -= 1 print(\"Tries left: \", tries) print(board) if win == True: print(\"Congrats! You won!\") else: print(\"Sorry... maybe better luck next time.\")     Project 3: Ceasar Cipher   letters = \"ABCDEFGHIJKLMNOPQRSTUVWXYZ\" open_message = \"\"\" We are going to use a Ceaser Cipher to encrypt or decrypt a secret message. A Ceasar Cipher maps the letters of the alphabet to different letters. For example, take the message 'Hello World' and a cipher code of 3, we will move each letter down 3 letters in the alphabet. So H -> K, E -> H, L -> 0, and so on. So 'Hello World' is encrypted as 'KHOOR ZRUOG'. If we know the cipher code, we can decrypt it back to 'HELLO WORLD'. \"\"\" print(open_message) encrypt_decrypt = input(\"Do you want to encrypt or decrypt a message? E or D \") if encrypt_decrypt.upper() == 'E': message = input(\"What is your secret message? \") code = input(\"Give a cipher code between 0 and 25. \") message = message.upper() encrypt_message = \"\" for i in range(len(message)): if message[i] == \" \": encrypt_message += \" \" else: letter_index = letters.index(message[i]) letter_index += int(code) encrypt_message += letters[letter_index%26] print(\"Your encrypted message: \") print(encrypt_message) else: message = input(\"What is your encrypted message? \") code = input(\"Give a cipher code between 0 and 25. \") decrypt_message = \"\" for i in range(len(message)): if message[i] == \" \": decrypt_message += \" \" else: letter_index = letters.index(message[i]) letter_index -= int(code) decrypt_message += letters[letter_index%26] print(\"Your encrypted message: \") print(decrypt_message)     Project 4: Upside-Down Snowfall   import random, time open_message = \"\"\" We will build an upside-down snowfall... meaning the snow flakes will fall upward! \"\"\" print(open_message) intensity = input(\"How intense of a snowstorm do you want? 1-10 \") snow_count = int(intensity) while True: #Display our snow flakes row = \" \"*90 for i in range(snow_count): flake = random.randint(0,len(row)) row = row[:flake] + '*' + row[flake+1:] time.sleep(0.05) print(row)     Project 5: The Sieve of Erastothenes   import math open_message = \"\"\" The Sieve of Eratosthenes ---- a way to check for primes. Philosopher and mathematician, Eratosthenes developed a way to find prime numbers less than a given integer. First, we arange the numbers in a grid. Secondly, we choose a number and eliminate all multiples of that number in our grid. After a while, we will eliminate all numbers that are not prime! And for integer n, we only need to check the first sqrt(n) integers. \"\"\" def num_list(n): row_count = n\/\/10 + 1 grid = [] for i in range(row_count): row = [] for j in range(10): if (i*10 + j >= n): row.append(i*10 + j) grid.append(row) return grid def num_grid(list): list for i in range(len(list)): print(list[i]) def multiples_in_row(p, list): for i in range(len(list)): if list[i]=='X': continue elif int(list[i])% p == 0 and int(list[i]) != p: list[i] = 'X' elif int(list[i]) == 1: list[i] = 'X' return list def multiples_in_sieve(p,list): if p == 1: print(\"Well, 1 is not prime. Try again. \") else: for j in range(len(list)): multiples_in_row(p, list[j]) return list iterate = True print(open_message) number_q = input(\"For what integer, do you want to apply the Sieve of Eratosthenes? (Like 100, for example.) \") number = int(number_q) sieve = num_list(number) num_grid(sieve) while iterate == True: multiples_to_check = input(\"What multiples should we eliminate? \") multiples_in_sieve(int(multiples_to_check),sieve) num_grid(sieve) terminate = input(\"Do you think you have all the primes? Y\/N \") if terminate.upper() == 'Y': iterate = False    "
 },
