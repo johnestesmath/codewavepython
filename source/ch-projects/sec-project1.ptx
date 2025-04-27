@@ -1,5 +1,5 @@
 <section xml:id="sec-projectproejct1">
-    <title>Project 1: Rock, Paper, and Scissors</title>
+    <title>Project 1: Rock, Paper, Scissors</title>
     
     <p>
         In this project, we will build a game of Rock, Paper, and Scissors against a Bot. Here's the code in full.
@@ -10,54 +10,141 @@
         code in for yourself. Once complete, save the file and share with your instructor.
     </p>
 
+    <p>
+        Keep in mind that program is not linear. Much like writing a story, a poem, or a mathematical proof, we will not
+        think of the parts one at a time. We'll try to describe our thought process in the script to share the strategy behind
+        writing a program.
+    </p>
+
+    <remark>
+       <p> The bot we play against will make a random decision, so we definitely need to import <c>random</c>. </p>
+    </remark>
 
 
-            <program language="python" line-numbers="yes" highlight-lines="2,6-8">
-                <title>Rock, Paper, Scissors</title>
-                <code>
+    <program language="python" line-numbers="yes">
+        <code>
 import random
+        </code>
+    </program>
 
-            throws=("rock","paper","scissors")
-            
-            
-            game_on = True
-            
-            def rock_paper_scissors(a, b):
-                if a == b:
-                    print("It's a tie!")
-                elif a%3 == b%3 + 1:
-                    print("You win!")
-                else:
-                    print("Bot wins!")
-            
-            while game_on == True:
-                choice = False
+<remark>
+    <p>
+        We also need a way to declare a winner. There are a lot of ways we can do this, but a nice way is to 
+        "mathematize" the selection of <c>"rock"</c>, <c>"paper"</c>, and <c>"scissors"</c>. We can do this with a tuple.
+    </p>
+</remark>
+
+<program language="python" line-numbers="yes">
+    <code>
+throws=("rock","paper","scissors")
+    </code>
+</program>
+
+<remark>
+    <p>
+        If we plan to play a lot of rounds, we should also make a function that computes the winner. The tuple 
+        <c>throws=("rock","paper","scissors")</c> implies that <m>1</m> beats <m>0</m>, <m>2</m> beats <m>1</m>, and
+        <m>0</m> beats <m>2</m>. How can we decide a winner then? With circular inequalities like this, using <m>%</m>
+        can be very useful.
+    </p>
+</remark>
+
+<program language="python" line-numbers="yes">
+    <code>
+def rock_paper_scissors(a, b):
+    if a == b:
+        print("It's a tie!")
+    elif a%3 == b%3 + 1:  # If you choose 1, and they choose 0, you win.
+        print("You win!")
+    else:
+        print("Bot wins!")
+    </code>
+</program>
+
+<remark>
+    <p>
+       We have a way to declare a winner, but now we need actually play the game. We also hope to play more than once.
+    </p>
+
+    <p>
+       We can do this by setting a Boolean (like <c>game_on = True</c>) and a <c>while</c> loop (like <c>while game_on == True:</c>). 
+       At some point, we need to be able to end the game, and we do that by setting <c>game_on =False </c>.
+    </p>
+</remark>
+
+<program language="python" line-numbers="yes">
+    <code>
+game_on = True
+
+while game_on == True:
+    '''
+    Our game mechanic will go here.
+    '''
+    play_again = input("Do you want to play again? Y/N ")
+    if play_again.upper() == "N":   # If the user doesn't want to play again, we set the game_on Boolean to False
+        print("See you later!")
+        game_on = False
+
+    </code>
+</program>
+
+<remark>
+    <p>
+        Now for the game mechanic. How does the bot choose? randomly.
+    </p>
+</remark>
+
+<program language="python" line-numbers="yes">
+    <code>
+bot_throw = random.randint(0,2) # Bot picks 1, 2, 3 randomly
+    </code>
+</program>
+
+<remark>
+    <p>
+       And the human? With an <c>input()</c> function and matching their selection with something from <c>throws=("rock","paper","scissors")</c>.
+       We can also set up a <c>while</c> loop to ensure that the user gives us a workable answer. This <c>while</c> trick 
+       is a common technique, and one you'll want to keep that in mind for sure!.
+    </p>
+</remark>
+
+<program language="python" line-numbers="yes">
+    <code>
+choice = False
                 
-                while choice == False:
-                    player_choice = input("What do you throw? 1 rock, 2 paper, 3 scissors ")
-                    if player_choice not in ("1","2","3"):
-                        print("Sorry. Please pick 1, 2, 3.")
-                    else:
-                        player_throw = int(player_choice) - 1
-                        choice = True
+while choice == False:
+    player_choice = input("What do you throw? 1 rock, 2 paper, 3 scissors ")
+    if player_choice not in ("1","2","3"):
+        print("Sorry. Please pick 1, 2, 3.")
+    else:
+        player_throw = int(player_choice) - 1
+        choice = True
+    </code>
+</program>
+
+<remark>
+    <p>
+        Lastly, we add some of the printing and declare a winner. We already have <c>bot_throw</c> and <c>player_throw</c>, so
+        <c>rock_paper_scissors(player_throw, bot_throw)</c> will declare the winner.
+    </p>
+</remark>
+
+<program language="python" line-numbers="yes">
+    <code>
+input("Bot has decided. You ready? [Press Enter] ")
             
-                bot_throw = random.randint(0,2) # Bot picks 1, 2, 3 randomly
-            
-                input("Bot has decided. You ready? [Press Enter] ")
-            
-                print("1... ")
-                print("2... ")
-                print("3... Shoot!")
-            
-                print("You throw " + throws[player_throw])
-                print("Bot throws " + throws[bot_throw])
-                rock_paper_scissors(player_throw, bot_throw)
-            
-                play_again = input("Do you want to play again? Y/N ")
-                if play_again.upper() == "N":
-                    print("See you later!")
-                    game_on = False
-                </code>
-                </program>
+print("1... ")
+print("2... ")
+print("3... Shoot!")
+   
+print("You throw " + throws[player_throw])
+print("Bot throws " + throws[bot_throw])
+rock_paper_scissors(player_throw, bot_throw)
+    </code>
+</program>
+
+<p>
+Now, just debug for syntax issues, and good luck against the bot!
+</p>
 
 </section>

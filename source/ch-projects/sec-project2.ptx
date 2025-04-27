@@ -1,0 +1,71 @@
+<section xml:id="sec-projectproejct2">
+    <title>Project 2: Hangman</title>
+    
+    <p>
+        In this project, we will build a game of Hangman that two friends can. Here's the code in full.
+    </p>
+
+    <p>
+        We will explain what is going on, but vist <url href="https://www.online-python.com/" visual="online-python.com">Online-Python</url> and type the
+        code in for yourself. Once complete, save the file and share with your instructor.
+    </p>
+
+    <p>
+        Keep in mind that program is not linear. Much like writing a story, a poem, or a mathematical proof, we will not
+        think of the parts one at a time. We'll try to describe our thought process in the script to share the strategy behind
+        writing a program.
+    </p>
+
+    <program language="python" line-numbers="yes" highlight-lines="2,6-8">
+        <code>
+            print("Let's play hangman! User 1 types a message, and user 2 has 5 attempts to figure it out by guessing letters.")
+            print("Letters only, please.")
+            
+            user1 = input("Player 1: Give us your hangman message. ")
+            
+            print('\n'*20 + 'Player 2, are you ready? ')
+            
+            message = user1.strip()
+            message = message.lower()
+            
+            tries = 5
+            
+            board = ""
+            for i in message:
+                if i == " ":
+                    board += i
+                else:
+                    board += "_"
+            
+            print(board)
+            win = False
+            
+            used_letters = []
+            while tries > 0:
+                guess = input("Player 2: Guess a letter ")
+                if guess.lower() in used_letters:
+                    print("You already guessed that letter!")
+                elif guess.lower() in message:
+                    for i in range(len(message)):
+                        if guess.lower() == message[i]:
+                            board = board[:i] + guess.lower() + board[i+1:]  
+                    if board == message:
+                        print("Great! You won!")
+                        tries = 0
+                        win = True
+                    used_letters.append(guess.lower())
+                else:
+                    tries -= 1
+                print("Tries left: ", tries)
+                print(board)
+            
+            if win == True:
+                    print("Congrats! You won!")
+            else:
+                    print("Sorry... maybe better luck next time.")
+            
+                               
+        </code>
+    </program>
+
+</section>

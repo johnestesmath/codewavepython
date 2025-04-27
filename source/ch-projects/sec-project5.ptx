@@ -1,0 +1,97 @@
+<section xml:id="sec-projectproejct5">
+    <title>Project 5: The Sieve of Eratosthenes</title>
+    
+    <p>
+        In this project, we will build the famous Sieve of Eratosthenes ---- a way to check for primes.
+        Philosopher and mathematician, Eratosthenes developed a way to find prime numbers
+        less than a given integer. First, we arange the numbers in a grid. Secondly, 
+        we choose a number and eliminate all multiples of that number in our grid. After 
+        a while, we will eliminate all numbers that are not prime! And for integer <m>n</m>, we
+        only need to check the first <m>sqrt(n)</m> integers.
+    </p>
+
+    <p>
+        We will explain what is going on, but vist <url href="https://www.online-python.com/" visual="online-python.com">Online-Python</url> and type the
+        code in for yourself. Once complete, save the file and share with your instructor.
+    </p>
+
+    <p>
+        Keep in mind that program is not linear. Much like writing a story, a poem, or a mathematical proof, we will not
+        think of the parts one at a time. We'll try to describe our thought process in the script to share the strategy behind
+        writing a program.
+    </p>
+
+
+    <program language="python" line-numbers="yes">
+        <code>
+            import math
+
+            open_message = """
+            The Sieve of Eratosthenes ---- a way to check for primes.
+            Philosopher and mathematician, Eratosthenes developed a way to find prime numbers
+            less than a given integer. First, we arange the numbers in a grid. Secondly, 
+            we choose a number and eliminate all multiples of that number in our grid. After 
+            a while, we will eliminate all numbers that are not prime! And for integer n, we
+            only need to check the first sqrt(n) integers.
+            
+            """
+            
+            def num_list(n):
+                row_count = n//10 + 1
+                grid = []
+                for i in range(row_count):
+                    row = []
+                    for j in range(10):
+                        if (i*10 + j &gt;= n):
+                            row.append(i*10 + j)
+                    grid.append(row)
+                return grid
+               
+            def num_grid(list):
+                list
+                for i in range(len(list)):
+                    print(list[i])
+            
+            def multiples_in_row(p, list):
+                for i in range(len(list)):
+                    if list[i]=='X':
+                        continue
+                    elif int(list[i])% p == 0 and int(list[i]) != p:
+                        list[i] = 'X'
+                    elif int(list[i]) == 1:
+                        list[i] = 'X'
+                return list
+            
+            def multiples_in_sieve(p,list):
+                if p == 1:
+                    print("Well, 1 is not prime. Try again. ")
+                else:
+                    for j in range(len(list)):
+                        multiples_in_row(p, list[j])
+                return list
+            
+            iterate = True
+            
+            print(open_message)
+            number_q = input("For what integer, do you want to apply the Sieve of Eratosthenes? (Like 100, for example.) ")
+            
+            number = int(number_q)
+            sieve = num_list(number)
+            num_grid(sieve)
+            
+            while iterate == True:
+                multiples_to_check = input("What multiples should we eliminate? ")
+                multiples_in_sieve(int(multiples_to_check),sieve)
+                num_grid(sieve)
+            
+                terminate = input("Do you think you have all the primes? Y/N ")
+                if terminate.upper() == 'Y':
+                    iterate = False
+        </code>
+    </program>
+
+<p>
+Now, just debug for syntax issues, and good luck against the bot!
+</p>
+
+</section>

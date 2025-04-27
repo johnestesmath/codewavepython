@@ -1,0 +1,51 @@
+<section xml:id="sec-projectproejct4">
+    <title>Project 4: Upside Down Snow Storm</title>
+    
+    <p>
+        In this project, we will make a calm and relaxing visual of snowfall. The only catch is that the snowflakes will
+        be falling up... so an upside down snow storm.
+    </p>
+
+    <p>
+        We will explain what is going on, but vist <url href="https://www.online-python.com/" visual="online-python.com">Online-Python</url> and type the
+        code in for yourself. Once complete, save the file and share with your instructor.
+    </p>
+
+    <p>
+        Keep in mind that program is not linear. Much like writing a story, a poem, or a mathematical proof, we will not
+        think of the parts one at a time. We'll try to describe our thought process in the script to share the strategy behind
+        writing a program.
+    </p>
+
+
+    <program language="python" line-numbers="yes">
+        <code>
+            import random, time
+
+            open_message = """
+            We will build an upside-down snowfall... meaning the snow flakes will fall upward!
+            """
+            print(open_message)
+            
+            intensity = input("How intense of a snowstorm do you want? 1-10 ")
+            snow_count = int(intensity)
+            
+            
+            
+            while True:
+                #Display our snow flakes
+                row = " "*90
+                for i in range(snow_count):
+                    
+                    flake = random.randint(0,len(row))
+                    row = row[:flake] + '*' + row[flake+1:]
+                    time.sleep(0.05)
+                print(row)
+        </code>
+</program>
+
+<p>
+Now, just debug for syntax issues, and good luck against the bot!
+</p>
+
+</section>

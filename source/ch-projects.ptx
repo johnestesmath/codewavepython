@@ -14,6 +14,10 @@
   </introduction>
 
   <xi:include href="./ch-projects/sec-project1.ptx" />
+  <xi:include href="./ch-projects/sec-project2.ptx" />
+  <xi:include href="./ch-projects/sec-project3.ptx" />
+  <xi:include href="./ch-projects/sec-project4.ptx" />
+  <xi:include href="./ch-projects/sec-project5.ptx" />
   <xi:include href="./ch-projects/sec-projects-total.ptx" />
 
 </chapter>

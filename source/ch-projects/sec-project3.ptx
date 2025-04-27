@@ -1,0 +1,80 @@
+<section xml:id="sec-projectproejct3">
+    <title>Project 3: Ceasar Cipher</title>
+    
+    <p>
+        In this project, we will learn to encrypt and decrypt secrete messages with a Ceasare Cipher. 
+        A Ceasar Cipher maps the letters of the alphabet to different letters. For example,
+        take the message 'Hello World' and a cipher code of 3, we will move each letter down
+        3 letters in the alphabet.
+    </p> 
+    <p>   
+        So H -> K, E -> H, L -> 0, and so on. So 'Hello World' is encrypted as 'KHOOR ZRUOG'. If 
+        we know the cipher code, we can decrypt it back to 'HELLO WORLD'.
+    </p>
+
+    <p>
+        We will explain what is going on, but vist <url href="https://www.online-python.com/" visual="online-python.com">Online-Python</url> and type the
+        code in for yourself. Once complete, save the file and share with your instructor.
+    </p>
+
+    <p>
+        Keep in mind that program is not linear. Much like writing a story, a poem, or a mathematical proof, we will not
+        think of the parts one at a time. We'll try to describe our thought process in the script to share the strategy behind
+        writing a program.
+    </p>
+
+    <program language="python" line-numbers="yes" highlight-lines="2,6-8">
+        <code>
+            letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+            open_message = """
+            We are going to use a Ceaser Cipher to encrypt or decrypt a secret message. 
+            A Ceasar Cipher maps the letters of the alphabet to different letters. For example,
+            take the message 'Hello World' and a cipher code of 3, we will move each letter down
+            3 letters in the alphabet.
+            
+            So H -> K, E -> H, L -> 0, and so on. So 'Hello World' is encrypted as 'KHOOR ZRUOG'. If 
+            we know the cipher code, we can decrypt it back to 'HELLO WORLD'.
+            """
+            
+            print(open_message)
+            
+            encrypt_decrypt = input("Do you want to encrypt or decrypt a message? E or D ")
+            
+            if encrypt_decrypt.upper() == 'E':
+                message = input("What is your secret message? ")
+                code = input("Give a cipher code between 0 and 25. ")
+            
+                message = message.upper()
+            
+                encrypt_message = ""
+                for i in range(len(message)):
+                    if message[i] == " ":
+                        encrypt_message += " "
+                    else:
+                        letter_index = letters.index(message[i])
+                        letter_index += int(code)
+                        encrypt_message += letters[letter_index%26]
+            
+                print("Your encrypted message: ")
+                print(encrypt_message)
+            
+            else:
+                message = input("What is your encrypted message? ")
+                code = input("Give a cipher code between 0 and 25. ")
+            
+                decrypt_message = ""
+                for i in range(len(message)):
+                    if message[i] == " ":
+                        decrypt_message += " "
+                    else:
+                        letter_index = letters.index(message[i])
+                        letter_index -= int(code)
+                        decrypt_message += letters[letter_index%26]
+            
+                print("Your encrypted message: ")
+                print(decrypt_message)
+        </code>
+    </program>
+
+</section>
