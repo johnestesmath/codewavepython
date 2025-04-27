@@ -1,0 +1,74 @@
+<section xml:id="sec-function-project">
+    <title>Mini Project: Magic 8-Ball</title>
+
+    <p>
+        You can combine functions and randomness to make really cool programs. We'll provide an example, and give you
+        something to try.
+    </p>
+
+    <subsection xml:id="subsec-die">
+        <title>Rolling a Die</title>
+
+        <p>
+          Let's roll a die.
+          
+          <sage language="python">
+            <input>
+import random
+
+def roll_die():
+    return random.randint(1, 6)
+                
+result = roll_die()
+print("You rolled a", result)
+                                
+            </input>
+        </sage>
+        </p>
+
+
+    </subsection>
+
+    <subsection xml:id="subsec-magicball">
+        <title>Magic 8-Ball</title>
+        
+        <p>
+            Build a Magic 8-Ball in Python that will give us very useful advice. We recommend
+
+            <ol>
+                <li>
+                    <p>
+                        Defining a function <c>magic_8()</c>
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Making a list of possible answers (in <c>magic_8()</c>).
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Return a randomly chosen answer from your list.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Prompt the user to ask a question (with <c>input()</c>.)
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        Print a <c>magic_8()</c> response.
+                    </p>
+                </li>
+            </ol>
+        </p>
+
+        <p>
+            To complete this project, vist <url href="https://www.online-python.com/" visual="online-python.com">Online-Python</url>. Once complete,
+            save the file and share with your instructor.
+        </p>
+    </subsection>
+    
+
+</section>

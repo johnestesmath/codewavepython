@@ -90,6 +90,28 @@ print(random.randint(1, 100))
         
     </subsection>
 
+    <subsection xml:id="subsec-randomchoice">
+        <title>Random Choice</title>
+        
+        <p>
+            We can randomly select from a list using <c>random.choice()</c>, a very useful application!    
+            <sage language="python">
+                <input>
+import random
+
+fruits = ["banana", "strawberry", "peach"]
+my_fruit = random.choice(fruits)
+
+print(f"You know... I could really go for a {my_fruit} right now.")
+                </input>
+            </sage>
+        
+        </p>
+
+
+
+    </subsection>
+
     <subsection xml:id="subsec-tiy-random">
         <title>Try It Yourself: Randomness</title>
 
