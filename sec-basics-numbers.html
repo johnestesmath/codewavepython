@@ -368,6 +368,9 @@ sagecell.makeSagecell({
 </div>
 <div class="para" id="subsec-num-types-3"><div id="subsec-num-types-3-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">                    apples = 4          # Integer
 price = 1.99        # Float
+
+print(apples)
+print(price)
 </script></div></div>
 <div class="para" id="subsec-num-types-4">It is important to remember if your application needs an integer or a float. Python does not think of 4 and 4.0 as the same thing!</div></section><section class="subsection" id="subsec-math-ops"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">1.3.2</span><span class="space"> </span><span class="title">Math Operators</span>
@@ -435,8 +438,8 @@ print(2 ** 5)
 </tr>
 <tr>
 <td class="l m b0 r0 l0 t0 lines">Floor Division</td>
-<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">/ / </code></td>
-<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10 /slash /slash 4\)</span></td>
+<td class="l m b0 r0 l0 t0 lines"><code class="code-inline tex2jax_ignore">// </code></td>
+<td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(10 // 4\)</span></td>
 <td class="l m b0 r0 l0 t0 lines"><span class="process-math">\(3\)</span></td>
 </tr>
 </table></div></figure><div class="para" id="subsec-math-ops-7">The Modulus operator gives you the remainder after division. For example, <code class="code-inline tex2jax_ignore">13% 3</code> is <code class="code-inline tex2jax_ignore">1</code>. Floor Division give you the quotient, or in other words floor division rounds down to the nearest integer after dividing. For example, <code class="code-inline tex2jax_ignore">13 // 3</code> is <code class="code-inline tex2jax_ignore">4</code>.</div></section><section class="subsection" id="subsec-tiy-numops"><h3 class="heading hide-type">
@@ -503,7 +506,8 @@ print("Total cost:", total)
 </script></div>
 </div> <div class="para" id="sec-basics-numbers-7-2-1-2">Try making your own example with different numbers!</div></article></details><details id="sec-basics-numbers-7-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">1.3.6</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec-basics-numbers-7-3-1">Write a small “math quiz” program. This example includes a few things we have not yet seen that we will cover in more detail later. <div id="sec-basics-numbers-7-3-1-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">                    # Math Quiz!
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="sec-basics-numbers-7-3-1">Write a small “math quiz” program. This example includes a few things we have not yet seen that we will cover in more detail later.</div>
+<div class="code-box"><pre class="program"><code class="language-py">                    # Math Quiz!
 num1 = 10
 num2 = 3
 
@@ -514,9 +518,8 @@ if answer == num1 + num2:
     print("Correct!")
 else:
     print("Oops! The right answer is", num1 + num2)
-</script></div>
-</div>
-<div class="para" id="sec-basics-numbers-7-3-2">Can you adjust the code to make your own quiz using subtraction, multiplication, or division?</div></article></details><article class="remark remark-like" id="sec-basics-numbers-7-4"><h4 class="heading">
+</code></pre></div>
+<div class="para" id="sec-basics-numbers-7-3-3">Unfortunately, our embedded code cells do not support the <code class="code-inline tex2jax_ignore">input()</code> function, but you can play with <code class="code-inline tex2jax_ignore">input()</code> by visting <a class="external" href="https://www.online-python.com/" target="_blank">Online-Python</a><details class="ptx-footnote" aria-live="polite" id="sec-basics-numbers-7-3-3-4"><summary class="ptx-footnote__number" title="Footnote 1.3.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-basics-numbers-7-3-3-4"><code class="code-inline tex2jax_ignore">online-python.com</code></div></details> Can you adjust the code to make your own quiz using subtraction, multiplication, or division?</div></article></details><article class="remark remark-like" id="sec-basics-numbers-7-4"><h4 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">1.3.7</span><span class="period">.</span>
 </h4>
 <ol class="decimal" id="sec-basics-numbers-7-4-1">
@@ -528,8 +531,8 @@ else:
 <span class="type">Activity</span><span class="space"> </span><span class="codenumber">1.3.1</span><span class="period">.</span><span class="space"> </span><span class="title">AI Connections.</span>
 </h4>
 <div class="para" id="sec-basics-numbers-7-5-2">We just saw some code that had elements we have not talked about yet. Some of it may have been confusing. A great use of AI is getting help understanding how the code works.</div>
-<div class="para" id="sec-basics-numbers-7-5-3">As an example, visit <a class="external" href="https://www.chatgpt.com" target="_blank">ChatGPT</a><details class="ptx-footnote" aria-live="polite" id="sec-basics-numbers-7-5-3-2"><summary class="ptx-footnote__number" title="Footnote 1.3.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-basics-numbers-7-5-3-2"><code class="code-inline tex2jax_ignore">chatgpt.com</code></div></details>, the popular AI tool provided by OpenAI. Once there, ask ChatGPT to explain the following code line by line.</div>
-<div class="para" id="sec-basics-numbers-7-5-4"><code class="code-inline tex2jax_ignore"># Get three integers from the user
+<div class="para" id="sec-basics-numbers-7-5-3">As an example, visit <a class="external" href="https://www.chatgpt.com" target="_blank">ChatGPT</a><details class="ptx-footnote" aria-live="polite" id="sec-basics-numbers-7-5-3-2"><summary class="ptx-footnote__number" title="Footnote 1.3.2"><sup> 2 </sup></summary><div class="ptx-footnote__contents" id="sec-basics-numbers-7-5-3-2"><code class="code-inline tex2jax_ignore">chatgpt.com</code></div></details>, the popular AI tool provided by OpenAI. Once there, ask ChatGPT to explain the following code line by line.</div>
+<div class="code-box"><pre class="program line-numbers"><code class="language-py"># Get three integers from the user
             start = int(input("Enter the first integer (start of range): "))
             end = int(input("Enter the second integer (end of range): "))
             adder = int(input("Enter the third integer (number to add): "))
@@ -538,7 +541,7 @@ else:
             for i in range(start, end + 1):
                 result = i + adder
                 print(f"{i} + {adder} = {result}")
-            </code></div></article></section></section></div>
+</code></pre></div></article></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-strings.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="ch-strings.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

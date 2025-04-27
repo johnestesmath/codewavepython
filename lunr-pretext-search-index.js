@@ -97,7 +97,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "1.3",
   "title": "Numbers and Math in Python",
-  "body": " Numbers and Math in Python  By the end of this lesson, you’ll be able to:   Work with numbers in Python (integers and decimals).    Use basic math operators to do calculations.    Write expressions using variables and numbers.      Types of Numbers in Python  Python has two different number structures: integers and floats.   Integers – whole numbers like 5 , -12 , or 0     Floats – decimal numbers like 3.14 or 2.0         It is important to remember if your application needs an integer or a float. Python does not think of 4 and 4.0 as the same thing!    Math Operators  Like a calculator, Python uses common symbols to do math:   Common Arithmetic Operators    Operator  Symbol  Example  Result    Addition  +      Subtraction  -      Multiplication  \\(\\times\\) or \\(\\cdot\\) or *  or or 2 * 6     Division   \/  or 15 \/ 3     Exponentiation  **   2 ** 3         In addition to these common operators, Python has a couple of additional not-so-common-yet-common operators called Modulus and Floor Division.   Common Arithmetic Operators    Operator  Symbol  Example  Result    Modulus  %      Floor Division   \/ \/       The Modulus operator gives you the remainder after division. For example, 13% 3 is 1 . Floor Division give you the quotient, or in other words floor division rounds down to the nearest integer after dividing. For example, 13 \/\/ 3 is 4 .    Try It Yourself: Math Operators   Write code that calculates and prints:   the sum of 12 and 8    the product of 7 and 5    the result of 15 divided by 4   Also print what type (integer or float) of each of the results.       Write code that calculates and prints:   the remainder when 82 is divided by 7.    the quotient when 1036 is divded by 9.           Variables and Math  You can combine variables and numbers:   You can even update variables:   We can even short-cut the previous example with count += 1.     Try It Yourself: Math and Variables    Create a simple shopping calculation.   Try making your own example with different numbers!     Write a small “math quiz” program. This example includes a few things we have not yet seen that we will cover in more detail later.   Can you adjust the code to make your own quiz using subtraction, multiplication, or division?   We will cover these concepts in more detail later, but let’s point out what we haven’t seen before.   The input() function, which we will cover in more detail later. However, input() allows a user to interact with a program. In this case, the user types in a number.    Question: Why do we use int( ) around the input() function? Answer: Whatever the user types is considered a string. The int() function converts the string to an integer.    What is the if and else stuff? If-else structures are a way we can introduce decision making into a program. In this case, if the user gives the correct answer, we congratulate them. If they give us the wrong answer (else), we correct them    Notice how we tell if someone gave use the correct answer answer == num1 + num2 . The double equals, == , compares answer to num1 + num2 . Python decides if this is true or false, and makes a decision based upon that truth status. We call these true-false decision Booleans, and we will discuss them in detail later.      AI Connections  We just saw some code that had elements we have not talked about yet. Some of it may have been confusing. A great use of AI is getting help understanding how the code works.  As an example, visit ChatGPT , the popular AI tool provided by OpenAI. Once there, ask ChatGPT to explain the following code line by line.   # Get three integers from the user start = int(input(\"Enter the first integer (start of range): \")) end = int(input(\"Enter the second integer (end of range): \")) adder = int(input(\"Enter the third integer (number to add): \")) # For loop that goes from start to end (inclusive) for i in range(start, end + 1): result = i + adder print(f\"{i} + {adder} = {result}\")     "
+  "body": " Numbers and Math in Python  By the end of this lesson, you’ll be able to:   Work with numbers in Python (integers and decimals).    Use basic math operators to do calculations.    Write expressions using variables and numbers.      Types of Numbers in Python  Python has two different number structures: integers and floats.   Integers – whole numbers like 5 , -12 , or 0     Floats – decimal numbers like 3.14 or 2.0         It is important to remember if your application needs an integer or a float. Python does not think of 4 and 4.0 as the same thing!    Math Operators  Like a calculator, Python uses common symbols to do math:   Common Arithmetic Operators    Operator  Symbol  Example  Result    Addition  +      Subtraction  -      Multiplication  \\(\\times\\) or \\(\\cdot\\) or *  or or 2 * 6     Division   \/  or 15 \/ 3     Exponentiation  **   2 ** 3         In addition to these common operators, Python has a couple of additional not-so-common-yet-common operators called Modulus and Floor Division.   Common Arithmetic Operators    Operator  Symbol  Example  Result    Modulus  %      Floor Division   \/\/       The Modulus operator gives you the remainder after division. For example, 13% 3 is 1 . Floor Division give you the quotient, or in other words floor division rounds down to the nearest integer after dividing. For example, 13 \/\/ 3 is 4 .    Try It Yourself: Math Operators   Write code that calculates and prints:   the sum of 12 and 8    the product of 7 and 5    the result of 15 divided by 4   Also print what type (integer or float) of each of the results.       Write code that calculates and prints:   the remainder when 82 is divided by 7.    the quotient when 1036 is divded by 9.           Variables and Math  You can combine variables and numbers:   You can even update variables:   We can even short-cut the previous example with count += 1.     Try It Yourself: Math and Variables    Create a simple shopping calculation.   Try making your own example with different numbers!     Write a small “math quiz” program. This example includes a few things we have not yet seen that we will cover in more detail later.   # Math Quiz! num1 = 10 num2 = 3 print(\"What is\", num1, \"+\", num2, \"?\") answer = int(input(\"Your answer: \")) if answer == num1 + num2: print(\"Correct!\") else: print(\"Oops! The right answer is\", num1 + num2)   Unfortunately, our embedded code cells do not support the input() function, but you can play with input() by visting Online-Python Can you adjust the code to make your own quiz using subtraction, multiplication, or division?   We will cover these concepts in more detail later, but let’s point out what we haven’t seen before.   The input() function, which we will cover in more detail later. However, input() allows a user to interact with a program. In this case, the user types in a number.    Question: Why do we use int( ) around the input() function? Answer: Whatever the user types is considered a string. The int() function converts the string to an integer.    What is the if and else stuff? If-else structures are a way we can introduce decision making into a program. In this case, if the user gives the correct answer, we congratulate them. If they give us the wrong answer (else), we correct them    Notice how we tell if someone gave use the correct answer answer == num1 + num2 . The double equals, == , compares answer to num1 + num2 . Python decides if this is true or false, and makes a decision based upon that truth status. We call these true-false decision Booleans, and we will discuss them in detail later.      AI Connections  We just saw some code that had elements we have not talked about yet. Some of it may have been confusing. A great use of AI is getting help understanding how the code works.  As an example, visit ChatGPT , the popular AI tool provided by OpenAI. Once there, ask ChatGPT to explain the following code line by line.   # Get three integers from the user start = int(input(\"Enter the first integer (start of range): \")) end = int(input(\"Enter the second integer (end of range): \")) adder = int(input(\"Enter the third integer (number to add): \")) # For loop that goes from start to end (inclusive) for i in range(start, end + 1): result = i + adder print(f\"{i} + {adder} = {result}\")     "
 },
 {
   "id": "subsec-math-ops-3",
@@ -115,7 +115,7 @@ var ptx_lunr_docs = [
   "type": "Table",
   "number": "1.3.2",
   "title": "Common Arithmetic Operators",
-  "body": " Common Arithmetic Operators    Operator  Symbol  Example  Result    Modulus  %      Floor Division   \/ \/      "
+  "body": " Common Arithmetic Operators    Operator  Symbol  Example  Result    Modulus  %      Floor Division   \/\/      "
 },
 {
   "id": "subsec-tiy-numops-2",
@@ -151,7 +151,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "1.3.6",
   "title": "",
-  "body": " Write a small “math quiz” program. This example includes a few things we have not yet seen that we will cover in more detail later.   Can you adjust the code to make your own quiz using subtraction, multiplication, or division?  "
+  "body": " Write a small “math quiz” program. This example includes a few things we have not yet seen that we will cover in more detail later.   # Math Quiz! num1 = 10 num2 = 3 print(\"What is\", num1, \"+\", num2, \"?\") answer = int(input(\"Your answer: \")) if answer == num1 + num2: print(\"Correct!\") else: print(\"Oops! The right answer is\", num1 + num2)   Unfortunately, our embedded code cells do not support the input() function, but you can play with input() by visting Online-Python Can you adjust the code to make your own quiz using subtraction, multiplication, or division?  "
 },
 {
   "id": "sec-basics-numbers-7-4",
@@ -250,16 +250,16 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "2.3",
   "title": "User Input",
-  "body": " User Input  A big part of programming involves asking the program's user for some sort of input.   username and password    setting preferences    their favorite color     We can easily interact with a program user with input() . Use the input() function to ask the user a question and get their answer.    The input() function always gives us (or returns) a string. If you want a number, convert it using int() or float() .    Use input() is an exteremely valuable tool to add to your growing, programming toolkit!   Try It Yourself: Strings and Inputs  Try the following exercises. Don’t be afraid of making errors. That’s how we learn.   Making Introductions  Ask a user for (1) their name, (2) their favorite animal, and (3) a place they would like to visit. Then summarize their answers with a sentence.    Ask a user for a sentence. Then   convert the sentence to lowercase    count the number of times the letter 's' appears    replace all spaces with an underscore '_'    print the resulting sentence.      "
+  "body": " User Input  A big part of programming involves asking the program's user for some sort of input.   username and password    setting preferences    their favorite color     We can easily interact with a program user with input() . Use the input() function to ask the user a question and get their answer. Unfortunately, our embedded code cells do not support the input() function, but you can play with input() by visting Online-Python .  Try typing the following.   name = input(\"What is your name? \") print(\"Hello,\", name + \"!\")    The input() function always gives us (or returns) a string. If you want a number, convert it using int() or float() .  Try typing the following.   age = input(\"How old are you? \") print(\"Next year, you will be\", int(age) + 1)    Use input() is an exteremely valuable tool to add to your growing, programming toolkit!   Try It Yourself: Strings and Inputs  Try the following exercises. Don’t be afraid of making errors. That’s how we learn.   Making Introductions  Ask a user for (1) their name, (2) their favorite animal, and (3) a place they would like to visit. Then summarize their answers with a sentence.    "
 },
 {
-  "id": "sec-input-4",
+  "id": "sec-input-6",
   "level": "2",
-  "url": "sec-input.html#sec-input-4",
+  "url": "sec-input.html#sec-input-6",
   "type": "Remark",
   "number": "2.3.1",
   "title": "",
-  "body": " The input() function always gives us (or returns) a string. If you want a number, convert it using int() or float() .   "
+  "body": " The input() function always gives us (or returns) a string. If you want a number, convert it using int() or float() .  Try typing the following.   age = input(\"How old are you? \") print(\"Next year, you will be\", int(age) + 1)   "
 },
 {
   "id": "subsec-tiy-input-3",
@@ -268,16 +268,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "2.3.2",
   "title": "Making Introductions.",
-  "body": " Making Introductions  Ask a user for (1) their name, (2) their favorite animal, and (3) a place they would like to visit. Then summarize their answers with a sentence.   "
-},
-{
-  "id": "subsec-tiy-input-4",
-  "level": "2",
-  "url": "sec-input.html#subsec-tiy-input-4",
-  "type": "Checkpoint",
-  "number": "2.3.3",
-  "title": "",
-  "body": "Ask a user for a sentence. Then   convert the sentence to lowercase    count the number of times the letter 's' appears    replace all spaces with an underscore '_'    print the resulting sentence.    "
+  "body": " Making Introductions  Ask a user for (1) their name, (2) their favorite animal, and (3) a place they would like to visit. Then summarize their answers with a sentence.  "
 },
 {
   "id": "sec-strings-project1",
@@ -340,7 +331,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.3",
   "title": "For Loops and While Loops",
-  "body": " For Loops and While Loops   For Loops  What if we want to print \"Hello World\" 10 times? We could manually type a really long string, but that's not very computer science-y. What if we want to print \"Hello World\" 1000 times? We need some new tools. We need loops!  We can use a for loop to repeat something a specific number of times. You’ll most often loop over a sequence of values, like numbers or characters in a string.   Let's go over this example in more detail. The line for i in range(5) initiates a loop that will run 5 times. The letter i is a loop variable (or counter), counting how many times we have gone through the loop, and range(5) dictates how many times the loop will run.  As you run the code, you can see that on the first run through the loop, i is 0, and we print i and the string \"Hello World . We keep doing this until we have a total of 5 iterations through our loop.  Keep in mind that range(n) starts with 0.  Loops are a vital tool for programming. It may be a bit confusing at first, but for loops will be your best friend by the end of things.   Looping Over Lists  We have not talked about lists in Python yet, but we should still mention that Python can also loop over a list. This means that Python apply the code in your for loop once for each item in your list.   We can do the same thing over strings!      While Loops  With a for loop, we tell Python how many times we want to go through our loop. Another powerful loop, the while loop operate a little differently. A while loop repeats as long as a condition is true.   In this example, we set a count variable to 5, and as long as count > 5 the loop will initiate. So how is it that the while will ever not initiate? In theory, a while loop can run forever (called an infinite loop... and you want to avoid these). However, in the loop statement, we reduce the count by 1. So eventually the loop condition is false.    Break and Continue  We can exercise additional control over looping with using break and continue .      Try It Yourself: Loops  Write a program that asks a user for their age and prints whether they can drive, vote, or neither.  Write a loop that prints all the even numbers from 0 to 20. (Hint: Try using % to determine if a number is even or not.)  Modify the following loop to skip printing the number 5:    "
+  "body": " For Loops and While Loops   For Loops  What if we want to print \"Hello World\" 10 times? We could manually type a really long string, but that's not very computer science-y. What if we want to print \"Hello World\" 1000 times? We need some new tools. We need loops!  We can use a for loop to repeat something a specific number of times. You’ll most often loop over a sequence of values, like numbers or characters in a string.   Let's go over this example in more detail. The line for i in range(5) initiates a loop that will run 5 times. The letter i is a loop variable (or counter), counting how many times we have gone through the loop, and range(5) dictates how many times the loop will run.  As you run the code, you can see that on the first run through the loop, i is 0, and we print i and the string \"Hello World . We keep doing this until we have a total of 5 iterations through our loop.  Keep in mind that range(n) starts with 0.  Loops are a vital tool for programming. It may be a bit confusing at first, but for loops will be your best friend by the end of things.   Looping Over Lists  We have not talked about lists in Python yet, but we should still mention that Python can also loop over a list. This means that Python apply the code in your for loop once for each item in your list.   We can do the same thing over strings!      While Loops  With a for loop, we tell Python how many times we want to go through our loop. Another powerful loop, the while loop operate a little differently. A while loop repeats as long as a condition is true.   In this example, we set a count variable to 5, and as long as count > 5 the loop will initiate. So how is it that the while will ever not initiate? In theory, a while loop can run forever (called an infinite loop... and you want to avoid these). However, in the loop statement, we reduce the count by 1. So eventually the loop condition is false.    Break and Continue  We can exercise additional control over looping with using break and continue .      Try It Yourself: Loops   Write a program that asks a user for their age and prints whether they can drive, vote, or neither.    Write a loop that prints all the even numbers from 0 to 20. (Hint: Try using % to determine if a number is even or not.)    Modify the following loop to skip printing the number 5:     "
 },
 {
   "id": "subsec-forloops-6",
@@ -358,7 +349,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "3.3.2",
   "title": "",
-  "body": "Write a program that asks a user for their age and prints whether they can drive, vote, or neither. "
+  "body": " Write a program that asks a user for their age and prints whether they can drive, vote, or neither.  "
 },
 {
   "id": "subsec-tyi-more-loops-3",
@@ -367,7 +358,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "3.3.3",
   "title": "",
-  "body": "Write a loop that prints all the even numbers from 0 to 20. (Hint: Try using % to determine if a number is even or not.) "
+  "body": " Write a loop that prints all the even numbers from 0 to 20. (Hint: Try using % to determine if a number is even or not.)  "
 },
 {
   "id": "subsec-tyi-more-loops-4",
@@ -376,7 +367,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "3.3.4",
   "title": "",
-  "body": "Modify the following loop to skip printing the number 5:  "
+  "body": " Modify the following loop to skip printing the number 5:   "
 },
 {
   "id": "sec-ifsloopsproject1",
@@ -466,7 +457,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "4.3",
   "title": "Tuples",
-  "body": " Tuples  Lists are ordered and mutable. Sets are unordered and mutable, but there may be times we need something unmutable. Tuples are ordered, immutable collections. Use them when you want to ensure data cannot be changed.   If we try to modifying a tuple, we receive an error.    Try It Yourself: Tuples  Create a tuple representing your birth date (day, month, year). Print the month.    "
+  "body": " Tuples  Lists are ordered and mutable. Sets are unordered and mutable, but there may be times we need something unmutable. Tuples are ordered, immutable collections. Use them when you want to ensure data cannot be changed.   If we try to modifying a tuple, we receive an error.    Try It Yourself: Tuples   Create a tuple representing your birth date (day, month, year). Print the month.     "
 },
 {
   "id": "subsec-tiytuples-2",
@@ -475,7 +466,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "4.3.1",
   "title": "",
-  "body": "Create a tuple representing your birth date (day, month, year). Print the month.  "
+  "body": " Create a tuple representing your birth date (day, month, year). Print the month.   "
 },
 {
   "id": "subsec-dictionaries",
@@ -583,7 +574,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "5.2",
   "title": "Randomness",
-  "body": " Randomness   Why Use Randomness?  Randomness makes programs less predictable — perfect for games, simulations, and surprises. We make use of randomness for dice rolls, coin flips, and many other applications.  To implement randomness in Python, we must first import the random module.     Random Numbers  We can a generate random number between n and m with random.randint(n,m) to generate. Each time you run the program, you may get a different number.    Print 4 random integers between 50 and 100.      Random Floating-Point Numbers  Probabilities are always between and , so randint is not always what we need. We can use random() to generate a random float between and .     Seeding the Random Generator  If you want repeatable randomness (for testing), you can seed the random number generator:     Random Choice  We can randomly select from a list using random.choice() , a very useful application!     Try It Yourself: Randomness   Import random and print a random number between 1 and 50.     Print a random decimal number between 0 and 5. (You can multiple random() by 5)     Generate three random numbers between 1 and 20 and print their sum.    "
+  "body": " Randomness   Why Use Randomness?  Randomness makes programs less predictable — perfect for games, simulations, and surprises. We make use of randomness for dice rolls, coin flips, and many other applications.  To implement randomness in Python, we must first import the random module.     Random Numbers  We can a generate random number between n and m with random.randint(n,m) to generate. Each time you run the program, you may get a different number.    Print 4 random integers between 50 and 100.      Random Floating-Point Numbers  Probabilities are always between and , so randint is not always what we need. We can use random() to generate a random float between and .     Seeding the Random Generator  If you want repeatable randomness (for testing), you can seed the random number generator:     Random Choice  We can randomly select from a list using random.choice() , a very useful application!     Try It Yourself: Randomness   Import random and print a random number between 1 and 50.     Print a random decimal number between 0 and 5. (You can multiple random() by 5)     Generate three random numbers between 1 and 20 and print their sum.     "
 },
 {
   "id": "subsec-randint-3",
@@ -619,7 +610,7 @@ var ptx_lunr_docs = [
   "type": "Checkpoint",
   "number": "5.2.4",
   "title": "",
-  "body": " Generate three random numbers between 1 and 20 and print their sum.  "
+  "body": " Generate three random numbers between 1 and 20 and print their sum.   "
 },
 {
   "id": "sec-function-project",

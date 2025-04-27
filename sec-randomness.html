@@ -376,10 +376,13 @@ print(random.random())
 </div></section><section class="subsection" id="subsec-seeding"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="space"> </span><span class="title">Seeding the Random Generator</span>
 </h3>
-<div class="para" id="subsec-seeding-2">If you want repeatable randomness (for testing), you can seed the random number generator: <div id="subsec-seeding-2-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">                   import random 
+<div class="para" id="subsec-seeding-2">If you want repeatable randomness (for testing), you can seed the random number generator: <div id="subsec-seeding-2-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">import random 
 
-                   random.seed(5)
+random.seed(5)
 print(random.randint(1, 100))
+print(random.randint(1, 100))
+
+random.seed(5)
 print(random.randint(1, 100))
 </script></div>
 </div></section><section class="subsection" id="subsec-randomchoice"><h3 class="heading hide-type">
@@ -405,7 +408,9 @@ print(f"You know... I could really go for a {my_fruit} right now.")
 </script></div>
 </div></article></details><details id="subsec-tiy-random-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">5.2.4</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-tiy-random-4-1">Generate three random numbers between 1 and 20 and print their sum.</div></article></details></section></section></div>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-tiy-random-4-1">Generate three random numbers between 1 and 20 and print their sum. <div id="subsec-tiy-random-4-1-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">
+</script></div>
+</div></article></details></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-functions.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-function-project.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

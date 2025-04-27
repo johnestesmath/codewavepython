@@ -123,18 +123,6 @@ eBookConfig.enable_chatcodes =  false;
 <script src="_static/prefix-runtime.33e494184ef307b3.bundle.js"></script><script src="_static/prefix-723.3e6434f80549315a.bundle.js"></script><script src="_static/prefix-runestone.f7a03b209751032d.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-723.3bccd435914aa0ff.css">
 <link rel="stylesheet" type="text/css" href="_static/prefix-runestone.541c9106f2c605b9.css">
 <script src="https://sagecell.sagemath.org/static/embedded_sagecell.js"></script><script xmlns:xlink="http://www.w3.org/1999/xlink" src="_static/pretext/js/lti_iframe_resizer.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/components/prism-core.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-numbers/prism-line-numbers.min.js" integrity="sha512-dubtf8xMHSQlExGRQ5R7toxHLgSDZ0K7AunqPWHXmJQ8XyVIG19S1T95gBxlAeGOK02P4Da2RTnQz0Za0H0ebQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.26.0/plugins/line-highlight/prism-line-highlight.min.js" integrity="sha512-93uCmm0q+qO5Lb1huDqr7tywS8A2TFA+1/WHvyiWaK6/pvsFl6USnILagntBx8JnVbQH5s3n0vQZY6xNthNfKA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/pretext_search.js"></script><script src="_static/pretext/js/lib/knowl.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
-</script><script>// Make *any* div with class 'sagecell-python' an executable Sage cell
-// Their results will be linked, only within language type
-sagecell.makeSagecell({
-  "inputLocation": "div.sagecell-python",
-  "linked": true,
-  "linkKey": "linked-python",
-  "autoeval": false,
-  "languages": [
-    "python"
-  ],
-  "evalButtonText": "Evaluate (Python)"
-});
 </script>
 </head>
 <body id="changeme" class="pretext book ignore-math">
@@ -354,33 +342,26 @@ sagecell.makeSagecell({
 <li id="sec-input-2-1-3"><div class="para" id="sec-input-2-1-3-1">their favorite color</div></li>
 </ol>
 </div>
-<div class="para" id="sec-input-3">We can easily interact with a program user with <code class="code-inline tex2jax_ignore">input()</code>. Use the <code class="code-inline tex2jax_ignore">input()</code> function to ask the user a question and get their answer. <div id="sec-input-3-3" class="ptx-sagecell sagecell-python"><script type="text/x-sage">                name = input("What is your name? ")
+<div class="para" id="sec-input-3">We can easily interact with a program user with <code class="code-inline tex2jax_ignore">input()</code>. Use the <code class="code-inline tex2jax_ignore">input()</code> function to ask the user a question and get their answer. Unfortunately, our embedded code cells do not support the <code class="code-inline tex2jax_ignore">input()</code> function, but you can play with <code class="code-inline tex2jax_ignore">input()</code> by visting <a class="external" href="https://www.online-python.com/" target="_blank">Online-Python</a><details class="ptx-footnote" aria-live="polite" id="sec-input-3-6"><summary class="ptx-footnote__number" title="Footnote 2.3.1"><sup> 1 </sup></summary><div class="ptx-footnote__contents" id="sec-input-3-6"><code class="code-inline tex2jax_ignore">online-python.com</code></div></details>.</div>
+<div class="para" id="sec-input-4">Try typing the following.</div>
+<div class="code-box"><pre class="program"><code class="language-py">name = input("What is your name? ")
 print("Hello,", name + "!")
-</script></div>
-</div>
-<article class="remark remark-like" id="sec-input-4"><h3 class="heading">
+</code></pre></div>
+<article class="remark remark-like" id="sec-input-6"><h3 class="heading">
 <span class="type">Remark</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="period">.</span>
 </h3>
-<div class="para" id="sec-input-4-1">The <code class="code-inline tex2jax_ignore">input()</code> function always gives us (or returns) a string. If you want a number, convert it using <code class="code-inline tex2jax_ignore">int()</code> or <code class="code-inline tex2jax_ignore">float()</code>. <div id="sec-input-4-1-4" class="ptx-sagecell sagecell-python"><script type="text/x-sage">                    age = input("How old are you? ")
+<div class="para" id="sec-input-6-1">The <code class="code-inline tex2jax_ignore">input()</code> function always gives us (or returns) a string. If you want a number, convert it using <code class="code-inline tex2jax_ignore">int()</code> or <code class="code-inline tex2jax_ignore">float()</code>.</div>
+<div class="para" id="sec-input-6-2">Try typing the following.</div>
+<div class="code-box"><pre class="program"><code class="language-py">age = input("How old are you? ")
 print("Next year, you will be", int(age) + 1)
-</script></div>
-</div></article><div class="para" id="sec-input-5">Use <code class="code-inline tex2jax_ignore">input()</code> is an exteremely valuable tool to add to your growing, programming toolkit!</div>
+</code></pre></div></article><div class="para" id="sec-input-7">Use <code class="code-inline tex2jax_ignore">input()</code> is an exteremely valuable tool to add to your growing, programming toolkit!</div>
 <section class="subsection" id="subsec-tiy-input"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">2.3.1</span><span class="space"> </span><span class="title">Try It Yourself: Strings and Inputs</span>
 </h3>
 <div class="para" id="subsec-tiy-input-2">Try the following exercises. Don’t be afraid of making errors. That’s how we learn.</div>
 <details id="subsec-tiy-input-3" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
 <span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.2</span><span class="period">.</span><span class="space"> </span><span class="title">Making Introductions.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-tiy-input-3-2">Ask a user for (1) their name, (2) their favorite animal, and (3) a place they would like to visit. Then summarize their answers with a sentence. <div id="subsec-tiy-input-3-2-1" class="ptx-sagecell sagecell-python"><script type="text/x-sage">
-</script></div>
-</div></article></details><details id="subsec-tiy-input-4" class="exercise exercise-like born-hidden-knowl"><summary class="knowl__link"><h4 class="heading">
-<span class="type">Checkpoint</span><span class="space"> </span><span class="codenumber">2.3.3</span><span class="period">.</span>
-</h4></summary><article class="exercise exercise-like knowl__content"><ol class="decimal" id="subsec-tiy-input-4-1">
-<li id="subsec-tiy-input-4-1-1"><div class="para" id="subsec-tiy-input-4-1-1-1">convert the sentence to lowercase</div></li>
-<li id="subsec-tiy-input-4-1-2"><div class="para" id="subsec-tiy-input-4-1-2-1">count the number of times the letter ’s’ appears</div></li>
-<li id="subsec-tiy-input-4-1-3"><div class="para" id="subsec-tiy-input-4-1-3-1">replace all spaces with an underscore ’_’</div></li>
-<li id="subsec-tiy-input-4-1-4"><div class="para" id="subsec-tiy-input-4-1-4-1">print the resulting sentence.</div></li>
-</ol></article></details></section></section></div>
+</h4></summary><article class="exercise exercise-like knowl__content"><div class="para" id="subsec-tiy-input-3-2">Ask a user for (1) their name, (2) their favorite animal, and (3) a place they would like to visit. Then summarize their answers with a sentence.</div></article></details></section></section></div>
 <div class="ptx-content-footer">
 <a class="previous-button button" href="sec-string-manipulation.html" title="Previous"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="sec-strings-project1.html" title="Next"><span class="name">Next</span><span xmlns:xlink="http://www.w3.org/1999/xlink" class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
 </div></main>

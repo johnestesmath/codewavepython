@@ -364,10 +364,10 @@ largerthan(6,6)
 <section class="subsection" id="subsec-def-funcs"><h3 class="heading hide-type">
 <span class="type">Subsection</span><span class="space"> </span><span class="codenumber">5.1.1</span><span class="space"> </span><span class="title">Defining a Function</span>
 </h3>
-<div class="para" id="subsec-def-funcs-2">We create a function using the <code class="code-inline tex2jax_ignore">def</code> keyword. This defines the function. We use the function by "calling" it. <div id="subsec-def-funcs-2-2" class="ptx-sagecell sagecell-python"><script type="text/x-sage">  def say_hello(): # defining the function
-  print("Hello, world!") # the contents of the function
-
-  say_hell() # calling the function
+<div class="para" id="subsec-def-funcs-2">We create a function using the <code class="code-inline tex2jax_ignore">def</code> keyword. This defines the function. We use the function by "calling" it. <div id="subsec-def-funcs-2-2" class="ptx-sagecell sagecell-python"><script type="text/x-sage">def say_hello(): # defining the function
+print("Hello, world!") # the contents of the function
+                  
+say_hello() # calling the function
 </script></div>
 </div>
 <article class="remark remark-like" id="subsec-def-funcs-3"><h4 class="heading">
@@ -398,7 +398,7 @@ def greet2(name1, name2):
 greet1("Alice")
 greet1("Bob")
 greet0()
-greet2("Charlie", "Dorothy"
+greet2("Charlie", "Dorothy")
 </script></div>
 </div>
 <div class="para" id="subsec-parameters-5">In <code class="code-inline tex2jax_ignore">greet1(name)</code>, <code class="code-inline tex2jax_ignore">name</code> is the parameter. Notice that <code class="code-inline tex2jax_ignore">greet0()</code> has no parameter! Yet, it still is effective. There are two parameters in <code class="code-inline tex2jax_ignore">greet2(name1, name2)</code>. Is there a limit to how many parameters a function can have? Not really.</div>
@@ -421,7 +421,7 @@ greet2("Charlie", "Dorothy"
 <div class="para" id="subsec-return-2">All of our examples so far have printed some sort of statement. It’s very common that instead of printing something we will want to perform a calculation and use that result somewhere else. In this case, a function needs to give a value back using <code class="code-inline tex2jax_ignore">return</code>. <div id="subsec-return-2-2" class="ptx-sagecell sagecell-python"><script type="text/x-sage">    def interval(a, b): # returns a list starting at a and ending at b
     list = []
     i = a
-    while i >= b:
+    while i <= b:
         list.append(i)
         i += 1
     return list
