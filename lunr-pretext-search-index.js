@@ -304,7 +304,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.1",
   "title": "Booleans: True and False",
-  "body": " Booleans: True and False  How can we ask a computer to make a decision? By answering a True\/False question. Let's do a quick simulation to highlight what that means.   You say, \"I have not brushed my teeth yet today.\"    Is this true? If it is, you decide to brush your teeth.    If it is false, you choose to brush your teeth later.   .  This is how computers make decisions as well. At the heart of every decision in a program is a Boolean value. A Boolean represents one of two states: True or False .     Boolean Logic     -->  Booleans are crucially important for computer decision making. Boolean values are the foundation of computer logic. --> "
+  "body": " Booleans: True and False  How can we ask a computer to make a decision? By answering a True\/False question. Let's do a quick simulation to highlight what that means.   You say, \"I have not brushed my teeth yet today.\"    Is this true? If it is, you decide to brush your teeth.    If it is false, you choose to brush your teeth later.   .  This is how computers make decisions as well. At the heart of every decision in a program is a Boolean value. A Boolean represents one of two states: True or False .     Boolean Logic  We can combine logic statement as well. Python also includes logical operators to combine or modify Booleans:    and : True if both conditions are true     or : True if either condition is true (or both)     not : True if the condition is false       -->  Booleans are crucially important for computer decision making. Boolean values are the foundation of computer logic. --> "
 },
 {
   "id": "sec-ifThen",
@@ -313,7 +313,7 @@ var ptx_lunr_docs = [
   "type": "Section",
   "number": "3.2",
   "title": "Conditional Statements",
-  "body": " Conditional Statements  Conditional statements let you branch your code—only running certain blocks when specific conditions are met. We make these decisions through Boolean values. We'll look at the most common conditional statements: if , if-then , and if-elif-else    If Statements  Let's look at an example.   The code inside the if block only runs if the condition is True. In this case, we print \"You can vote!\" if the age is at least 18.   Notice the indentation: Python uses indentation (typically 4 spaces) to define blocks of code. Generally speaking, (and you may have discovered this on your own already) Python is picky with indentation. Here, the indentation tells Python what all is considered to be in your if block.    "
+  "body": " Conditional Statements  Conditional statements let you branch your code—only running certain blocks when specific conditions are met. We make these decisions through Boolean values. We'll look at the most common conditional statements: if , if-then , and if-elif-else    If Statements  Let's look at an example.   The code inside the if block only runs if the condition is True. In this case, we print \"You can vote!\" if the age is at least 18.   Notice the indentation: Python uses indentation (typically 4 spaces) to define blocks of code. Generally speaking, (and you may have discovered this on your own already) Python is picky with indentation. Here, the indentation tells Python what all is considered to be in your if block.     If-Then Statements  When we initiate an if statement, we test some conditional statement. If it is True, then the code is run. What if we want something to happen if the conditional statement if False? That's where we get the if-then block.   With else , we cover both possibilities: one block runs if the condition is true, the other if it’s false.    If-Elif-Else Statements  We can parse out more logical possibilities with if-elif-else chains. Try to guess the output of the following code before running it.   With if-elif-else chains, we can insert as many conditional checks that we need.    Try It Yourself: If-Elif-Else   Define the variable day = \"Sunday\" . Then use an if-elif-else chain that checks to see what day of the week day is set to and prints a different greeting based upon the day. (Hint use day == \"Monday\" to test if day is equal.) Use several different days to check your logic works.     "
 },
 {
   "id": "subsec--4",
@@ -323,6 +323,321 @@ var ptx_lunr_docs = [
   "number": "3.2.1",
   "title": "",
   "body": " Notice the indentation: Python uses indentation (typically 4 spaces) to define blocks of code. Generally speaking, (and you may have discovered this on your own already) Python is picky with indentation. Here, the indentation tells Python what all is considered to be in your if block.  "
+},
+{
+  "id": "subsec-tyielif-2",
+  "level": "2",
+  "url": "sec-ifThen.html#subsec-tyielif-2",
+  "type": "Checkpoint",
+  "number": "3.2.2",
+  "title": "",
+  "body": " Define the variable day = \"Sunday\" . Then use an if-elif-else chain that checks to see what day of the week day is set to and prints a different greeting based upon the day. (Hint use day == \"Monday\" to test if day is equal.) Use several different days to check your logic works.   "
+},
+{
+  "id": "sec-forloops",
+  "level": "1",
+  "url": "sec-forloops.html",
+  "type": "Section",
+  "number": "3.3",
+  "title": "For Loops and While Loops",
+  "body": " For Loops and While Loops   For Loops  What if we want to print \"Hello World\" 10 times? We could manually type a really long string, but that's not very computer science-y. What if we want to print \"Hello World\" 1000 times? We need some new tools. We need loops!  We can use a for loop to repeat something a specific number of times. You’ll most often loop over a sequence of values, like numbers or characters in a string.   Let's go over this example in more detail. The line for i in range(5) initiates a loop that will run 5 times. The letter i is a loop variable (or counter), counting how many times we have gone through the loop, and range(5) dictates how many times the loop will run.  As you run the code, you can see that on the first run through the loop, i is 0, and we print i and the string \"Hello World . We keep doing this until we have a total of 5 iterations through our loop.  Keep in mind that range(n) starts with 0.  Loops are a vital tool for programming. It may be a bit confusing at first, but for loops will be your best friend by the end of things.   Looping Over Lists  We have not talked about lists in Python yet, but we should still mention that Python can also loop over a list. This means that Python apply the code in your for loop once for each item in your list.   We can do the same thing over strings!      While Loops  With a for loop, we tell Python how many times we want to go through our loop. Another powerful loop, the while loop operate a little differently. A while loop repeats as long as a condition is true.   In this example, we set a count variable to 5, and as long as count > 5 the loop will initiate. So how is it that the while will ever not initiate? In theory, a while loop can run forever (called an infinite loop... and you want to avoid these). However, in the loop statement, we reduce the count by 1. So eventually the loop condition is false.    Break and Continue  We can exercise additional control over looping with using break and continue .      Try It Yourself: Loops  Write a program that asks a user for their age and prints whether they can drive, vote, or neither.  Write a loop that prints all the even numbers from 0 to 20. (Hint: Try using % to determine if a number is even or not.)  Modify the following loop to skip printing the number 5:    "
+},
+{
+  "id": "subsec-forloops-6",
+  "level": "2",
+  "url": "sec-forloops.html#subsec-forloops-6",
+  "type": "Remark",
+  "number": "3.3.1",
+  "title": "",
+  "body": "Keep in mind that range(n) starts with 0. "
+},
+{
+  "id": "subsec-tyi-more-loops-2",
+  "level": "2",
+  "url": "sec-forloops.html#subsec-tyi-more-loops-2",
+  "type": "Checkpoint",
+  "number": "3.3.2",
+  "title": "",
+  "body": "Write a program that asks a user for their age and prints whether they can drive, vote, or neither. "
+},
+{
+  "id": "subsec-tyi-more-loops-3",
+  "level": "2",
+  "url": "sec-forloops.html#subsec-tyi-more-loops-3",
+  "type": "Checkpoint",
+  "number": "3.3.3",
+  "title": "",
+  "body": "Write a loop that prints all the even numbers from 0 to 20. (Hint: Try using % to determine if a number is even or not.) "
+},
+{
+  "id": "subsec-tyi-more-loops-4",
+  "level": "2",
+  "url": "sec-forloops.html#subsec-tyi-more-loops-4",
+  "type": "Checkpoint",
+  "number": "3.3.4",
+  "title": "",
+  "body": "Modify the following loop to skip printing the number 5:  "
+},
+{
+  "id": "sec-ifsloopsproject1",
+  "level": "1",
+  "url": "sec-ifsloopsproject1.html",
+  "type": "Section",
+  "number": "3.4",
+  "title": "Ifs and Loops Project 1",
+  "body": " Ifs and Loops Project 1  Ask the user to guess a secret number between 1 and 10. Give them up to 3 tries using a while loop.  To complete this project, vist Online-Python . Once complete, save the file and share with your instructor.  "
+},
+{
+  "id": "sec-ifsloopsproject3",
+  "level": "1",
+  "url": "sec-ifsloopsproject3.html",
+  "type": "Section",
+  "number": "3.5",
+  "title": "Ifs and Loops Project 2: FizzBuzz",
+  "body": " Ifs and Loops Project 2: FizzBuzz  Print the numbers from 1 to 30. For each number:   If it’s divisible by 3, print “Fizz”    If it’s divisible by 5, print “Buzz”    If it’s divisible by both, print “FizzBuzz”    Otherwise, print the number     To complete this project, vist Online-Python . Once complete, save the file and share with your instructor.  "
+},
+{
+  "id": "sec-lists",
+  "level": "1",
+  "url": "sec-lists.html",
+  "type": "Section",
+  "number": "4.1",
+  "title": "Lists",
+  "body": " Lists  Lists are the simplest of the collections we're investigating. Lists are ordered, mutable (changeable) collections that can hold a variety of data types. We call the entries of a list an element.  We can create a list with brackets, [ ] .    Indices  We can use indices to access an element from a list.   Remember using indices to find a character in a string? Well, strings are also lists... lists of characters.  We can pull out \"sublists\" from our lists with slicing. Slicing is an extremely useful tool when dealing with lists. One that you will use often!     Modifying Lists  Some structures in Python are immutable, meaning that the cannot be changed. Lists, however, are very mutable. There are many convenient methods to modify lists.  For example,     Try It Yourself: Lists   Create a list of five animals. Replace the third one with another animal.     Create a list of five animals. Add two more animals to the list. Then remove one (You can do that using the .pop() method.).     "
+},
+{
+  "id": "subsec-indices-3",
+  "level": "2",
+  "url": "sec-lists.html#subsec-indices-3",
+  "type": "Remark",
+  "number": "4.1.1",
+  "title": "",
+  "body": "Remember using indices to find a character in a string? Well, strings are also lists... lists of characters. "
+},
+{
+  "id": "subsec-ttyi-lists-2",
+  "level": "2",
+  "url": "sec-lists.html#subsec-ttyi-lists-2",
+  "type": "Checkpoint",
+  "number": "4.1.2",
+  "title": "",
+  "body": " Create a list of five animals. Replace the third one with another animal.   "
+},
+{
+  "id": "subsec-ttyi-lists-3",
+  "level": "2",
+  "url": "sec-lists.html#subsec-ttyi-lists-3",
+  "type": "Checkpoint",
+  "number": "4.1.3",
+  "title": "",
+  "body": " Create a list of five animals. Add two more animals to the list. Then remove one (You can do that using the .pop() method.).   "
+},
+{
+  "id": "sec-sets",
+  "level": "1",
+  "url": "sec-sets.html",
+  "type": "Section",
+  "number": "4.2",
+  "title": "Sets",
+  "body": " Sets  Where lists consist of elements in a given order, sometimes we may not care about the order of elements. Sets are unordered collections of unique elements. They are useful when you need to eliminate duplicates or perform set operations.  Sets in Python are just like sets you see in mathematics.   Sets  Given sets a and b , we can form new sets. The set \"a union b\" combines elements of two lists into one (without duplicates), and the set \"a intersect b\" is the list of elements that are in a and b .     We can also modify sets and their elements.     Try It Yourself: Sets   Create two sets of favorite foods for two people. Find the common and unique favorites.     "
+},
+{
+  "id": "sec-sets-3",
+  "level": "2",
+  "url": "sec-sets.html#sec-sets-3",
+  "type": "Remark",
+  "number": "4.2.1",
+  "title": "",
+  "body": "Sets in Python are just like sets you see in mathematics. "
+},
+{
+  "id": "subsec-tiysets-2",
+  "level": "2",
+  "url": "sec-sets.html#subsec-tiysets-2",
+  "type": "Checkpoint",
+  "number": "4.2.2",
+  "title": "",
+  "body": " Create two sets of favorite foods for two people. Find the common and unique favorites.   "
+},
+{
+  "id": "sec-tuples",
+  "level": "1",
+  "url": "sec-tuples.html",
+  "type": "Section",
+  "number": "4.3",
+  "title": "Tuples",
+  "body": " Tuples  Lists are ordered and mutable. Sets are unordered and mutable, but there may be times we need something unmutable. Tuples are ordered, immutable collections. Use them when you want to ensure data cannot be changed.   If we try to modifying a tuple, we receive an error.    Try It Yourself: Tuples  Create a tuple representing your birth date (day, month, year). Print the month.    "
+},
+{
+  "id": "subsec-tiytuples-2",
+  "level": "2",
+  "url": "sec-tuples.html#subsec-tiytuples-2",
+  "type": "Checkpoint",
+  "number": "4.3.1",
+  "title": "",
+  "body": "Create a tuple representing your birth date (day, month, year). Print the month.  "
+},
+{
+  "id": "subsec-dictionaries",
+  "level": "1",
+  "url": "subsec-dictionaries.html",
+  "type": "Section",
+  "number": "4.4",
+  "title": "Dictionaries",
+  "body": " Dictionaries  We can refer to an element in a list by its index. Sometimes, though, we might want to reference things in a different way. A dictionary pairs a key with an element.  For example,   As another example,    Try It Yourself: Dictionaries   Create a dictionary representing a book (title, author, year). Add a new key genre. Update the year.     "
+},
+{
+  "id": "subsec-tiydict-2",
+  "level": "2",
+  "url": "subsec-dictionaries.html#subsec-tiydict-2",
+  "type": "Checkpoint",
+  "number": "4.4.1",
+  "title": "",
+  "body": " Create a dictionary representing a book (title, author, year). Add a new key genre. Update the year.   "
+},
+{
+  "id": "sec-listproject",
+  "level": "1",
+  "url": "sec-listproject.html",
+  "type": "Section",
+  "number": "4.5",
+  "title": "Mini Project: Dictionaries of Words",
+  "body": " Mini Project: Dictionaries of Words  Write a program that takes a sentence as input and returns a dictionary where keys are words and values are the number of times each word appears.  To complete this project, vist Online-Python . Once complete, save the file and share with your instructor.  "
+},
+{
+  "id": "sec-functions",
+  "level": "1",
+  "url": "sec-functions.html",
+  "type": "Section",
+  "number": "5.1",
+  "title": "What is a Function?",
+  "body": " What is a Function?  In mathematics, a function like is a way to assign output with a given input. For example, . Functions are very useful in algebra, calculus, and so on. In programming, a function is a block of code that performs a specific task. Once you write a function, you can call it whenever you need it.  We can think of a function as building a tool that we will use over and over again. Imagine functions like a machine: you put something in, and it gives something back. For example, consider the following:   A good function saves a programmer a lot time!   Defining a Function  We create a function using the def keyword. This defines the function. We use the function by \"calling\" it.    When writing a program that requires you repeat a task repeatedly, defining a function that can accomplish this task may be a good idea.     Parameters of a Function  In mathematical functions like and have variable and . In programming, we call variables like these parameters.  In Python, functions can have   1 parameter    many parameters    no parameters    parameters of different types (integers, floats, strings, lists, etc.)     For example,   In greet1(name) , name is the parameter. Notice that greet0() has no parameter! Yet, it still is effective. There are two parameters in greet2(name1, name2) . Is there a limit to how many parameters a function can have? Not really.  Try to make some functions for yourself.   Write a function say_goodbye() that prints \"Goodbye!\".     Write a function favorite_movie(title) that prints \"My favorite movie is title .\"     Write a function star(n) that prints out copies of \"*\". For example, star(5) prints out ***** .      Returning a Value  All of our examples so far have printed some sort of statement. It's very common that instead of printing something we will want to perform a calculation and use that result somewhere else. In this case, a function needs to give a value back using return .    Why, again, would we use a function?   Organization: Keeps your code neat and easy to read\/    Reuse: Write code once, use it many times.    Testing: You can test small pieces instead of the whole program.        Try It Yourself: Functions   Write a function multiply(x, y) that returns the result of x times y      Write a function added(n) that prints the sum of 1 up to n . (Hint: In your function definition, start with sum = 0 . Then with for i in range(n) , sum+= i .)     "
+},
+{
+  "id": "subsec-def-funcs-3",
+  "level": "2",
+  "url": "sec-functions.html#subsec-def-funcs-3",
+  "type": "Remark",
+  "number": "5.1.1",
+  "title": "",
+  "body": " When writing a program that requires you repeat a task repeatedly, defining a function that can accomplish this task may be a good idea.  "
+},
+{
+  "id": "subsec-parameters-7",
+  "level": "2",
+  "url": "sec-functions.html#subsec-parameters-7",
+  "type": "Checkpoint",
+  "number": "5.1.2",
+  "title": "",
+  "body": " Write a function say_goodbye() that prints \"Goodbye!\".   "
+},
+{
+  "id": "subsec-parameters-8",
+  "level": "2",
+  "url": "sec-functions.html#subsec-parameters-8",
+  "type": "Checkpoint",
+  "number": "5.1.3",
+  "title": "",
+  "body": " Write a function favorite_movie(title) that prints \"My favorite movie is title .\"   "
+},
+{
+  "id": "subsec-parameters-9",
+  "level": "2",
+  "url": "sec-functions.html#subsec-parameters-9",
+  "type": "Checkpoint",
+  "number": "5.1.4",
+  "title": "",
+  "body": " Write a function star(n) that prints out copies of \"*\". For example, star(5) prints out ***** .   "
+},
+{
+  "id": "subsec-return-3-1",
+  "level": "2",
+  "url": "sec-functions.html#subsec-return-3-1",
+  "type": "Remark",
+  "number": "5.1.5",
+  "title": "",
+  "body": "Why, again, would we use a function?   Organization: Keeps your code neat and easy to read\/    Reuse: Write code once, use it many times.    Testing: You can test small pieces instead of the whole program.    "
+},
+{
+  "id": "subsec-tiy-funcs-2",
+  "level": "2",
+  "url": "sec-functions.html#subsec-tiy-funcs-2",
+  "type": "Checkpoint",
+  "number": "5.1.6",
+  "title": "",
+  "body": " Write a function multiply(x, y) that returns the result of x times y    "
+},
+{
+  "id": "subsec-tiy-funcs-3",
+  "level": "2",
+  "url": "sec-functions.html#subsec-tiy-funcs-3",
+  "type": "Checkpoint",
+  "number": "5.1.7",
+  "title": "",
+  "body": " Write a function added(n) that prints the sum of 1 up to n . (Hint: In your function definition, start with sum = 0 . Then with for i in range(n) , sum+= i .)   "
+},
+{
+  "id": "sec-randomness",
+  "level": "1",
+  "url": "sec-randomness.html",
+  "type": "Section",
+  "number": "5.2",
+  "title": "Randomness",
+  "body": " Randomness   Why Use Randomness?  Randomness makes programs less predictable — perfect for games, simulations, and surprises. We make use of randomness for dice rolls, coin flips, and many other applications.  To implement randomness in Python, we must first import the random module.     Random Numbers  We can a generate random number between n and m with random.randint(n,m) to generate. Each time you run the program, you may get a different number.    Print 4 random integers between 50 and 100.      Random Floating-Point Numbers  Probabilities are always between and , so randint is not always what we need. We can use random() to generate a random float between and .     Seeding the Random Generator  If you want repeatable randomness (for testing), you can seed the random number generator:     Try It Yourself: Randomness   Import random and print a random number between 1 and 50.     Print a random decimal number between 0 and 5. (You can multiple random() by 5)     Generate three random numbers between 1 and 20 and print their sum.    "
+},
+{
+  "id": "subsec-randint-3",
+  "level": "2",
+  "url": "sec-randomness.html#subsec-randint-3",
+  "type": "Checkpoint",
+  "number": "5.2.1",
+  "title": "",
+  "body": " Print 4 random integers between 50 and 100.   "
+},
+{
+  "id": "subsec-tiy-random-2",
+  "level": "2",
+  "url": "sec-randomness.html#subsec-tiy-random-2",
+  "type": "Checkpoint",
+  "number": "5.2.2",
+  "title": "",
+  "body": " Import random and print a random number between 1 and 50.   "
+},
+{
+  "id": "subsec-tiy-random-3",
+  "level": "2",
+  "url": "sec-randomness.html#subsec-tiy-random-3",
+  "type": "Checkpoint",
+  "number": "5.2.3",
+  "title": "",
+  "body": " Print a random decimal number between 0 and 5. (You can multiple random() by 5)   "
+},
+{
+  "id": "subsec-tiy-random-4",
+  "level": "2",
+  "url": "sec-randomness.html#subsec-tiy-random-4",
+  "type": "Checkpoint",
+  "number": "5.2.4",
+  "title": "",
+  "body": " Generate three random numbers between 1 and 20 and print their sum.  "
+},
+{
+  "id": "ch-projects",
+  "level": "1",
+  "url": "ch-projects.html",
+  "type": "Chapter",
+  "number": "6",
+  "title": "Projects",
+  "body": " Projects      Text before the first section.   "
+},
+{
+  "id": "ch-projects-2-1",
+  "level": "2",
+  "url": "ch-projects.html#ch-projects-2-1",
+  "type": "Figure",
+  "number": "6.0.1",
+  "title": "",
+  "body": "  "
 },
 {
   "id": "backmatter-2",
