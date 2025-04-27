@@ -37,8 +37,9 @@ print(a.difference(b))    # {1, 2}
         We can also modify sets and their elements.
         <sage language="python">
             <input>
-                colors.add('yellow')
-                colors.remove('red')                     
+colors = {'blue','red'}
+colors.add('yellow')
+colors.remove('red')                     
             </input>
         </sage>
     </p>

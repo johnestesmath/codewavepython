@@ -8,6 +8,9 @@
         <input>
             location = 'Mississippi'
             goodByeMessage = "Goodbye, my friend!"
+
+            print(location)
+            print(goodByeMessage)
         </input>
     </sage>
 

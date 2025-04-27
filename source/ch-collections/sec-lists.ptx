@@ -76,12 +76,23 @@ print(fruits[-1])   # 'cherry'
             <sage language="python">
                 <input>
                     
-                fruits = ['apple', 'banana', 'cherry', 'pineapple', 'pear', 'grape', 'mango']
+fruits = ['apple', 'banana', 'cherry', 'pineapple', 'pear', 'grape', 'mango']
+print(fruits)
+
 fruits[1] = 'blueberry'         # Modify
+print(fruits)
+
 fruits.append('orange')         # Add to end
+print(fruits)
+
 fruits.insert(1, 'kiwi')        # Insert at index
+print(fruits)
+
 fruits.remove('apple')          # Remove by value
+print(fruits)
+
 removed_item = fruits.pop()     # Remove last
+print(fruits)
 
                 </input>
             </sage>

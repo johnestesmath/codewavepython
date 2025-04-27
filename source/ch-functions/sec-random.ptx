@@ -29,11 +29,11 @@
 
             <sage language="python">
                 <input>
-                   import random 
+import random 
 
-                   print(random.randint(-4,4))
-                   print(random.randint(-4,4))
-                   print(random.randint(-4,4))
+print(random.randint(-4,4))
+print(random.randint(-4,4))
+print(random.randint(-4,4))
                 </input>
             </sage>
         </p>
@@ -79,11 +79,15 @@
 
             <sage language="python">
                 <input>
-                   import random 
+import random 
 
-                   random.seed(5)
+random.seed(5)
 print(random.randint(1, 100))
 print(random.randint(1, 100))
+
+random.seed(5)
+print(random.randint(1, 100))
+
                 </input>
             </sage>
         </p>
@@ -141,6 +145,11 @@ print(f"You know... I could really go for a {my_fruit} right now.")
         <exercise>
         <p>
             Generate three random numbers between 1 and 20 and print their sum.
+            <sage language="python">
+                <input>
+                    
+                </input>
+            </sage>
         </p>
         </exercise>
         

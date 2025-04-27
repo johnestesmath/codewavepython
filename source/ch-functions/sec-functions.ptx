@@ -41,10 +41,10 @@
             We create a function using the <c>def</c> keyword. This defines the function. We use the function by "calling" it. 
             <sage language="python">
                 <input>
-                    def say_hello(): # defining the function
-                    print("Hello, world!") # the contents of the function
+def say_hello(): # defining the function
+print("Hello, world!") # the contents of the function
                   
-                    say_hell() # calling the function
+say_hello() # calling the function
                 </input>
             </sage>
         </p>
@@ -108,7 +108,7 @@
                 greet1("Alice")
                 greet1("Bob")
                 greet0()
-                greet2("Charlie", "Dorothy"
+                greet2("Charlie", "Dorothy")
 
                 </input>
             </sage>
@@ -174,7 +174,7 @@
                     def interval(a, b): # returns a list starting at a and ending at b
                     list = []
                     i = a
-                    while i &gt;= b:
+                    while i &lt;= b:
                         list.append(i)
                         i += 1
                     return list

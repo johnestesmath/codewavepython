@@ -13,8 +13,8 @@
             We can use a <c>for</c> loop to repeat something a specific number of times. You’ll most often loop over a sequence of values, like numbers or characters in a string.
         <sage language="python">
             <input>
-                for i in range(5)
-    print(i," Hello World")
+                for i in range(5):
+        print(i," Hello World")
 
             </input>
         </sage>
@@ -109,20 +109,20 @@
 
         <sage language="python">
             <input>
-                for i in range(10):
-                if i == 3:
-                    break
-                print(i)
+for i in range(10):
+    if i == 3:
+       break
+    print(i)
               
             </input>
         </sage>
 
         <sage language="python">
             <input>
-                for i in range(5):
+for i in range(5):
     if i == 2:
         continue
-    print(i
+    print(i)
 
             </input>
         </sage>
@@ -133,19 +133,19 @@
     <title>Try It Yourself: Loops</title>
     
     <exercise>
-        Write a program that asks a user for their age and prints whether they can drive, vote, or neither.
+       <p> Write a program that asks a user for their age and prints whether they can drive, vote, or neither.</p>
     </exercise>
 
     <exercise>
-        Write a loop that prints all the even numbers from 0 to 20. (Hint: Try using <c>%</c> to determine if a number is even or not.)
+        <p>Write a loop that prints all the even numbers from 0 to 20. (Hint: Try using <c>%</c> to determine if a number is even or not.)</p>
     </exercise>
 
     <exercise>
-        Modify the following loop to skip printing the number 5:
+        <p>Modify the following loop to skip printing the number 5:</p>
 
 <sage language="python">
     <input>
-        for i in range(10):
+for i in range(10):
     print(i)
     </input>
 

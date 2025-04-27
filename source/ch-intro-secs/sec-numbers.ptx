@@ -48,7 +48,8 @@
                     apples = 4          # Integer
 price = 1.99        # Float
 
-
+print(apples)
+print(price)
 
                 </input>
             </sage>
@@ -144,8 +145,8 @@ price = 1.99        # Float
                 </row>
                 <row>
                     <cell>Floor Division</cell>
-                    <cell> <c>/ / </c></cell>
-                    <cell><m>10 /slash /slash 4</m></cell>
+                    <cell> <c>// </c></cell>
+                    <cell><m>10 // 4</m></cell>
                     <cell><m>3</m></cell>
                 </row>
                 
@@ -305,9 +306,10 @@ print(count)       # Outputs: 6
             <p>
                 Write a small “math quiz” program. 
                 This example includes a few things we have not yet seen that we will cover in more detail later.
-            
-            <sage language="python">
-                <input>
+            </p>
+
+            <program language="python">
+                <code>
                     # Math Quiz!
 num1 = 10
 num2 = 3
@@ -320,13 +322,12 @@ if answer == num1 + num2:
 else:
     print("Oops! The right answer is", num1 + num2)
 
-                </input>
-            </sage>
+                </code>
+            </program>
            
-            </p>
 
             <p>
-                Can you adjust the code to make your own quiz using subtraction, multiplication, or division?
+               Unfortunately, our embedded code cells do not support the <c>input()</c> function, but you can play with <c>input()</c> by visting <url href="https://www.online-python.com/" visual="online-python.com">Online-Python</url> Can you adjust the code to make your own quiz using subtraction, multiplication, or division? 
             </p>
 
 
@@ -377,8 +378,8 @@ else:
         OpenAI. Once there, ask ChatGPT to explain the following code line by line. 
         </p>
 
-        <p>
-        <c># Get three integers from the user
+        <program language="python" line-numbers="yes">
+        <code># Get three integers from the user
             start = int(input("Enter the first integer (start of range): "))
             end = int(input("Enter the second integer (end of range): "))
             adder = int(input("Enter the third integer (number to add): "))
@@ -387,8 +388,8 @@ else:
             for i in range(start, end + 1):
                 result = i + adder
                 print(f"{i} + {adder} = {result}")
-            </c>
-        </p>
+        </code>
+    </program>
         
             
     </activity>

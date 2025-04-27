@@ -23,13 +23,13 @@
         As another example,
         <sage language="python">
             <input>
-                person = {
-                    'name': 'Alice',
-                    'age': 30,
-                    'is_student': False
-                }
+person = {
+ 'name': 'Alice',
+ 'age': 30,
+ 'is_student': False
+}
 
-                person['age'] = 31
+person['age'] = 31
 person['email'] = 'alice@example.com'
 
 print(person.keys())

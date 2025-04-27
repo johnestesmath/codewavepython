@@ -25,29 +25,35 @@
 
     <p>
         We can easily interact with a program user with <c>input()</c>. Use the <c>input()</c> function to ask the user a question and get their answer.
-
-        <sage language="python">
-            <input>
+        Unfortunately, our embedded code cells do not support the <c>input()</c> function, but you can play with <c>input()</c> by visting <url href="https://www.online-python.com/" visual="online-python.com">Online-Python</url>.
+         </p>
+         <p>
+            Try typing the following.
+         </p>
+        <program language="python">
+            <code>
                 name = input("What is your name? ")
 print("Hello,", name + "!")
 
-            </input>
-        </sage>
-    </p>
+            </code>
+        </program>
+
 
     <remark>
         <p>
             The <c>input()</c> function always gives us (or returns) a string. If you want a number, convert it using <c>int()</c>
             or <c>float()</c>.
-
-            <sage language="python">
-                <input>
-                    age = input("How old are you? ")
-print("Next year, you will be", int(age) + 1)
-
-                </input>
-            </sage>
         </p>
+        <p>
+            Try typing the following.
+         </p>
+        <program language="python">
+            <code>
+                age = input("How old are you? ")
+                print("Next year, you will be", int(age) + 1)
+
+            </code>
+        </program>
     </remark>
 
     <p>
@@ -66,39 +72,7 @@ print("Next year, you will be", int(age) + 1)
         <p>
             Ask a user for (1) their name, (2) their favorite animal, and (3) a place they would like to visit. Then summarize
             their answers with a sentence.
-
-            <sage language="python">
-                <input>
-                    
-                </input>
-            </sage>
         </p>
-    </exercise>
-
-    <exercise>
-        Ask a user for a sentence. Then 
-        <ol>
-            <li>
-                <p>
-                    convert the sentence to lowercase
-                </p>
-            </li>
-            <li>
-                <p>
-                    count the number of times the letter 's' appears 
-                </p>
-            </li>
-            <li>
-                <p>
-                    replace all spaces with an underscore '_'
-                </p>
-            </li>
-            <li>
-                <p>
-                    print the resulting sentence.
-                </p>
-            </li>
-        </ol>
     </exercise>
 
  </subsection>   

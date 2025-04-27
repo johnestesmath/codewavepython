@@ -30,7 +30,7 @@
     <title>Try It Yourself: Tuples</title>
     
     <exercise>
-        Create a tuple representing your birth date (day, month, year). Print the month.
+        <p>Create a tuple representing your birth date (day, month, year). Print the month.</p>
 
         <sage language="python">
             <input>

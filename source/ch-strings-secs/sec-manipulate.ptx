@@ -199,7 +199,7 @@ print(word[5])  # Output: n
 
                     word = "Python"
 
-                    print(word[0:3])  # Output: Pyt
+print(word[0:3])  # Output: Pyt
 print(word[2:])   # Output: thon
 print(word[:4])   # Output: Pyth
 
@@ -215,7 +215,7 @@ print(word[:4])   # Output: Pyth
 
                     word = "Python"
                     
-                    print(word[-1])  # Output: n (last character)
+print(word[-1])  # Output: n (last character)
 print(word[-2])  # Output: o (second-to-last)
 
 

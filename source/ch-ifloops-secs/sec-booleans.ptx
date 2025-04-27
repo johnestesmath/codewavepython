@@ -114,9 +114,9 @@
         <p>
             <sage language="python">
                 <input>
-                    (5 > 3) and (2 \\lt 4)    # True
-(5 > 3) or (2 \\lt 4)     # True
-not (5 \\gt 3)            # False
+                    print((5 &gt; 3) and (2 &lt; 4))    # True
+print((5 &gt; 3) or (2 &lt; 4))     # True
+print(not (5 &gt; 3))            # False
 
                 </input>
             </sage>
